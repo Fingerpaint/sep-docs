@@ -18,4 +18,5 @@ Managers
 --------
 
 -  Simon Burg
+-  Ekaterina Sabelnikova
 -  Luc de Smet
