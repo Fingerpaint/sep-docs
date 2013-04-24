@@ -1,4 +1,4 @@
-﻿*.acn
+*.acn
 *.acr
 *.alg
 *.aux
@@ -26,6 +26,7 @@
 *.ps
 *.snm
 *.synctex.gz
+*.synctex.gz(busy)
 *.toc
 *.vrb
 *.xdy
