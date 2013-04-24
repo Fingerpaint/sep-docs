@@ -18,5 +18,5 @@ Managers
 --------
 
 -  Simon Burg
--  Ekaterina Sabelnikova
+-  Areti Paziouriou 
 -  Luc de Smet
