@@ -31,3 +31,8 @@
 *.vrb
 *.xdy
 *.tdo
+*.tex.bak
+*.synctex
+*.kate-swp
+*.backup
+*~
