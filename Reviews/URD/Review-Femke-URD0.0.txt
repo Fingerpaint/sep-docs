@@ -1,0 +1,43 @@
+Reviewer: Femke Jansen
+Document: draft version URD
+
+Category: Question, Typo, Incorrect (content), Missing (content), Structure / layout, Inconsistent, Other 
+
+Location/reference					Category			Remark
+======================================================================================
+Abstract							Missing				The abstract is very short and could use some more information; see the template for scmp.pdf as an example. You could mention in the abstract that this document is part of the SEP project and what can be found in this document (a very brief description).
+
+Section 1.1 - 						Structure			I would change the beginning to this sentence to "This document", because you already mentioned in the abstract that this document is the URD.
+"The user requirement document"
+
+Section 1.2							Question		 	I believe that the client mentioned that the original goal was to find the optimal mix as soon as possible. Should we mention that here as well?									
+
+Section 1.5	-						Typo				"remainder" should be "remaining"
+"The remainder chapter"
+
+Section 1.5 - The bullet list		Structure / layout	I would change the layout/text in the list to something like:
+for chapter 2.											- The relation to other systems (2.1)
+														- The main capabilities (2.2)
+														etcetera. 
+														That would make the list more readable, I believe.
+
+
+Section 2.2 - The description 		Missing				In this paragraph, the "movement of the walls" is mentioned, but we didn't mention the "walls" as a mixing protocol in earlier sections. Perhaps changing it to something like this will clarify it a bit more: ".. given some constraints and initial concentration of the fluids. The constraints are described through a mixing protocol and consists of a sequence of transformations that are applied to the selected geometry. In case of a rectangular geometry, for instance, the sequence consists of 'wall movements': the fluid can be manipulated by moving an upper and lower wall for a specified amount of steps."
+in the first paragraph
+
+Section 2.2 - 						Structure			I would explain the example as a new sentence, instead of placing it within brackets in the current sentence. In general, using long sentences within brackets can decreas the readability of the text.
+"The second is ..."	
+
+Section 2.3 - 						Missing				A third parameter is started to be explained, but the sentence is not finished.
+"The third parameter ..."
+
+Section 2.4 -						Structure / layout	I would change this to "As mentioned before". Now, it seems like the focus lies on the "being documented" part, whereas you probably only want to say that you mentioned this earlier in this chapter.
+"As documented before"
+
+Section 3.1 -						Typo				"off" should be "of"
+"and constraints off the application ..."
+
+Section 3.1 - CPR10 and CPR13		Incorrect			CPR10 should refer to CPR09 and CPR13 should refer to CPR12.
+
+Section 3.2 - Order of CNR, 		Incorrect			The order/IDs of the constraint requirements are incorrect, as we have duplicate IDs. All IDs must be incremented by one starting from the CNR13 I mentioned.
+starting from CNR13 'should have'
