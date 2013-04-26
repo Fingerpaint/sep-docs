@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage{amsmath, amsfonts, amssymb, array, a4wide, fancyhdr, graphicx, lineno, graphicx, epsfig, soul, color, wallpaper, pbox}
+\usepackage[square, numbers]{natbib}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage[toc, page]{appendix}
+
+% % Running line numbers:
+% \linenumbers
+% % Number only every 5:th line:
+% \modulolinenumbers[5]
+
+%Nodig om een bibliography midden in het artikel te zetten, ipv aan het einde zoals eigenlijk gebruikelijk is
+\renewcommand{\bibsection}{}
+\bibliographystyle{ieeetr}
+
+% TODO command
+\newcommand{\todo}[1]{
+    \hl{#1}
+}
+
+% The things that should be filled in by each group, depending on their situation, are written in a todo command, \todo{like this text}. All text in normal the normal font, is applicable for any group. However, everyone is free to adapt any text, and it is even suggested to look at all text critically and make changes if needed.
+
+% Project specific commands
+\newcommand{\pathtobase}[1]{./#1}
+
+\newcommand{\projectauthor}{Group Fingerpaint\ }
+\newcommand{\projectname}{Fingerpaint\ }
+\newcommand{\applicationname}{Fingerpaint application\ }
+
+\newcommand{\TitelFull}{Full Document Name}
+\newcommand{\TitelAbbr}{FDN}
+\newcommand{\Version}{0.1}
+
+\newcommand{\aanpassen}[1]{ {\sethlcolor{green} \hl{#1}} }
+
+% author names
+\newcommand{\tessa}{Tessa Belder}
+\newcommand{\lasse}{Lasse Blaauwbroek}
+\newcommand{\thom}{Thom Castermans}
+\newcommand{\roel}{Roel van Happen}
+\newcommand{\benjamin}{Benjamin van der Hoeven}
+\newcommand{\femke}{Femke Jansen}
+\newcommand{\hugo}{Hugo Snel}
+
+% management names
+\newcommand{\simon}{Simon Burg}
+\newcommand{\areti}{Areti Paziourou}
+\newcommand{\luc}{Luc de Smet}
+
+\newcommand{\markbrand}{Mark van den Brand}
+\newcommand{\lou}{Lou Somers}
+\newcommand{\ion}{Ion Barosan}
+
+% custom name
+\newcommand{\patrick}{Patrick Anderson}
+
+% Should be included right after \begin{document}
+\newcommand{\fingerpainttitlepage}{%
+\ThisLRCornerWallPaper{1.0}{\pathtobase{background}}
+\begin{titlepage}
+ \begin{center}
+  % Top
+  \includegraphics[width=0.15\textwidth]{\pathtobase{tue}}\\[1cm]
+  {\LARGE Project Fingerpaint}\\[0.5cm]
+  {\Large  \TitelAbbr}\\[3.5cm]
+  {\huge \bfseries \TitelFull}\\[1.5cm]
+
+  % Authors and teacher
+  \begin{minipage}{0.4\textwidth}
+  \begin{flushleft} \large
+  \emph{Authors:}\\
+  \tessa\\
+  \lasse\\
+  \thom\\
+  \roel\\
+  \benjamin\\
+  \femke\\
+  \hugo\\
+  ~\\
+  ~\\
+  ~\\
+  ~\\
+  ~\\
+  ~
+  \end{flushleft}
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth}
+  \begin{flushright} \large
+  \emph{Junior Management:}\\
+  \simon\\
+  \areti\\
+  \luc\\
+  ~\\
+  \emph{Senior Management:}\\
+  \markbrand\\
+  \lou\\
+  ~\\
+  \emph{Advisor:}\\
+  \ion\\
+  ~\\
+  \emph{Customer:}\\
+  \patrick
+  \end{flushright}
+  \end{minipage}
+
+  \vfill
+  % Bottom
+  {\large \today}
+ \end{center}
+\end{titlepage}
+}
