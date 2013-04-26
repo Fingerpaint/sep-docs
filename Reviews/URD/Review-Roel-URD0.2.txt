@@ -1,0 +1,3 @@
+2.1: structure: the word vector is introduced, without any introduction on what kind of vector. This also holds to a lesser extent for 'constraints' in the same sentence.
+2.2.1: structure: perhaps some clarification on the second constraint is needed, like saying it's the mixer length/height.
+3.1: question: CPR15, step (D), wut? Idem in CPR19.
