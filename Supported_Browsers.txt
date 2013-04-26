@@ -1,0 +1,8 @@
+Browser            Min version   Curr version
+=============================================
+Firefox                   19             20
+Internet Exploder          9             10
+Chrome                    24             26
+Opera                     12.1           12.1
+Safari                     5.1            6.0
+iOS Safari                 3.2            6.0
