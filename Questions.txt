@@ -1,0 +1,3 @@
+Questions for the client:
+- Do the geometries have parameters? (for instance the ratio between the walls of the rectangle)
+- What are the datatypes of the mixer-parameters?
