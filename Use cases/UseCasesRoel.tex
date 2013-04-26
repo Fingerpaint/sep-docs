@@ -1,0 +1,62 @@
+\documentclass[a4paper,twoside,11pt]{article}
+\usepackage{a4wide,fancyhdr,amsmath,amssymb}
+
+\begin{document}
+%-------------------------------- Title ----------------------------------
+\title{task 1a}
+\author{Roel van Happen \and 0751614}
+\date{\today}
+\maketitle
+%--------------------------------- Text ----------------------------------
+\section*{Define the geometry of the canvas}
+\begin{tabular}{ll}
+
+ Goals: & Define a mixing geometry \\
+ Preconditions: & none \\
+ Summary: & The user selects the geometry used for the mixing process \\
+ Priority: & could have \\
+ Steps: & \\
+\end{tabular} \\
+\ \\ \ \\
+\begin{tabular}{ll}
+ User                       & FingerPaint                            \\
+ 1. Click on 'start mixing' & 2. Display select menu                 \\
+ 3. Select mixing geometry  & 4. Display blank initial distribution. \\
+\end{tabular}
+
+\section*{define the initial distribution}
+\begin{tabular}{ll}
+
+ Goals: & Define the starting distribution \\
+ Preconditions: & the mixer geometry has been chosen \\
+ Summary: & The user selects the initial distribution used for the mixing process \\
+ Priority: & must have \\
+ Steps: & \\
+\end{tabular} \\
+\ \\ \ \\
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+ User                       & FingerPaint                            \\
+ 1. Selects the color picker & 2. Opens a drop down menu with colors \\
+ 3. Selects a new color from a color picker & 4. Changes displayed color to the chosen color \\
+ 5. Makes an initial distribution for this color with the cursor (finger)  & 6. Fills in the area the cursor moves over with the selected color \\
+ 7. Repeat steps 3 \& 5 with different colors until satisfied & repeat steps 4 \& 6 accordingly \\
+\end{tabular}
+
+\section*{Define the mixing protocol}
+\begin{tabular}{ll}
+
+ Goals: & Define the desired sequence of mixing steps \\
+ Preconditions: & an initial fluid distribution has been chosen \\
+ Summary: & The user composes a sequence of steps that define a mixing protocol \\
+ Priority: & must have \\
+ Steps: & \\
+\end{tabular} \\
+\ \\ \ \\
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+ User                       & FingerPaint                            \\
+ 1. Selects a step size signifying how much the component moves & 2. Gives visual feedback on the selected value \\
+ 3. Selects a direction for a certain geometric component & 4. Calculates \& shows resulting fluid distribution of applying the given movement for the given step size \\
+ 5. Repeat steps 1 \& 3 until satisfied & 6. repeat 2 \& 4 accordingly \\
+\end{tabular}
+
+\end{document} 
