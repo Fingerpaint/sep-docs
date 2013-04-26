@@ -1,0 +1,19 @@
+Review of URD0.2 section 2.2
+Reviewer: Tessa Belder
+
+Category		Location		Remark
+--------------------------------------------------------
+Structure/Layout	Section 2.2.1		The sentence "It is possible to both specify an entire protocol consisting of multiple wall movements, and to only execute one step at a time." sounds like you can do two things at the same time. I would change it to: ""It is both possible to specify an entire protocol consisting of multiple wall movements, and to only execute one step at a time."
+
+Missing			Section 2.2.1		There is no information included about the parameter '#steps' which defines how many times the defined mixing protocol is executed.
+
+Incorrect		Section 2.2.1 		"The fourth parameter is the initial concentration of the fluids," This should be: "The fourth parameter is the initial concentration distribution of the fluids," 
+
+Missing			Section 2.2.1		"If desired, it is also possible to load an existing initial distribution." This should be "If desired, it is also possible to load an existing or predifined initial concentration distribution."
+
+Structure/Layout	Section 2.2.2		"When the final result has been computed, this result is of course sent back to the mobile device" Sounds a little weird, I would leave the 'of course' out.
+
+Incorrect		Section 2.2.2		"to easily sharable formats, such as .png or .pdf" We changed this to vector graphics.
+
+Structure/Layout	Section 2.2.2		"or to start over with the original initial concentration distribution" You can start over with 'a new' initial concentration distribution, not with 'the original' initial concentration distribution.
+
