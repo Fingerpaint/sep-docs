@@ -26,3 +26,6 @@ Or do we receive the intermediate steps (after applying 1 time, again 1 time, et
 mixing performance of the submitted information. It was already suggested that we could
 use a log-plot (logarithmic values on the y-axis) for this, but do we receive the
 logarithmic values from the server?
+
+- Should the app (potentially) support multiple languages. That is, should the interface
+be available in both Dutch and English for example?
