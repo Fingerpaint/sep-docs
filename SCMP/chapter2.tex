@@ -1,0 +1,31 @@
+\chapter{Management}
+\label{chap:management}
+In this chapter it is specified which project member has what function. Also, the responsibility a team member has in a function is explained. Finally, some general responsibilities are explained.
+
+\section{Organisation}
+The team members involved in configuration management are the configuration manager (CM) and vice CM. The project members that have been assigned these roles are named in the SPMP.
+
+\section{Responsibilities}
+The CM and vice CM are responsible for copying documents to the master and archive library at the right moments, as mentioned in chapter \ref{chap:configurationcontrol}. They are in general responsible for the contents of the master and archive library. Another task for them is creating and updating document templates, although this task can be delegated.
+
+The CM is primarily responsible for configuration management, although he or she can delegate tasks to the vice CM, in which case the vice CM is responsible. Whenever the CM is (temporarily) not available, the vice CM should take over the tasks of the CM, including the responsibility for these tasks.
+
+Finally, all project members are responsible for the documents they work on. This means that they update the document status sheet and make sure the latest version of the document they work(ed) on is available in the development repository (refer to chapter \ref{chap:configurationcontrol}, section \ref{subsec:configcontrol-library-dev}). When multiple group members work on the same document, they share the responsibility and additionally are responsible for the combined consistency of the document. Also, they should make sure that the repository remains in a ``workable'' state. That is, they should solve possible merge conflicts together.
+
+\section{Interface Management}
+\label{sec:interfacemanagement}
+The \projectname\ application will be developed using an external virtual server provided by the BCF. In case of failure of this server, the CM will contact BCF and let them resolve the issue. BCF is in this case supposed to have expert knowledge and have the means to resolve issues.
+
+In general, the CM can help other project members when they have trouble with some software that is used (refer to chapter \ref{chap:tools}). However, the CM may delegate this task to other group members who have more expertise on the subject.
+
+\section{SCMP Implementation}
+In this project, we will have only one SCMP document, contrary to what is described in the ESA standard \cite{esa}. Thus, this document will not contain a planning for every phase of the project. Instead, refer to the SPMP for the planning of the phases.
+
+\section{Applicable Procedures}
+Project specific conventions such as coding style and committing conventions are described in the CaCSaS document \cite{cacsas}.
+
+Every non-code document has to be created using \LaTeX{} and should start with an \verb|\input| of the \texttt{style.tex} file that can be found in the \texttt{project-docs} and \texttt{sep-docs} repositories (note that this file should always be the same in both repositories). This will ensure a consistent style. Every document should start with a \verb|\fingerpainttitlepage{}| call, followed by an abstract and then the \verb|\tableofcontents|.
+
+Each document should have a ``main'' \texttt{.tex}-file that \verb|\input|s separate \texttt{.tex}-files that each contain a chapter. This enables project members to work on the same document more efficiently, as working on different chapters will not cause any merge conflicts.
+
+As noted in section \ref{sec:interfacemanagement}, the CM can assist when project members experience problems with \LaTeX{}.
