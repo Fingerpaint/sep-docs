@@ -316,7 +316,7 @@ starting from CNR13 'should have'\\
 \feedbackTableStart{Benjamin van der Hoeven}
 \setVersion{0.4}
 3 & Missing & We have chosen not to specify interfaces, because we want to have options when designing these. Also, this is more of a developer detail than a customer need, as the customer does not really care how exactly the interfaces look, as long as they are functional and intuitive. However, none of this is documented in the URD.\\
-3.1 & Missing & \textbf{CPR23} should reference a constraint that specifies that it is possible to execute the mixing protocol. As it is now, this constraint actually specifies two constraints, one of which is only implicitly mentioned.\\ 
+3.1 & Missing & \textbf{CPR23} should reference a constraint that specifies that it is possible to execute the mixing protocol. As it is now, this constraint actually specifies two constraints, one of which is only implicitly mentioned.\\
 3.1 & Other & \textbf{CPR24} and \textbf{CPR27} contain solutions. We specify that we will use vector formats, but this is not a customer need. Therefore, this part should be removed.\\
 \end{longtable}
 
@@ -341,7 +341,7 @@ CPR 8 & Missing & Mention that stepsize can be adjusted in between steps (it is 
 CNR 12,13,14 & Structure/Layout & replace with ``The application is compatible with devices running ..''\\
 \end{longtable}
 
-% Appendix A -------------------------------------------------------------------------------------------------------------------------------
+
 \section{Appendix A}
 \subsection{External reviews}
 \subsubsection*{Junior Management}
@@ -375,4 +375,31 @@ A.9 & Question & What does the \emph{Load $C_0$} button do? It is not clear what
 A.10 & Question & Why is the first step numbered as 0? Is it different from the other use cases? \\
 A.10 & Structure & I would change ``Increments/decrements value in the display...'' to ``Increments/decrements value and displays the change in the display...'' \\
 A.11 \& A.12 & Inconsistent & The numbering from the use cases mentioned in step 3 appear to be inconsistent with the actual use cases listed.
+\end{longtable}
+
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}
+\setVersion{0.3}
+A & Other & Yellow background is probably not suitable for printing, and also looks slightly unprofessional.\\ 
+\end{longtable}
+
+\section{Appendix B}
+\subsection{Internal reviews}
+\feedbackTableStart{Benjamin van der Hoeven}
+\setVersion{0.3}
+B & Other & Third person sounds a bit odd.\\
+B & Typo & No closing `.'.\\
+B & Other & For alternatives: say \emph{why} the alternative takes place.\\
+B.1 & Other & To define a mixing geometry and mixer, the user should first tap the ``Start mixing'' button. I'd think that this button means that the mixing starts now, not that I first have to do all kinds of things before the mixing actually starts.\\
+B.2 and others & Other & Alternative 6: Which mixing interface?\\
+B.4 and others & Other & ``B.1 or B.2 or B.3'' should be ``B.1, B.2 or B.3''.\\
+B.4 and others & Other & Use ``and'' instead of ``\&''.\\
+B.5 and others & Typo & ``succesfull'' $\rightarrow$ ``successful''.\\
+B.5, B.11, B.12, B.14, B.15, B.16 & Other & Why is a message shown when the save was successful? It would only be an annoying pop-up that the user would have to click away. I'd only show a message if the save was unsuccessful.\\
+B.7 & Question & Is it possible that there are no saved protocols? I thought that either we would not implement this feature or the client would provide us with predefined protocols.\\
+B.8 and others & Typo & Inconsistent spacing.\\
+B.8 & Question & Remark is not clear.\\
+B.9 & Other & Maybe refer to use cases by name, not just by section number.\\
+B.10 & Question & What is the protocol-log?\\
+
 \end{longtable}
