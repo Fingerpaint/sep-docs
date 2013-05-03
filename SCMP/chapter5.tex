@@ -1,2 +1,20 @@
 \chapter{Status Accounting}
 \label{chap:statusaccounting}
+In this chapter, we will discuss how the configuration status of CIs is documented and reported in a clear way to group members and management.
+
+As described in chapter \ref{chap:configurationcontrol}, there are three libraries in which a CI can reside. The CM is responsible for moving files from one library to another, thereby following strict rules. To report the status of all CIs, the CM will maintain a page on the website of the \applicationname{}. This page will list all CIs and for every CI a table indicating its status. Such a status could look as follows:
+
+\begin{center}
+\begin{tabular}{@{}cccl@{}}
+	\toprule
+	\emph{Version} & \emph{Library} & \emph{Date into master} & \emph{Comments} \\
+	\midrule
+	current & Development &           - & - \\
+	0.3     & Master      & 07-May-2013 & - \\
+	0.2     & Archive     & 03-May-2013 & - \\
+	0.1     & Archive     & 25-Apr-2013 & - \\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent Note here that the top line will always be present, even when for instance in above example, the current version is version 0.3.
