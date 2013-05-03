@@ -28,7 +28,7 @@ Incorrect	2.3 General constraints		'to quickly try out new ideas for mixers' -->
 
 Incorrect	2.3 General constraints		'the server can compute the flow of fluids' --> Same mistake again.
 Incorrect	2.3 General constraints		'when the flow has been computed' --> Again, flow isn't computed.
-Incorrect	2.3 General constraints		'As mentioned before, it should be possible... ...and the resulting performance metric' --> You can't export mixing runs, you can only save them within the application. You can only export the image of the final concentration distribution, the performance graph, and the animation of the mixing run.
+Incorrect	2.3 General constraints		'As mentioned before, it should be possible... ...and the resulting performance metric' --> You can't export mixing runs, you can only save them within the application. You can only export 2the image of the final concentration distribution, the performance graph, and the animation of the mixing run.
 
 Incorrect	2.4 User Characteristics	'to quickly try out ideas for mixers' --> Can't try out a new mixer, only new protocols / initial concentration distributions.
 Incorrect	2.4 User Characteristics	'The user can change the shape and characterisitics of the mixer' --> Well maybe later, but these are options to be included later, not the main idea of the application.
