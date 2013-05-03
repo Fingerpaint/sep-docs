@@ -1,2 +1,5 @@
 \chapter{Records Collection and Retention}
 \label{chap:recordscollection}
+In the development version, files can be deleted by any group member. Of course, all members need to agree on this decision, but theoretically, anyone can delete any file. Git retains files even after they are deleted, so files can be recovered at any time if needed.
+
+Files in the master library can only be replaced with a newer version. At the same time, the old version will move to the archive library, where files cannot be removed. So, files placed there will be retained for the entire project.
