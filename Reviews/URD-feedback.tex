@@ -12,6 +12,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 title page & Missing & Maybe include student numbers and room numbers for staff (as in other URD's). \\
 \end{longtable}
 
@@ -23,6 +24,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 title page & Missing & The advisor is not just an advisor: more explicitly, he is a technical advisor. \\
 \end{longtable}
 
@@ -39,10 +41,9 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 Abstract & Missing & State that this document was based on discussions with your client and that it conveys their wishes. \\
 \end{longtable}
-
-\newpage
 
 \subsubsection*{Technical Advisor}
 \begin{longtable}{l|l|p{0.5\textwidth}}
@@ -52,6 +53,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 Abstract & structure & Change ``how it should function and in what environment it should function'' to ``how and in what environment it should function''. \\
 \end{longtable}
 
@@ -66,6 +68,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 1.1 & Structure & You might consider rephrasing the sentence ``All of the listed requirements''. We just assure that some requirements will be implemented, but not all requirements. \\
 1.1 & Other & The sentence ``mixing on a mobile device'' implies that you are bound to specific hardware. The application should be cross-platform. \\
 \end{longtable}
@@ -80,6 +83,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.1}
 1.3 & Missing & URD is missing from the list
 \end{longtable}
 
@@ -92,6 +96,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.0}
 abstract & missing & The abstract is very short and could use some more information; see the template for scmp.pdf as an example. You could mention in the abstract that this document is part of the SEP project and what can be found in this document (a very brief description). \vspace{1em} \\
 1.1 & Structure & I would change the beginning to this sentence to ``This document'', because you already mentioned in the abstract that this document is the URD.\vspace{1em} \\
 1.2 & Question & I believe that the client mentioned that the original goal was to find the optimal mix as soon as possible. Should we mention that here as well? \vspace{1em} \\
@@ -108,12 +113,14 @@ That would make the list more readable, I believe.\\
 \subsection{External reviews}
 \subsubsection*{Junior Management}
 \begin{longtable}{l|l|p{0.5\textwidth}}
+\hline
 Location/reference & Category & Remark\\
 \hline
 \hline
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 2.1 & Inconsistent & In this paragraph you talk about mobile devices, while it should be cross-platform. \\
 2.1 & Other & The sentence ``after which output should be shown on the screen'' is unclear and ambiguous. \\
 2.1 & Other & You talk about sending constraints to the server as a black box, but I think there's too much detail about the black box and how it will work. Just say it is present and you leave the complicated computations to them and you do the visualizing and formatting. \\
@@ -140,6 +147,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 2.1 & Question & In the sentence ``we are to use it as a black box to which we can send constraints and a vector'', it is unclear what the vector is. Is this an implementation detail? If this is the case, it should not be mentioned in this document \\
 2.2.1 & Question & What do you mean with the sentence ``It is possible to both specify ...''? Perhaps you can insert a few comma's in this sentence or you can re-write it to make it more clear. \\
 2.2.2 & Missing & In the sentence ``A history of past simulations ... to compare previous runs with the current'', I would change ``current'' to ``current run'', because now it is unclear what ``current'' is.\\
@@ -161,7 +169,15 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.1}
 2.2 & Missing & The sentence ``The third parameter to be specified is '' is unfinished.\\
+2.2.1 & Structure/Layout & The sentence ``It is possible to both specify an entire protocol consisting of multiple wall movements, and to only execute one step at a time.'' sounds like you can do two things at the same time. I would change it to: ``It is both possible to specify an entire protocol consisting of multiple wall movements, and to only execute one step at a time.'' \\
+2.2.1 & Missing & There is no information included about the parameter '\#steps' which defines how many times the defined mixing protocol is executed. \\
+2.2.1 & Incorrect & ``The fourth parameter is the initial concentration of the fluids,'' should be: ``The fourth parameter is the initial concentration distribution of the fluids,'' \\
+2.2.1 & Missing & ``If desired, it is also possible to load an existing initial distribution." This should be "If desired, it is also possible to load an existing or predifined initial concentration distribution.''\\
+2.2.2 & Structure/Layout & ``When the final result has been computed, this result is of course sent back to the mobile device'' Sounds a little weird, I would leave the `of course' out.''\\
+2.2.2 & Incorrect & ``to easily sharable formats, such as .png or .pdf'' We changed this to vector graphics.\\
+2.2.2 & Structure/Layout & ``or to start over with the original initial concentration distribution'' You can start over with `a new' initial concentration distribution, not with `the original' initial concentration distribution.\\
 \end{longtable}
 
 \subsubsection*{Roel van Happen}
@@ -172,6 +188,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.2}
 2.2 & Inconsistent & Third parameter is not exactly a parameter for the algorithm.\\
 2.4 & Typo & ``The user can then store these results to reference later'' $\rightarrow$ ``The user can then store these results for reference later.''\\
 \end{longtable}
@@ -184,6 +201,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.0}
 2.2 (description) & Missing & In this paragraph, the ``movement of the walls'' is mentioned, but we didn't mention the ``walls'' as a mixing protocol in earlier sections. Perhaps changing it to something like this will clarify it a bit more: ``.. given some constraints and initial concentration of the fluids. The constraints are described through a mixing protocol and consists of a sequence of transformations that are applied to the selected geometry. In case of a rectangular geometry, for instance, the sequence consists of 'wall movements': the fluid can be manipulated by moving an upper and lower wall for a specified amount of steps.''
 \\
 2.2 & Structure & I would explain the example as a new sentence, instead of placing it within brackets in the current sentence. In general, using long sentences within brackets can decrease the readability of the text.\\
@@ -201,6 +219,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 2.1 & Other & ``Should be provided to'' $\rightarrow$ ``allows to''. We're not provided with any interface\\
 2.1 & Inconsistent & ``initial details'' $\rightarrow$ initial concentration distribution. This is consistent with chapter 3.\\
 2.2 & Inconsistent & ``is the protocol for moving the mixer''$\rightarrow$ ``is the protocol for moving the geometric component''\\
@@ -221,6 +240,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 3 & Incorrect & The sentence ``any requirements following from further requests will be added here'' is not correct: we won't just add any requirements that are requested. Also, after signing the URD, there should not really be any more changes/additions. \\
 3.1 & Structure & It might be nice to have more hierarchy for the requirements (as in the review checklist: coherent groups). \\
 3.1 & Inconsistent & Formats are named in these constraints, while others are named in previous chapters (.SVG here, .GIF there). Try to make this consistent. \\
@@ -241,6 +261,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 CPR04 & Question & You mention that the ``user can define an initial concentration distribution with black and white'', but what are these ``black and white'' exactly? Do they refer to colors? \\
 CPR21 & Typo & ``an image of the end result'' should be ``end-result''.\\
 CPR24 & Question &What do you mean in the sentence ``an animation of applying the mixing protocol''?\\
@@ -257,6 +278,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.1}
 3.1 \& 3.2 & Missing & Explanation is missing about what exactly capability/constraint requirements are.\\
 \end{longtable}
 
@@ -268,6 +290,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.2}
 CPR 5 \& 7 & Question & Isn't 7 an extension of 5?\\
 CPR 8 & Other & Vague\\
 CPR10 & Incorrect & Isn't 6 supposed to be 9?\\
@@ -283,11 +306,20 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.0}
 3.1 & Typo & ``off'' should be ``of'' in ``and constraints off the application ...''\\
 3.1 (CPR 10 \& 13) & Incorrect & CPR10 should refer to CPR09 and CPR13 should refer to CPR12.\\
 3.2 & Incorrect & The order/IDs of the constraint requirements are incorrect, as we have duplicate IDs. All IDs must be incremented by one starting from the CNR13 I mentioned.
 starting from CNR13 'should have'\\
 \end{longtable}
+
+\feedbackTableStart{Benjamin van der Hoeven}
+\setVersion{0.4}
+3 & Missing & We have chosen not to specify interfaces, because we want to have options when designing these. Also, this is more of a developer detail than a customer need, as the customer does not really care how exactly the interfaces look, as long as they are functional and intuitive. However, none of this is documented in the URD.\\
+3.1 & Missing & \textbf{CPR23} should reference a constraint that specifies that it is possible to execute the mixing protocol. As it is now, this constraint actually specifies two constraints, one of which is only implicitly mentioned.\\ 
+3.1 & Other & \textbf{CPR24} and \textbf{CPR27} contain solutions. We specify that we will use vector formats, but this is not a customer need. Therefore, this part should be removed.\\
+\end{longtable}
+
 
 \subsubsection*{Hugo Snel}
 \begin{longtable}{l|l|p{0.5\textwidth}}
@@ -297,6 +329,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 3.1 & Structure/Layout & The priorities should be listed in list-format instead of the current 'newline-format'\\
 3.1 & Other & ``could have'' talks about 'budget' whilst there is no financial compensation. This seems a bit odd.\\
 3.1 & Incorrect & ``won't have'' talks about ``this version'', whilst the requirements describe only the final deliverable. This seems a bit odd.\\
@@ -319,6 +352,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 Appendix A & Missing & Add alternatives, if necessary. \\
 A.2 & Questions & What are the details in the storage of step 6? Will the exports of the results also be deleted? \\
 \end{longtable}
@@ -331,6 +365,7 @@ Location/reference & Category & Remark\\
 \endhead
 \hline
 \endfoot
+\setVersion{0.3}
 Appendix & Structure & Perhaps you can omit the preconditions and instead include the necessary use cases as an additional step in the use case.\\
 Appendix & Missing & Now, it is not directly clear how the use cases are related; perhaps you could add a Use Case Diagram with a ``precedes'' relation to indicate the preconditions.\\
 A.3 & Incorrect & The first step in this use case is that the \applicationname\ gives a response, but now it seems that the application triggers the use case. This seems a bit strange, because it is a use case for users.\\
