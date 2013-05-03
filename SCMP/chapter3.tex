@@ -1,0 +1,13 @@
+\chapter{Configuration Identification}
+\label{chap:configurationidentification}
+In this chapter, a versioning scheme is set. All documents created for the \projectname{} project should adhere to this scheme.
+
+\section{Naming Conventions}
+All documents will have a unique identifier. This identifier is \texttt{title abbreviaton-version}, for example \texttt{URD-0.1}. The initial version of every document is \texttt{0.0}. Then, after every formal review, the version number is bumped up with \texttt{0.1}. A document that has been reviewed three times thus has version number \texttt{0.3}. Only when the client or managment has approved a document, the version number is bumped up to \texttt{1.0}. Basically, the version number will not change after that, but it is theoretically possible that after that, some more changes are required and versions \texttt{1.x} are created. After a second final approval (note how exceptional this situation sounds), the version will become \texttt{2.0}, et cetera.
+
+Changes noted in the document status sheet in every document will only mention changes since the last version. Older versions of the document can be found in the master (and archive) library (which will be discussed in more detail in chapter \ref{chap:configurationcontrol}), so all changes leading to the current version of a document can at all times be retrieved. In practice, even between-version changes can be retrieved from the development library, but this functionality will probably not be needed.
+
+\section{Baselines}
+A baseline is a document that has been reviewed and approved externally. Baseslines will be stored in the master (and archive) library, as discussed in chapter \ref{chap:configurationcontrol}. As described in the ESA standard \cite{esa}, the CM will make sure that any version of every document can be directly downloaded from or rebuild from the various libraries.
+
+The ESA standard prescribes that new versions of management documents need to be created for every phase of the project. However, as the \projectname{} project is a relatively small project, we will have only one version of every document, including managment documents, for the complete project. Phase-specific information will be added in the form of appendices to documents if needed.

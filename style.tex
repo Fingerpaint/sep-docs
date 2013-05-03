@@ -1,8 +1,9 @@
 \documentclass[11pt,a4paper]{report}
 
-\usepackage{amsmath, amsfonts, amssymb, array, a4wide, fancyhdr, graphicx, lineno, graphicx, epsfig, soul, color, wallpaper, pbox}
+\usepackage{amsmath, amsfonts, amssymb, array, a4wide, fancyhdr, graphicx, lineno, graphicx, epsfig, soul, color, wallpaper, pbox, tabularx, booktabs, longtable}
 \usepackage[square, numbers]{natbib}
 \usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage[defaultlines=5,all]{nowidow}
 \usepackage[toc, page]{appendix}
 
 % % Running line numbers:
@@ -24,9 +25,10 @@
 % Project specific commands
 \newcommand{\pathtobase}[1]{./#1}
 
-\newcommand{\projectauthor}{Group Fingerpaint\ }
-\newcommand{\projectname}{Fingerpaint\ }
-\newcommand{\applicationname}{Fingerpaint application\ }
+\newcommand{\projectauthor}{Group Fingerpaint}
+\newcommand{\projectname}{\textsc{Fingerpaint}}
+\newcommand{\applicationname}{\textsc{Fingerpaint} application}
+
 
 \newcommand{\TitelFull}{Full Document Name}
 \newcommand{\TitelAbbr}{FDN}
@@ -43,17 +45,26 @@
 \newcommand{\femke}{Femke Jansen}
 \newcommand{\hugo}{Hugo Snel}
 
+% author names & IDs
+\newcommand{\tessaID}{Tessa Belder (0739377)}
+\newcommand{\lasseID}{Lasse Blaauwbroek (0749928)}
+\newcommand{\thomID}{Thom Castermans (0739808)}
+\newcommand{\roelID}{Roel van Happen (0751614)}
+\newcommand{\benjaminID}{Benjamin van der Hoeven (0758975)}
+\newcommand{\femkeID}{Femke Jansen (0741948)}
+\newcommand{\hugoID}{Hugo Snel (0657700)}
+
 % management names
 \newcommand{\simon}{Simon Burg}
 \newcommand{\areti}{Areti Paziourou}
 \newcommand{\luc}{Luc de Smet}
 
-\newcommand{\markbrand}{Mark van den Brand}
-\newcommand{\lou}{Lou Somers}
-\newcommand{\ion}{Ion Barosan}
+\newcommand{\markbrand}{Mark van den Brand, MF 7.096}
+\newcommand{\lou}{Lou Somers, MF 7.145}
+\newcommand{\ion}{Ion Barosan, MF 7.082}
 
 % custom name
-\newcommand{\patrick}{Patrick Anderson}
+\newcommand{\patrick}{Patrick Anderson, GEM-Z 4.147}
 
 % Should be included right after \begin{document}
 \newcommand{\fingerpainttitlepage}{%
@@ -63,20 +74,20 @@
   % Top
   \includegraphics[width=0.15\textwidth]{\pathtobase{tue}}\\[1cm]
   {\LARGE Project Fingerpaint}\\[0.5cm]
-  {\Large  \TitelAbbr}\\[3.5cm]
+  {\Large  \TitelAbbr-\Version}\\[3.5cm]
   {\huge \bfseries \TitelFull}\\[1.5cm]
 
   % Authors and teacher
-  \begin{minipage}{0.4\textwidth}
+  \begin{minipage}{0.5\textwidth}
   \begin{flushleft} \large
   \emph{Authors:}\\
-  \tessa\\
-  \lasse\\
-  \thom\\
-  \roel\\
-  \benjamin\\
-  \femke\\
-  \hugo\\
+  \tessaID\\
+  \lasseID\\
+  \thomID\\
+  \roelID\\
+  \benjaminID\\
+  \femkeID\\
+  \hugoID\\
   ~\\
   ~\\
   ~\\
@@ -96,7 +107,7 @@
   \markbrand\\
   \lou\\
   ~\\
-  \emph{Advisor:}\\
+  \emph{Technical Advisor:}\\
   \ion\\
   ~\\
   \emph{Customer:}\\

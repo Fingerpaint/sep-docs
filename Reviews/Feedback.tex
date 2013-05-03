@@ -1,143 +1,48 @@
+\input{../style.tex}
+\renewcommand{\pathtobase}[1]{../#1}
 
-\input{style.tex}
-
+\renewcommand{\TitelFull}{Review document}
+\renewcommand{\TitelAbbr}{Review}
+\renewcommand{\Version}{0.3}
+\newcommand{\setVersion}[1]{\hline \multicolumn{3}{c}{Version #1}\\ \hline}
+\newcommand{\feedbackTableStart}[1]{
+\subsubsection*{#1}
+\begin{longtable}{l|l|p{0.5\textwidth}}
+    Location/reference & Category & Remark\\
+    \hline
+    \hline
+    \endhead
+    \hline
+    \endfoot
+}
 \begin{document}
 
-\chapter{Purpose}
-This document contains the collection of all internal review documents. It is used for documentation and later reference.
+\fingerpainttitlepage{}
+
+\begin{abstract}
+This document contains a collection of all review documents for several documents of \projectname\ that have to be created and delivered for the Software Engineering Project (2IP35). The review document is based on the conventions listed in Conventions about Coding Style and Software (CaCSaS) \cite{CaCSaS}.
+\end{abstract}
+
+\tableofcontents
+
+\chapter{Introduction}
+\section{Purpose}
+This document contains the collection of all review documents, both internal reviews and external reviews. It is used for documentation and later reference.
+
+\section{List of references}
+
+\bibliographystyle{plain}
+
+%\bibliography{../ref}
+
+\section{Overview}
+Each chapter corresponds to one document and contains all the feedback on this document. The chapters are organized according to the newest version of each of the documents; we distinguish between internal and external reviews and will also list the name of the person or group of persons that provided the feedback. \\
+The following deliverables are reviewed in this document:
+\begin{itemize}
+\item User Requirements Document \cite{urd} (chapter 2)
+\end{itemize}
 
 \chapter{URD}
-\section{Chapter 1}
-
-\subsection*{Femke}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-abstract & missing & The abstract is very short and could use some more information; see the template for scmp.pdf as an example. You could mention in the abstract that this document is part of the SEP project and what can be found in this document (a very brief description). \vspace{1em} \\
-1.1 & Structure & I would change the beginning to this sentence to "This document", because you already mentioned in the abstract that this document is the URD.\vspace{1em} \\
-1.2 & Question & I believe that the client mentioned that the original goal was to find the optimal mix as soon as possible. Should we mention that here as well? \vspace{1em} \\
-1.5 & Typo & "remainder" should be "remaining" in "The remainder chapter"\\ 
-1.5 & Structure/layout & I would change the layout/text in the list to something like:
-* The relation to other systems (2.1)
-* The main capabilities (2.2)
-* etcetera.
-That would make the list more readable, I believe.\\
-\end{tabular}
-
-\subsection*{Tessa}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-1.3 & Missing & URD is missing from the list
-\end{tabular}
-
-\section{Chapter 2}
-
-\subsection*{Femke}
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-2.2 (description) & Missing & In this paragraph, the "movement of the walls" is mentioned, but we didn't mention the "walls" as a mixing protocol in earlier sections. Perhaps changing it to something like this will clarify it a bit more: ".. given some constraints and initial concentration of the fluids. The constraints are described through a mixing protocol and consists of a sequence of transformations that are applied to the selected geometry. In case of a rectangular geometry, for instance, the sequence consists of 'wall movements': the fluid can be manipulated by moving an upper and lower wall for a specified amount of steps."
-in the first paragraph\\
-2.2 & Structure & I would explain the example as a new sentence, instead of placing it within brackets in the current sentence. In general, using long sentences within brackets can decreas the readability of the text.\\
-2.3 & Missing & A third parameter is started to be explained, but the sentence is not finished.
-"The third parameter ..." \\
-2.4 & Structure/Layout & I would change this to "As mentioned before". Now, it seems like the focus lies on the "being documented" part, whereas you probably only want to say that you mentioned this earlier in this chapter.
-"As documented before"\\
-\end{tabular}
-
-\subsection*{Tessa}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-2.2 & Missing & The sentence "The third parameter to be specified is " is unfinished.\\
-\end{tabular}
-
-\subsection*{Roel}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-2.2 & Inconsistent & Third parameter is not exactly a parameter for the algorithm.\\
-2.4 & Typo & "The user can then store these results to reference later" -> "The user can then store these results for reference later."\\
-\end{tabular}
-
-\subsection*{Hugo}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-2.1 & Other & "Should be provided to" -$>$ "allows to". We're not provided with any interface\\
-2.1 & Inconsistent & "initial details" -$>$ initial concentration distribution. This is consistent with chapter 3.\\
-2.2 & Inconsistent & "is the protocol for moving the mixer"-$>$ "is the protocol for moving the geometric component"\\
-2.4 & Typo & "results to reference later" -$>$ "results for later reference"\\
-2.5 & Structure/Layout & "Apple iPhones and Android phones or tablets" -$>$ "Apple and Android mobile devices"\\
-2.5 & Other & "the hard work of computing the matrices" -$>$ "the hard work of computing". The fact that matrixes are used is an implementation detail that the reader should not be aware of in "Environment description".\\
-2.5 & Structure/Layout & "will be distributed to" -$>$ "send to". You distribute to $>$1 servers , you send it to 1 server\\
-
-\end{tabular}
-
-\section{Chapter 3}
-\subsection*{Femke}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-3.1 & Typo & "off" should be "of" in "and constraints off the application ..."\\
-3.1 (CPR 10 \& 13) & Incorrect & CPR10 should refer to CPR09 and CPR13 should refer to CPR12.\\
-3.2 & Incorrect & The order/IDs of the constraint requirements are incorrect, as we have duplicate IDs. All IDs must be incremented by one starting from the CNR13 I mentioned.
-starting from CNR13 'should have'\\
-
-\end{tabular}
-
-\subsection*{Tessa}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-3.1 \& 3.2 & Missing & Explanation is missing about what exactly capability/constraint requirements are.\\
-\end{tabular}
-
-\subsection*{Roel}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-CPR 5 \& 7 & Question & Isn't 7 an extension of 5?\\
-CPR 8 & Other & Vague\\
-CPR10 & Incorrect & Isn't 6 supposed to be 9?\\
-CPR13 & Incorrect & Isn't 9 supposed to be 12?\\
-CNR 10 & Inconsistent & It has priority 'should have', while the interface is required for this function has priority 'could have'.\\
-\end{tabular}
-
-\subsection*{Hugo}
-
-\begin{tabular}{l|l|p{0.5\textwidth}}
-Location/reference & Category & Remark\\
-\hline
-\hline
-3.1 & Structure/Layout & The priorities should be listed in list-format instead of the current 'newline-format'\\
-3.1 & Other & "could have" talks about 'budget' whilst there is no financial compensation. This seems a bit odd.\\
-3.1 & Incorrect & "won't have" talks about "this version", whilst the requirements describe only the final deliverable. This seems a bit odd.\\
-3.1 \& 3.2 & Structure/Layout & Forall requirements with 'save' --$>$ 'Save and manage'. If you have access to store it, access to delete is kind of implicit (in b4 memory overflow). This would make all 'is able to delete ..." requirements obsolete.\\
-3.1 \& 3.2 & Structure/Layout & Sort the table on importance. First all "must have", then "should", then "could".\\
-CPR 7 & Typo & should be "..can define a Stepsize" 	or	"..can define a timeperiod."	Not both.\\
-CPR 7 & Missing &  Say something about a "fixed period" (otherwise the difference with the dynamische stepsize in 08 isn't clear).\\
-CPR 8 & Missing & Mention that stepsize can be adjusted in between steps (aka dynamic stepsize)\\
-CNR 12,13,14 & Strcture/Layout & replace with "The application is compatible with devices running .."\\
-
-\end{tabular}
+\input{URD-feedback}
 
 \end{document}
