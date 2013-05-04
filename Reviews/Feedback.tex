@@ -3,7 +3,7 @@
 
 \renewcommand{\TitelFull}{Review document}
 \renewcommand{\TitelAbbr}{Review}
-\renewcommand{\Version}{0.3}
+\renewcommand{\Version}{0.4}
 \newcommand{\setVersion}[1]{\hline \multicolumn{3}{c}{Version #1}\\ \hline}
 \newcommand{\feedbackTableStart}[1]{
 \subsubsection*{#1}
@@ -25,15 +25,17 @@ This document contains a collection of all review documents for several document
 
 \tableofcontents
 
+\input{history.tex}
+
 \chapter{Introduction}
 \section{Purpose}
 This document contains the collection of all review documents, both internal reviews and external reviews. It is used for documentation and later reference.
 
 \section{List of references}
 
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
 
-%\bibliography{../ref}
+\bibliography{../ref}
 
 \section{Overview}
 Each chapter corresponds to one document and contains all the feedback on this document. The chapters are organized according to the newest version of each of the documents; we distinguish between internal and external reviews and will also list the name of the person or group of persons that provided the feedback. \\
