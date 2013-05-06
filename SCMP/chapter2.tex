@@ -1,9 +1,11 @@
 \chapter{Management}
 \label{chap:management}
-In this chapter it is specified which project member has what function. Also, the responsibility a team member has in a function is explained. Finally, some general responsibilities are explained.
+In this chapter it is specified which project members are involved in configuration management. Also, the responsibility a team member has in a function involved with configuration management is explained. Then, some general responsibilities are explained. Finally, a template for the creation of documents is given and some conventions are set about document creation, to ensure a consistent layout.
 
 \section{Organisation}
-The team members involved in configuration management are the configuration manager (CM) and vice CM. The project members that have been assigned these roles are named in the SPMP.
+The team members involved in configuration management are the configuration manager (CM) and vice CM. The project members that have volunteered to fulfil these roles are named in the SPMP \cite{spmp}.
+
+Other group members should always assist the CM and vice CM.
 
 \section{Responsibilities}
 The CM and vice CM are responsible for copying documents to the master and archive library at the right moments, as mentioned in chapter \ref{chap:configurationcontrol}. They are in general responsible for the contents of the master and archive library. Another task for them is creating and updating document templates, although this task can be delegated.
@@ -22,8 +24,51 @@ In general, the CM can help other project members when they have trouble with so
 In this project, we will have only one SCMP document, contrary to what is described in the ESA standard \cite{esa}. Thus, this document will not contain a planning for every phase of the project. Instead, refer to the SPMP for the planning of the phases.
 
 \section{Applicable Procedures}
-Every non-code document has to be created using \LaTeX{} and should start with an \verb|\input| of the \texttt{style.tex} file that can be found in the \texttt{project-docs} and \texttt{sep-docs} repositories (note that this file should always be the same in both repositories). This will ensure a consistent style. Every document should start with a \verb|\fingerpainttitlepage{}| call, followed by an abstract and then the \verb|\tableofcontents|.
+Every non-code document has to be created using \LaTeX{} and should use the \texttt{fingerpaint.cls} document class by declaring the following in the beginning of the document (with other values for the options of course):
+\begin{center}\begin{minipage}{0.5\textwidth}\begin{verbatim}
+\documentclass[%
+    pathtobase=..,%
+    titlefull={Full Document Title},%
+    titleabbr=FDT,%
+    version=0.1]{fingerpaint}
+\end{verbatim}\end{minipage}\end{center}
+Every document should start with a \verb|\maketitle{}| call, followed by an abstract and then the \verb|\tableofcontents|. This to ensure a consistent style among all documents.
 
 Each document should have a ``main'' \texttt{.tex}-file that \verb|\input|s separate \texttt{.tex}-files that each contain a chapter. This enables project members to work on the same document more efficiently, as working on different chapters will not cause any merge conflicts.
 
+So, a standard ``main'' \texttt{.tex}-file should like as is shown in figure \ref{fig:exampledocument}.
+
+\begin{figure}
+	\begin{center}
+		\begin{minipage}{0.8\textwidth}
+			\begin{verbatim}
+				\documentclass[%
+				    pathtobase=..,%
+				    titlefull={Full Document Title},%
+				    titleabbr=FDT,%
+				    version=0.1]{fingerpaint}
+
+				\begin{document}
+
+				  \maketitle{}
+
+				  \begin{abstract}...\end{abstract}
+
+				  \tableofcontents
+
+				  \input{history.tex}
+				  \input{chapter1.tex}
+				  \input{chapter2.tex}
+				  ...
+
+				\end{document}
+			\end{verbatim}
+			\caption{Example of how a document that uses the \texttt{fingerpaint.cls} document class should look like.}
+			\label{fig:exampledocument}
+		\end{minipage}
+	\end{center}
+\end{figure}
+
 As noted in section \ref{sec:interfacemanagement}, the CM can assist when project members experience problems with \LaTeX{}.
+
+Finally, all documents are subject to the standards described in the ESA standard \cite{esa} and must also adhere to the requirements as described in the SQAP \cite{sqap} and the SVVP \cite{svvp}.

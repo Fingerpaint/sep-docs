@@ -1,10 +1,10 @@
 \chapter{Configuration Control}
 \label{chap:configurationcontrol}
-This chapter describes how we handle different versions of CIs and where they are stored: we introduce the concept of libraries. Since we are at it, we also describe how different libraries interact and what the role of the CM is in the management of these libraries.
+This chapter describes how we handle different versions of CIs and where they are stored: we introduce the concept of libraries. Moreover, we will describe how different libraries interact and what the role of the CM is in the management of these libraries.
 
 \section{Library Control}
 \label{sec:configcontrol-library}
-All CIs that are created for the \projectname{} project have to be stored somewhere. We call a place where CIs are stored a library. There are three libraries, that will be discussed in more detail in this section.
+All CIs that are created for the \projectname{} project have to be stored somewhere. We call a place where CIs are stored a \emph{library}. There are three libraries, that will be discussed in more detail in this section.
 
 \subsection{Development Library}
 \label{subsec:configcontrol-library-dev}
@@ -13,7 +13,7 @@ The development library is the library where all CIs are stored initially. Docum
 In practice, the development library is split up in multiple Git repositories (Git is discussed in more detail in chapter \ref{chap:tools}). We have the following repositories:
 \begin{itemize}
 	\item \texttt{project-code}: This repository contains all code that makes up the \applicationname{}.
-	\item \texttt{project-docs}: This repository contains all documentation that is potentially relevant for the client. That is, all CIs that are related to the \applicationname{} and \emph{not} to the SEP leading to the creation of that application are stored here.
+	\item \texttt{project-docs}: This repository contains all documentation that is potentially relevant for the client. That is, all CIs are stored here that are related to the \applicationname{} and \emph{not} to the SEP that led to the creation of that application.
 	\item \texttt{sep-docs}: This repository contains all documentation that is strictly relevant to SEP. That includes the roles that project members fulfil,  testing plans, this CI and the SQAP for example.
 \end{itemize}
 The idea of this split is that we have the possibility to hand over the software to the client by simply providing the first two repositories in the above list. These repositories will then be ``clean'' in the sense that they only contain the code and its documentation, nothing that is purely SEP-related.
@@ -30,7 +30,7 @@ A CI can be placed in the master library only with permission of the CM and only
 CIs cannot be deleted from the master library, but can be replaced with a newer version. In that case, the older version is moved to the archive library.
 
 \subsection{Archive Library}
-Like the master library, the archive library is a folder on the website of the \applicationname{}. Thus, this library is accessible through the same website as the master library. Of course, the difference is clearly stated on the website. A main difference with the master library is that documents are stored in a folder one level deeper, in a folder with the name of the version. Thus, the structure in the archive library will be:
+Like the master library, the archive library is a folder on the website of the \applicationname{}. Thus, this library is accessible through the same website as the master library. A main difference with the master library is that documents are stored in a folder one level deeper, in a folder with the name of the version. Thus, the structure in the archive library will be similar to what is shown below:
 
 \begin{itemize}
 	\item Code
@@ -59,6 +59,8 @@ Like the master library, the archive library is a folder on the website of the \
 
 The structure of the master library resembles the one of the archive library, but does not have (and does not need) the version folders. This is because the master library only contains the latest externally accepted version of every CI.
 
+CIs may only be added to this directory after they have been externally reviewed and approved, as described in the SQAP \cite{sqap} and SVVP \cite{svvp}.
+
 \section{Media Control}
 \label{sec:configcontrol-media}
 The libraries mentioned in section \ref{sec:configcontrol-library} are, as also mentioned there, stored on GitHub. GitHub is a commercial service that can be used freely as long as the repositories hosted by them are publicly accessible. They have offline encrypted backups of all repositories, that can be used in case of complete failure. Also, because of the distributed nature of Git, every project member has a local copy of every library on his/her computer.
@@ -74,9 +76,9 @@ Every group member is allowed to change any CI in the development library. This 
 The general structure of the development library can however not be changed by group members: this is something the CM is responsible for. This is fair, as the CM is chosen by all group members.
 
 \subsection{Master Library}
-Files in the master library can only be changed by the CM, thus there is no need for version control. When a team member wants to change something to a CI in the master library, he/she has to contact the QM. The QM can then call up a review meeting, in which the proposed changes are discussed and either approved or rejected. More information on this can be found in the SVVP. When changes to the CI under discussion are approved, the CM will copy the new version to the master library from the development library. The old version in the master library is then moved to the archive library. Note that in this procedure, the version number of the CI is bumped with \texttt{1.0}.
+Files in the master library can only be changed by the CM, thus there is no need for version control. When a team member wants to change something to a CI in the master library, he/she has to contact the QM. The QM can then call up a review meeting, in which the proposed changes are discussed and either approved or rejected. More information on this can be found in the SVVP \cite{svvp}. When changes to the CI under discussion are approved, the CM will copy the new version to the master library from the development library. The old version in the master library is then moved to the archive library. Note that in this procedure, the version number of the CI is bumped with \texttt{1.0}.
 
 There is an exception possible to the above situation: if the only changes to a CI are non-fundamental layout changes, then the CM can simply update the document in the master library. This includes changing the font, changing the display style of the project name, et cetera. Note that these should not occur normally, as the layout is decided on at the start of the project.
 
 \subsection{Archive Library}
-Files in the archive library cannot be changed, only new files can be added. The only person allowed to do this is the CM. Thus, no change control is needed here. Note that files that are added to this library should come from the master library and the files in the master library should at that point be replaced by a newer version that has been approved externally.
+Files in the archive library cannot be changed, only new files can be added, as described in the SVVP \cite{svvp}. The only person allowed to do this is the CM. Thus, no change control is needed here. Note that files that are added to this library should come from the master library. The files in the master library should at that point be replaced by a newer version, that has been approved externally.
