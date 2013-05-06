@@ -74,7 +74,7 @@ Location/reference & Category & Remark\\
 \end{longtable}
 
 \subsection{Internal reviews}
-\subsubsection*{Tessa Belder}
+\subsubsection*{\tessa}
 
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
@@ -94,7 +94,7 @@ Location/reference & Category & Remark\\
 1.5 & Missing & The appendices aren't mentioned here, and they should be.\\
 \end{longtable}
 
-\subsubsection*{Femke Jansen}
+\subsubsection*{\femke}
 
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
@@ -116,7 +116,7 @@ That would make the list more readable, I believe.\\
 \end{longtable}
 
 
-\subsubsection*{Hugo Snel}
+\subsubsection*{\hugo}
 
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
@@ -183,7 +183,7 @@ Location/reference & Category & Remark\\
 \newpage
 
 \subsection{Internal reviews}
-\subsubsection*{Tessa Belder}
+\subsubsection*{\tessa}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -222,7 +222,7 @@ distribution.\\
 2.5 & Incorrect & Second assumption talks about flow. Again not correct.\\
 \end{longtable}
 
-\subsubsection*{Roel van Happen}
+\subsubsection*{\roel}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -245,7 +245,7 @@ Location/reference & Category & Remark\\
 Appendix B, Use case B.20 \& B.21 & Missing & Navigation to the history interface is missing in both use cases\\
 \end{longtable}
 
-\subsubsection*{Femke Jansen}
+\subsubsection*{\femke}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -262,7 +262,7 @@ Location/reference & Category & Remark\\
 2.4 & Structure/Layout & I would change this to ``As mentioned before''. Now, it seems like the focus lies on the ``being documented'' part, whereas you probably only want to say that you mentioned this earlier in this chapter.\\
 \end{longtable}
 
-\subsubsection*{Hugo Snel}
+\subsubsection*{\hugo}
 
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
@@ -341,7 +341,7 @@ CPR29 & Typo & ``mixng performance'' should of course by ``mixing performance'',
 
 \subsection{Internal reviews}
 
-\subsubsection*{Tessa Belder}
+\subsubsection*{\tessa}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -353,7 +353,7 @@ Location/reference & Category & Remark\\
 3.1 \& 3.2 & Missing & Explanation is missing about what exactly capability/constraint requirements are.\\
 \end{longtable}
 
-\subsubsection*{Roel van Happen}
+\subsubsection*{\roel}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -369,7 +369,7 @@ CPR13 & Incorrect & Isn't 9 supposed to be 12?\\
 CNR 10 & Inconsistent & It has priority 'should have', while the interface is required for this function has priority 'could have'.\\
 \end{longtable}
 
-\subsubsection*{Femke Jansen}
+\subsubsection*{\femke}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -384,7 +384,7 @@ Location/reference & Category & Remark\\
 starting from CNR13 'should have'\\
 \end{longtable}
 
-\feedbackTableStart{Benjamin van der Hoeven}
+\feedbackTableStart{\benjamin}
 \setVersion{0.3}
 3 & Missing & We have chosen not to specify interfaces, because we want to have options when designing these. Also, this is more of a developer detail than a customer need, as the customer does not really care how exactly the interfaces look, as long as they are functional and intuitive. However, none of this is documented in the URD.\\
 3.1 & Missing & \textbf{CPR23} should reference a constraint that specifies that it is possible to execute the mixing protocol. As it is now, this constraint actually specifies two constraints, one of which is only implicitly mentioned.\\
@@ -392,7 +392,7 @@ starting from CNR13 'should have'\\
 \end{longtable}
 
 
-\subsubsection*{Hugo Snel}
+\subsubsection*{\hugo}
 \begin{longtable}{l|l|p{0.5\textwidth}}
 Location/reference & Category & Remark\\
 \hline
@@ -412,7 +412,7 @@ CPR 8 & Missing & Mention that stepsize can be adjusted in between steps (it is 
 CNR 12,13,14 & Structure/Layout & replace with ``The application is compatible with devices running ..''\\
 \end{longtable}
 
-
+% Appendix A -------------------------------------------------------------------------------------------------------------------------------
 \section{Appendix A}
 \subsection{External reviews}
 \subsubsection*{Junior Management}
@@ -454,9 +454,16 @@ A.11 \& A.12 & Inconsistent & The numbering from the use cases mentioned in step
 A & Other & Yellow background is probably not suitable for printing, and also looks slightly unprofessional.\\ 
 \end{longtable}
 
+\feedbackTableStart{\femke}
+\setVersion{0.3}
+A & Typo & ``use-cases" should be ``use cases".\\
+A & Missing & Perhaps also explain what the \emph{Preceeds}  and \emph{Uses} relationships mean, although we know what this means, the client might not.
+\end{longtable}
+
+% Appendix B -------------------------------------------------------------------------------------------------------------------------------
 \section{Appendix B}
 \subsection{Internal reviews}
-\feedbackTableStart{Benjamin van der Hoeven}
+\feedbackTableStart{\benjamin}
 \setVersion{0.3}
 B & Other & Third person sounds a bit odd.\\
 B & Typo & No closing `.'.\\
@@ -472,5 +479,13 @@ B.8 and others & Typo & Inconsistent spacing.\\
 B.8 & Question & Remark is not clear.\\
 B.9 & Other & Maybe refer to use cases by name, not just by section number.\\
 B.10 & Question & What is the protocol-log?\\
-
 \end{longtable}
+
+\feedbackTableStart{\femke}
+\setVersion{0.3}
+Figure 2.1 & Question & What are those use cases listed above the diagram? Do they have no relations to other use cases? Maybe you can clarify this a bit. \\
+Figure 2.1 & Missing &  In the use case B.8, you mention B.4, B.5, B.6 or B.7 as actor actions that have been taken earlier. In the use case diagram, however, there is no direct arrow between B.4 and B.8. \\
+Figure 2.1 & Question & Is it an idea to also include the IDs (B.x) of the use cases in the use case diagram? I think this might clarify things even more.  \\
+Figure 2.1 & Inconsistent & Use case B.20 is called ``remove concentration distribution", but the use case listed in figure 2.1 says ``remove initial concentration distribution" \\
+\end{longtable}
+

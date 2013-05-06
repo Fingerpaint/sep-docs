@@ -1,17 +1,15 @@
-\input{../style.tex}
-\renewcommand{\pathtobase}[1]{../#1}
-
-%Variables
-\renewcommand{\TitelFull}{Software Configuration Management Plan}
-\renewcommand{\TitelAbbr}{SCMP}
-\renewcommand{\Version}{0.1}
+\documentclass[%
+		pathtobase=..,%
+		titlefull={Software Configuration Management Plan},%
+		titleabbr=SCMP,%
+		version=0.1]{fingerpaint}
 
 \begin{document}
 
-\fingerpainttitlepage{}
+\maketitle{}
 
 \begin{abstract}
-  This is the \TitelFull\ (\TitelAbbr) of \projectauthor. It is part of the Software Engineering Project (\textsc{2ip35}) of the Eindhoven University of Technology. This document is based on the standards of the European Space Agency \cite{esa}.
+  This is the \TitleFull{} (\TitleAbbr{}) of \projectauthor{}. It is part of the Software Engineering Project (\textsc{2IP35}) of the Eindhoven University of Technology. This document is based on the standards of the European Space Agency \cite{esa}.
   
   In this document, the configuration of the project is documented. This includes software used, conventions concerning versioning, naming and storage of documents, use of libraries and some other project related agreements.
 \end{abstract}
