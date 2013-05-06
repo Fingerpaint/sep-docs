@@ -1,0 +1,28 @@
+Input to server
+{
+  "geometry" : Integer (0, 1, 2, 3),
+  "matrix" : Integer,
+  "vector" : [0.2156, 0, 1,...] (array of length vectorSize with floats between zero and one),
+  "protocol" : [
+    {
+      "stepid": String (identifier for the action to perform, depends on mixer. Ex: "TL" for Top to the Left.),
+      "step": Float
+    },
+    ... (possibly more of the above object here)
+  ],
+  "numsteps": Integer (number of times protocol should be repeated),
+  "intermediateResults": Boolean (indicate if intermediate results should be sent back or not)
+}
+
+Output from server
+{
+  "performance": [ (array with datapoints, the order is important)
+    Float,
+    Float,
+    ... (more Floats here)
+  ],
+  "results": [
+    [ Float, Float, ... ] (result vector here),
+    ... (possibly more arrays here)
+  ]
+} 
