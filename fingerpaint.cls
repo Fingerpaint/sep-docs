@@ -148,7 +148,7 @@
 
 			\vfill
 			% Bottom
-			{\large Eindhoven \today}
+			{\large Eindhoven - \today}
 		\end{center}
 		\end{titlepage}
 	}
