@@ -1,0 +1,96 @@
+\chapter{Verification activities} \label{verificationactivities}
+\section{Reviews}
+    Review procedures are held during all phases of the \projectname{} project. Configuration items are reviewed in the phase they are delivered; an overview of which item is delivered in which phase can be found in the SPMP \cite{spmp}. All project and product documents have one of the following statuses:
+\begin{itemize}
+\item Draft (initial status)
+\item Internally approved with proposed changes
+\item Internally approved
+\item Conditionally approved
+\item (Externally) approved
+\end{itemize}
+Note that approved technical documents are not modified (unless the completion of the project is endangered). With respect to the approved management documents only appendices for every phase are added during the project. The appendices are approved during review meetings.
+
+For a document to become (internally) approved it has to be reviewed. Here internal and external reviews of technical and management documents (Section \ref{internal review} and \ref{external review} respectively) are distinguished.
+
+As noted above each document starts with the draft status. Once there has been a internal review it either becomes Internally approved or needs some changes. When there are only minor changes needed the document will be internally approved when the QAM has confirmed that the changes have been made. If it concerns major changes a new internal review will be needed.
+
+Internally approved documents can be scheduled for external review. During this review the document can reach the highest status of externally approved if there are no defects. If there are only minor defects the document may be conditionally approved, these defects need to be solved to retrieve the highest status. If major defects show up during the review the document needs to be changed to solve these defects. Because this involves great changes it should pass a new internal review before it may be subject to another external review.
+
+\subsection{Internal reviews} \label{internal review details}
+The following table shows the action list for
+    the preparation and execution of the external reviews of documents. The QA is the member of the SQA-team that is present. T is the time of the review meeting.
+
+
+\begin{tabular}{|l|l|p{20em}|l|}
+\hline
+ Nr &Actor     &  Action                                                 & Time \\
+\hline
+ 1  & QAM/QA   & Set a date for the internal review of the document      &    -\\
+ 2  & Leader   &  Deliver the paper review version of the document to the reviewers   & T - 2 workdays\\
+                
+ 3  & Reviewer &  Inspect the document (language errors are underlined)  & Before T\\
+ 4  & Reviewer &  Discuss all errors other than language errors          & T\\
+ 5  & Leader   &  Write down all necessary changes                       & T\\
+ 6  & Reviewer &  Decide if the document can be approved, provided the stated changes are made  & T\\
+                
+ 7  & QA       &  If the document cannot be approved, an appointment for a new review meeting is made    & T\\
+                
+ 8  & Leader   &  Collect annotated documents                            & T\\
+ 9  & QAM/QA   & See to it that the stated remarks are handled properly by the team delivering the document  &   After T\\
+                
+ 10 & QAM/QA   & Grant the document the status internally accepted if all requested changes are made     &   After T\\
+                
+\hline
+\end{tabular}
+
+\subsection{External reviews} \label{external review details}
+    For the organization of external reviews see Section \ref{external review}. The following table shows the action list for
+    the preparation and execution of the external reviews of documents. T is the time of the review
+    meeting. This procedure is only for the external review of product documents. The metrics of
+    the external review will be sent to the SM. The official format for reviews is described in Appendix \ref{format review}.
+
+\begin{tabular}{|l|p{6em}|p{20em}|p{6em}|}
+\hline
+Nr. &Actor &     Action       &                                                Time\\
+\hline
+1  & QAM   &      Set a date and place for the external review of the document & After internal acceptance\\
+2  & Author    & Deliver the paper version of the document to all reviewers  & T - 5 workdays\\
+3  & Reviewer &Inspect the document and write down all errors explicitly     & Before T\\
+4  & Reviewer &Deliver remarks to the moderator                              & Before T\\
+5  & QAM      &  Inspect remarks                                             & Before T\\
+6  & Author   &  Lead the meeting and keep discussions to the point          & T\\
+7  & QAM      &  Document everything that is discussed during the review     & T\\
+8  & Reviewer &Discuss all comments that need explanation or discussion     &  T\\
+9  & Author   &  Collect the remarks on the documents                       &  After T\\
+10 & Reviewer, QAM & Decide the status of the document at the end of the meeting. There are three possible outcomes: the document is rejected and a new appointment is made the document is accepted and the status Approved is granted  & After T\\
+11 & QAM     &  Make minutes of the review, and hand these together with the remarks of the reviewers to the Senior Management. Also make sure they will go to the configuration management system  & After T\\
+\hline               
+\end{tabular}
+
+Only when the document is rejected do actions 12 and 13 apply.\\
+
+\begin{tabular}{|l|p{6em}|p{20em}|p{6em}|}    
+\hline          
+12 & QAM  &      See to it that the remarks are handled properly by the team responsible for the document & After T\\
+               
+13 & QAM  &      Grant the document the status Approved if all reviewers inform that their remarks are handled properly, eventually       after another review if the remarks included major changes & After T\\
+\hline
+\end{tabular}
+
+
+\section{Formal proofs}
+Formal proof will be given where considered necessary by the SQA team, or when asked by the person(s) responsible for a certain product.
+
+\section{Tracing} \label{tracing}
+During the project the relation between the input and the output of a phase must be checked several times. A traceability table as result of the final trace is included in the output document of the phase. In this table the CI is traced to the input of the phase. During the software life cycle it is necessary to trace:
+
+\begin{itemize}
+\item User requirements to software requirements and vice versa, this is documented in the SVVP (Appendix \ref{Sprints phase}).
+\item Software requirements to component requirements and vice versa, this is documented in the SVVP (Appendix \ref{Sprints phase}).
+\item Component requirements to DD requirements and vice versa, this is documented in the SVVP (Appendix \ref{Sprints phase}).
+\item Integration tests to architectural units and vice versa, this is described in the integration test plans \cite{itp}. These tests are performed during the sprints.
+\item Unit tests to the modules of the detailed design, this is described in the unit test plans \cite{utp}. These tests are performed during the sprints.
+\item System tests to software requirements and vice versa, this is described in the system test plans \cite{stp}. These plans \cite{spmp} are executed during the sprints.
+\item Acceptance tests to user requirements and vice versa, this is described in the acceptance test plans \cite{atp}. These tests are executed during the sprints.
+\end{itemize}
+To support traceability, all requirements are uniquely identified.

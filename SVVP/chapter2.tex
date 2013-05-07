@@ -1,0 +1,126 @@
+\chapter{Verification overview}
+\section{Organization}
+\subsection{Organization}
+   The QAM checks the verification and validation of the activities of the project. Therefore
+   the QAM attends every internal or external review. If the QAM is not available the vice-QAM
+   will take his place, this means that every time the QAM is mentioned it can also be the vice-QAM.
+   If the QAM runs into problems he reports them to the PM. The PM needs to verify that these
+   problems are resolved.
+       The project uses the following methods of verification and validation:
+\section{Internal reviews} \label{internal review}
+   In order to keep the quality of our documents up to standards they will be subject to internal
+   reviews.
+       The team carrying out the internal review of a technical or management document will at least
+   consist of the following persons:
+\begin{itemize}
+\item The QAM. He will make the review document.
+\item One of the authors of the document.
+\item At least one other member of the project team, not part of the authoring team.
+\item The adviser/PM may also be present if necessary.
+\end{itemize}
+More details about internal reviews can be found in Section \ref{internal review details}.
+\section{External reviews} \label{external review}
+When a document has been internally accepted it should have the desired quality. Having the right amount of quality does not automatically mean that the document conforms to the customers expectations. Therefore an external review is held. The documents which need external reviews are the URD, Product Backlog, SRD, ATP, SUM and ADD.
+
+An external review can only take place after the document has been approved by the adviser. Any documents sent to the adviser will have to be accepted internally first. The external reviews of management documents will be done by the SM. The team carrying out the external review of a technical document will consist of the following people:
+\begin{itemize}
+\item The adviser (if available).
+\item At least one the author(s) (of the document to be reviewed).
+\item The QAM. He will make the review document.
+\item At least one other member of the team.
+\item When necessary (URD \cite{urd}, Product Backlog \cite{backlog}, SRD \cite{srd}, ATP \cite{atp} and SUM \cite{sum}) also the customer
+\end{itemize}
+More details about exteranl reviews can be found in Section \ref{external review details}.
+\section{Audits}
+    Audits are reviews that assess compliance with software requirements, specifications, baselines,
+    standards, procedures, instructions, codes and licensing requirements. Physical audits check that
+    all items identified as being part of the configuration are present in the product baseline. A
+    functional audit checks that unit tests, integration tests and system tests have been carried out
+    and records their success or failure. Functional and physical audits can be performed before
+    the release of the software (ESA Software Engineering Standard \cite{esa}). The SM is
+    allowed to audit the project to check if the procedures, as described in the management
+    documents SPMP \cite{spmp}, SQAP \cite{sqap}, SCMP \cite{scmp} and this document are followed. Audits are not routine
+    checks, but the SM can request them.
+        The following rules apply to all audits:
+\begin{itemize}
+\item Only the SM can request audits.
+\item Audit requests must be directed to the PM.
+\item In the audit request the following information must be included:
+\begin{itemize}
+\item Names of the auditors (at least two persons)
+\item Possible dates of the audit
+\item Purpose of the audit
+\item Items that will be checked
+\end{itemize}
+\item The audit is attended by a the QAM, the PM and possibly others as indicated by SM.
+\item The results of the audit are reported by a group member in a written report to the PM and the QAM within one week of the audit. This report must contain the following information:
+
+	\begin{itemize}
+	\item Date of the audit
+	\item Participants in the audit
+	\item Checked items
+	\item Conclusion
+	\item Recommendations
+	\end{itemize}
+\end{itemize}
+
+
+\section{Tests}
+At all times, tests covering functionality are coded before that functionality is implemented. 
+All tests covering all (impelemented) functionality together comprise the test suite, or regression tests.
+Before and after each code change, the test suite is run, and should pass before code is changed or committed to version control. This follows and extends on Test-Driven Development.
+
+ For each type of testing there is a separate test plan. 
+Note that these test plans are updated iteratively each sprint. The following test plans (plans that outline the approach to testing) can be found as separate documents:
+
+\begin{itemize}
+\item ATP (Acceptance Test Plan) \cite{atp}
+\item STP (System Test Plan) \cite{stp}
+\item ITP (Integration Test Plan) \cite{itp}
+\item UTP (Unit Test Plan) \cite{utp}
+\end{itemize}
+
+The ATP \cite{atp} has to be approved by the client, as it will define the terms on which the final product will be accepted. The results of the tests are presented to the PM and the QAM. The produced code and product documents must also be tested to assure that all the requirements are met. This can be found in Section \ref{tracing} and is documented in the appendix \ref{Sprints phase}.
+
+\section{Schedule}
+The schedules for all phases are given in the SPMP \cite{spmp}.
+
+\section{Resources}
+In this project we use the testing framework selenium. Selenium is a library that makes it easy to apply tests to the \applicationname{}, these tests can then easily be applied to multiple browsers running the \applicationname{}. Selenium is described in more detail in the SCMP\cite{scmp}
+
+\section{Project responsibilities}
+    Some of the roles defined in the SPMP have responsibilities related to verification and validation.
+    These responsibilities are:\\
+
+\textbf{Member of development team:}
+\begin{itemize}
+\item The work is adequately inspected.
+\end{itemize}
+
+\textbf{Quality Assurance Manager:}
+\begin{itemize}
+\item Assuring that the requirements of the documents are adhered to.
+\item Assuring the documents conform to the specified layout and contain the proper information.
+\item Lead the review sessions.
+\item Manage the test runs.
+\end{itemize}
+
+\textbf{Configuration Manager:}
+\begin{itemize}
+\item Tag documents that have been committed for review, and the approved versions if changes where needed.
+\end{itemize}
+
+\textbf{Scrum Master:}
+\begin{itemize}
+\item Ensure that the Scrum process is followed.
+\item Check that the backlog is updated and that stories are clear.
+\end{itemize}
+
+\textbf{Product Owner:}
+\begin{itemize}
+\item Check that the items in the product backlog are user centered rather than technical.
+\end{itemize}
+
+
+\section{Tools, techniques and methods}
+The tools that are used during the project are discussed in the SCMP \cite{scmp}.
