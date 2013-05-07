@@ -67,7 +67,7 @@
 \newcommand*{\ion}{Ion Barosan, MF 7.082}
 
 % custom name
-\newcommand*{\patrick}{Patrick Anderson, GEM-Z 4.147}
+\newcommand*{\patrick}{Patrick Anderson, GEM-Z 4.137}
 
 % --- Class structure: class extends the report class
 \LoadClass[11pt,a4paper,twoside]{report}
@@ -75,7 +75,8 @@
 % --- Class structure: loading packages
 \RequirePackage{amsmath, amsfonts, amssymb, array, a4wide,%
 		fancyhdr, graphicx, lineno, graphicx, epsfig, soul,%
-		color, wallpaper, pbox, tabularx, booktabs, longtable%
+		color, wallpaper, pbox, booktabs, tabularx, longtable,%
+		capt-of, ltxtable%
 	}
 \RequirePackage[square, numbers]{natbib}
 \RequirePackage[defaultlines=5,all]{nowidow}
