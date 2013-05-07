@@ -1,1 +1,0 @@
-../fingerpaint.cls
