@@ -12,10 +12,10 @@ geometry available. The number before a geometry is its ID.
    + 'BL' - move bottom wall to the left;
    + 'BR' - move bottom wall to the right.
  + 2 - circle
-   For the circle geometry, there are no actions. There are different types of
-   mixers however, so that can be indicated in the protocol instead. The 'step'
-   then is ignored.
-   TODO: list known mixers here
+   For the circle geometry, there are no actions. When this geometry is used,
+   the 'protocol' need not be set. However, the 'numsteps' needs to be set, as
+   it is important to know how many times the inside of the mixer should be
+   repeated.
  + 3 - Journal Bearing
    + 'ICW' - move inner circle clockwise;
    + 'ICC' - move inner circle counter clockwise;
