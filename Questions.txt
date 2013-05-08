@@ -5,12 +5,13 @@ the user specify this? I.e. the user can either:
   * specify values for the ratios;
   * choose from a pre-defined list of ratios.
   In general: do the geometries have parameters that the user can set?
-----> Mailed to client on 2-May.
+  Answer: ratio always the same, the user cannot set parameters.
 
 - Do the mixers have parameters themselves (such as the angle between the cross-section of
 a kenics) that can(not) be adjusted by the user?
 If so, what (data)types do these parameters have?
-----> Mailed to client on 2-May.
+  Answer: The parameters are fixed for the mixers, but may be different for different mixers.
+  Indeed, the parameters cannot be adjusted by the user.
 
 - For the sequence of (wall)movements, there could be an option added to "optimize" the
 sequence that the user has added. For instance, if the user has entered the sequence
@@ -18,12 +19,14 @@ sequence that the user has added. For instance, if the user has entered the sequ
 optimized to "1.0 lower wall to the right".
 Note that it is only possible to perform such an optimization if the sequence involves
 subsequent items with the same wall AND the same wall movement.
-----> Mailed to client on 2-May.
+ Answer: this is not relevant at all.
 
 - When we receive a response from the server, will we only receive the end result of
 applying the whole protocol (with the defined steps)? I.e., if the user defines that
 the protocol should be applied 5 times, we will only receive the protocol applied 5 times.
 Or do we receive the intermediate steps (after applying 1 time, again 1 time, etcetera)?
+ Answer: we can specify whether we would like to have the intermediate results as well. We will
+ always obtain the end result.
 
 - The response we receive from the server involves a list of datapoints, describing the
 mixing performance of the submitted information. It was already suggested that we could
@@ -32,4 +35,5 @@ logarithmic values from the server?
 
 - Should the app (potentially) support multiple languages. That is, should the interface
 be available in both Dutch and English for example?
-----> Mailed to client on 2-May.
+ Answer: Yes, English must be supported and Dutch is a could have. The manual that we have
+ to write for the customer has to be in English though.

@@ -1,28 +1,82 @@
-Input to server
+----------------------------- General information -----------------------------
+Currently, we have the following geometries and the following actions per
+geometry available. The number before a geometry is its ID.
+ + 0 - rectangle
+   + 'TL' - move top wall to the left;
+   + 'TR' - move top wall to the right;
+   + 'BL' - move bottom wall to the left;
+   + 'BR' - move bottom wall to the right.
+ + 1 - square
+   + 'TL' - move top wall to the left;
+   + 'TR' - move top wall to the right;
+   + 'BL' - move bottom wall to the left;
+   + 'BR' - move bottom wall to the right.
+ + 2 - circle
+   For the circle geometry, there are no actions. When this geometry is used,
+   the 'protocol' need not be set. However, the 'numsteps' needs to be set, as
+   it is important to know how many times the inside of the mixer should be
+   repeated.
+ + 3 - Journal Bearing
+   + 'ICW' - move inner circle clockwise;
+   + 'ICC' - move inner circle counter clockwise;
+   + 'OCW' - move outer circle clockwise;
+   + 'OCC' - move outer circle counter clockwise.
+
+
+------------------------------ Request to server ------------------------------
 {
-  "geometry" : Integer (0, 1, 2, 3),
+  // The geometry is an ID indicating which geometry is used.
+  "geometry" : Integer,
+
+  // The matrix that should be used: there can be multiple matrices per
+  // geometry. For example, for the circle you can have different shapes in the
+  // mixer and that shape can be built from different materials.
   "matrix" : Integer,
-  "vector" : [0.2156, 0, 1,...] (array of length vectorSize with floats between zero and one),
+
+  // A vector indicating the initial distribution of the fluids in the geometry
+  // indicated earlier. It depends on the geometry how the vector maps to actual
+  // positions in the "grid" that is laid over the geometry.
+  // This vector is an array with floats between 0 and 1.
+  "distribution" : Float[],
+
+  // The protocol defines what actions are performed. It depends on the
+  // geometry what actions are available. Each action can be performed for a
+  // certain amount of time, which is called the 'step' in below object.
   "protocol" : [
     {
-      "stepid": String (identifier for the action to perform, depends on mixer. Ex: "TL" for Top to the Left.),
+      "stepid": String,
       "step": Float
     },
     ... (possibly more of the above object here)
   ],
-  "numsteps": Integer (number of times protocol should be repeated),
-  "intermediateResults": Boolean (indicate if intermediate results should be sent back or not)
+
+  // Number of times protocol should be repeated.
+  "numsteps": Integer,
+
+  // Indicate if intermediate results should be sent back or not.
+  "intermediateResults": Boolean
 }
 
-Output from server
+
+---------------------------- Response from server -----------------------------
 {
-  "performance": [ (array with datapoints, the order is important)
-    Float,
-    Float,
+  // Array with datapoints. The step is the X-coordinate in a plot of the
+  // performance, the performance is the logarithm of the performance at that
+  // time: this can be used to generate a plot.
+  "performance": [
+    { step: Integer, performance: Float },
+    { step: Integer, performance: Float },
     ... (more Floats here)
   ],
+
+  // The result(s) of executing given actions/protocol in the given mixer with
+  // the given initial distribution, the given number of times. When asked for,
+  // (intermediateResults was true), then multiple results should be returned,
+  // otherwise, only the final result has to be returned. If there is only one
+  // result, then this result still has to be wrapped in a (singleton) array,
+  // for consistency.
   "results": [
     [ Float, Float, ... ] (result vector here),
     ... (possibly more arrays here)
   ]
-} 
+}
