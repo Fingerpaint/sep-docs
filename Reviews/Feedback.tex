@@ -1,9 +1,9 @@
-\input{../style.tex}
-\renewcommand{\pathtobase}[1]{../#1}
+\documentclass[%
+		pathtobase=..,%
+		titlefull={Review Document},%
+		titleabbr=Review,%
+		version=0.4]{fingerpaint}
 
-\renewcommand{\TitelFull}{Review document}
-\renewcommand{\TitelAbbr}{Review}
-\renewcommand{\Version}{0.4}
 \newcommand{\setVersion}[1]{\hline \multicolumn{3}{c}{Version #1}\\ \hline}
 \newcommand{\feedbackTableStart}[1]{
 \subsubsection*{#1}
@@ -15,9 +15,10 @@
     \hline
     \endfoot
 }
+
 \begin{document}
 
-\fingerpainttitlepage{}
+\maketitle{}
 
 \begin{abstract}
 This document contains a collection of all review documents for several documents of \projectname\ that have to be created and delivered for the Software Engineering Project (2IP35). The review document is based on the conventions listed in the Software Configuration Management Plan (SCMP) \cite{scmp}.
