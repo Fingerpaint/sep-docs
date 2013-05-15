@@ -1,0 +1,63 @@
+% The structure of this document is conform the latest version of the User Requirements Document.
+\chapter{SRD Feedback}
+\label{chap:srd-feedback}
+
+% Title page -------------------------------------------------------------------------------------------------------------------------------
+\section{Title page}
+
+No feedback has been given on this part of the document.
+
+% Abstract ---------------------------------------------------------------------------------------------------------------------------------
+\section{Abstract}
+
+No feedback has been given on this part of the document .
+
+% Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 1}
+
+No feedback has been given on this part of the document.
+
+
+% Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 2}
+
+No feedback has been given on this part of the document.
+
+% Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 3}
+
+\subsection{Internal reviews}
+
+\feedbackTableStart{\tessa}{0.0}
+SRQ5 \& SRQ12 & Question & Is this true? Isn't this unnecessary complicated? Just remove and add a new one would also do the trick, so I would say changing mixers is at most a \emph{should have}, \emph{not a must have}.\\
+3.1.6 & Question & `Such a value D can be entered in a text box near the drawing canvas.'  Why not something else like a spinner? I would say text box is inconvenient here, because of the error message when an invalid value is entered.\\
+SRQ23 & Other & `With four columns, to select an initial mixer, geometry and initial distribution.' Sounds kinda weird, since you have four columns for only three options, so it seems. There were two columns for selecting the initial distributions, right? So maybe that should be mentioned.
+Note: After reading the following requirements, this becomes clear. But maybe some extra text under the heading `Select a geometry, mixer and initial concentration distribution', like under some of the other headings, would be helpfull here. \\
+SRQ32 \& SRQ33 & Incorrect & Actually, predefined is \emph{could have} (see CPR14).\\
+Change the drawing Tool & Incorrect & The menu doesn't have two vertical panels. It has one horizontal panel with two cells. The left cell contains a vertical panel, with multiple cells, and each cell containing a button. The right cell of the horizontal panel contains the slider. \\
+SRQ34 & Layout & Faulty reference which screws up the layout of the document.\\
+SRQ38 & Layout & The point that should be on the end of this requirement is placed under the horizontal line, instead of after the requirement itself.\\
+Define the mixing protocol for specific geometries & Question/Incorrect & The protocol consists of movements of the geometry, right? That's what you say in the second alinea of this section. Not of movements of the mixer as stated in the first sentence. \\
+Define the mixing protocol for specific geometries & Incorrect & The circle geometry indeed doesn't support movement, but the mixer that is placed inside it does. Therefore you can specify how far you want to move the mixer inside the geometry, and this serves as the protocol. So the protocl isn't immediately defined after selecting a mixer.\\
+Define the mixing protocol for specific geometries & Question & Why is it stated for the Journal Bearing that movements are defined by swiping, and isn't it for the rectangular/square geometry? \\
+SRQ45 & Inconsistent & In the usecases there isn't an execute step button. Instead theres an 'intermediate steps' checkbox. If this checkbox is checked, selected steps are executed directly.
+Note: after further reading, it seems you have replaced this checkbox with the 'animate mixing' checkbox, which wasn't mentioned in the URD. I do think however that such an 'animate mixing' checkbox is a good idea.\\
+SRQ58 & Other & This isn't mentioned in the User requirements or in the use cases. It is nice, but maybe \emph{should have} is a bit overkill. \\
+Saving and exporting results & Incorrect & `The user can then name the file and browse to a desirable storage location. If during saving the specified name for saving/exporting is already in use, the application returns a name already in use message'.  Since exporting is done through the browser, the application doesn't do anything. You also can't say anything about being able to browse to a specific location, since this totally depends on your browsers download settings.\\
+SRQ84 & Incorrect & Same comment as above: depends on your browsers download settings.\\
+SRQ90 & Layout & Reference doesn't work.\\
+SRQ92 & Typo & tex\textbf{ttt}results has 3 t's here.\\
+Loading Results \& SRQ93 \& SRQ97 & Other & Loading multiple results sounds very awesome, but this wasn't mentioned anywhere in the URD (except for the performance graphs), and it also sounds pretty complicated. Therefore, I would say at least make it a \emph{could have} instead of a \emph{should have}. \\
+SRQ96 \& SRQ99 & Question & Aren't these requirements the same?\\
+Language selection & Other & A preferred language was never mentioned before (in the URD), so be careful with saying this `should be' there.\\
+SRQ109 & Missing & Also the geometry and mixer are given as input.\\
+SRQ110 \& SRQ112 & Question & What do you mean with matrix files? The vector which holds the concentration distribution?\\
+SRQ114 & Other & Sounds like all listed mixers are known for each geometry, which is not the case, and probably not what you meant. \\
+Define a mixing protocol & Other & I read all of this before, in the section `Define mixing protocol for specific geometries'. Also, this section only holds for rectangular and square geometries, which isn't mentioned here.\\
+\end{longtable}
+
+% Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 4}
+
+No feedback has been given on this part of the document.
+
