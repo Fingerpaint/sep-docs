@@ -174,3 +174,6 @@
 
 \pagestyle{followingpage}
 \AtBeginDocument{\thispagestyle{firstpage}}
+
+% Command to start a paragraph
+\newcommand*{\fpstartparagraph}{\vspace*{1em}\noindent{}\hspace*{-4pt}}
