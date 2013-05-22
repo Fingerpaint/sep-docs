@@ -76,7 +76,7 @@
 \RequirePackage{amsmath, amsfonts, amssymb, array, a4wide,%
 		fancyhdr, graphicx, lineno, graphicx, epsfig, soul,%
 		color, wallpaper, pbox, booktabs, tabularx, longtable,%
-		capt-of, ltxtable%
+		capt-of, ltxtable, ifthen%
 	}
 \RequirePackage[square, numbers]{natbib}
 \RequirePackage[defaultlines=5,all]{nowidow}
@@ -174,3 +174,6 @@
 
 \pagestyle{followingpage}
 \AtBeginDocument{\thispagestyle{firstpage}}
+
+% Command to start a paragraph
+\newcommand*{\fpstartparagraph}{\vspace*{1em}\noindent{}\hspace*{-4pt}}

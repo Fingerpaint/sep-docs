@@ -1,6 +1,6 @@
 \chapter{Configuration Control}
 \label{chap:configurationcontrol}
-This chapter describes how we handle different versions of CIs and where they are stored: we introduce the concept of libraries. Moreover, we will describe how different libraries interact and what the role of the CM is in the management of these libraries.
+This chapter describes how we handle different versions of CIs and where they are stored: we introduce the concept of libraries. Moreover, we describe how different libraries interact and what the role of the CM is in the management of these libraries.
 
 \section{Library Control}
 \label{sec:configcontrol-library}
@@ -8,12 +8,12 @@ All CIs that are created for the \projectname{} project have to be stored somewh
 
 \subsection{Development Library}
 \label{subsec:configcontrol-library-dev}
-The development library is the library where all CIs are stored initially. Documents in this library are generally under construction and can thus change a lot. The development library will store \emph{all} versions of a CI that are stored in it and thus, every modification to a CI can be made undone at any time.
+The development library is the library where all CIs are stored initially. Documents in this library are generally under construction and can thus change a lot. From the development library, \emph{all} versions of a CI that are stored in it can be retrieved and thus, every modification to a CI can be undone at any time.
 
-In practice, the development library is split up in multiple Git repositories (Git is discussed in more detail in chapter \ref{chap:tools}). We have the following repositories:
+In practice, the development library is split up in multiple Git repositories. Git is discussed in more detail in chapter \ref{chap:tools}. We have the following repositories:
 \begin{itemize}
 	\item \texttt{project-code}: This repository contains all code that makes up the \applicationname{}.
-	\item \texttt{project-docs}: This repository contains all documentation that is potentially relevant for the client. That is, all CIs are stored here that are related to the \applicationname{} and \emph{not} to the SEP that led to the creation of that application.
+	\item \texttt{project-docs}: This repository contains all documentation that is potentially relevant for the client. That is, all CIs that are related to the \applicationname{} and \emph{not} to the SEP that led to the creation of that application are stored here.
 	\item \texttt{sep-docs}: This repository contains all documentation that is strictly relevant to SEP. That includes the roles that project members fulfil,  testing plans, this CI and the SQAP for example.
 \end{itemize}
 The idea of this split is that we have the possibility to hand over the software to the client by simply providing the first two repositories in the above list. These repositories will then be ``clean'' in the sense that they only contain the code and its documentation, nothing that is purely SEP-related.
@@ -21,7 +21,7 @@ The idea of this split is that we have the possibility to hand over the software
 All repositories are stored on and accessible through GitHub (discussed in section \ref{sec:configcontrol-media} and chapter \ref{chap:tools}).
 
 \subsection{Master Library}
-In the master library, CIs that are externally approved are stored. It may of course be the case that a CI is stored in the development library, but not in the master library, when there is no externally approved version (yet). In practice, this library is a folder on the website of the \applicationname{}. Contrary to the development library, that only contains code and \texttt{.tex}-files that can be compiled to PDF files not present in the library, the master library only contains code and PDF files that are the result of running \LaTeX{} on files from the development library.
+In the master library, CIs that are externally approved are stored. It may of course be the case that a CI is stored in the development library, but not in the master library, when there is no externally approved version (yet). In practice, this library is a folder on the website of the \applicationname{}\footnote{\url{http://fingerpaint.github.io/}}. Contrary to the development library, that only contains code and \texttt{.tex}-files that can be compiled to PDF files not present in the library, the master library only contains code and PDF files that are the result of running \LaTeX{} on files from the development library.
 
 The master library also contains a page that presents an overview of all documentation-related CIs stored in it. Furthermore, there will be a link to the development library \emph{at that version}, so that the source files of CIs in the master library are easily accessible as well. Code is accessible through a link to the development version.
 
@@ -65,10 +65,10 @@ CIs may only be added to this directory after they have been externally reviewed
 \label{sec:configcontrol-media}
 The libraries mentioned in section \ref{sec:configcontrol-library} are, as also mentioned there, stored on GitHub. GitHub is a commercial service that can be used freely as long as the repositories hosted by them are publicly accessible. They have offline encrypted backups of all repositories, that can be used in case of complete failure. Also, because of the distributed nature of Git, every project member has a local copy of every library on his/her computer.
 
-Refer to chapter \ref{chap:tools} for more information about GitHub and how the libraries can accessed through it.
+Refer to chapter \ref{chap:tools} for more information about GitHub and how the libraries can be accessed through it.
 
 \section{Change Control}
-In this section, we discuss who can change what in the various libraries.
+In this section, we discuss who can change the contents of the various libraries.
 
 \subsection{Development Library}
 Every group member is allowed to change any CI in the development library. This means that any group member can create new files, edit existing files and delete files from the development library. There are two reasons why we allow this: first of all, the size of this project is relatively small. The entire group is working in the same room, so consultation can be done efficiently. Secondly, when a project member makes an error, this can be restored at any time because we use Git. Git also handles conflicts that may occur when two team members change the same file.

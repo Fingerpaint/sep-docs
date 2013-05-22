@@ -1,0 +1,114 @@
+% The structure of this document is conform the latest version of the User Requirements Document.
+\chapter{SRD Feedback}
+\label{chap:srd-feedback}
+
+% Title page -------------------------------------------------------------------------------------------------------------------------------
+\section{Title page}
+
+No feedback has been given on this part of the document.
+
+% Abstract ---------------------------------------------------------------------------------------------------------------------------------
+\section{Abstract}
+
+\feedbackTableStart{\hugo}{0.0}
+Abstract & Missing & One of which assignments? Now it feels like it is incomplete. Saying its for the SEP course is enough in my opinion.\\
+Document Status Sheet & Incorrect & It is version 0.0 even though it has a previous issue. I would say remove the template from the history.\\
+\end{longtable}
+
+% Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 1}
+
+\feedbackTableStart{\hugo}{0.0}
+Purpose & Structure & The last sentence seems out of place for the section "Purpose".\\
+Scope & Incorrect & "can be stored and analysed by the user.." Analysing is not part of the functionality provided by the application, therefore I wouldn't mention it in the scope of our project.\\
+\end{longtable}
+
+
+% Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 2}
+
+\feedbackTableStart{\hugo}{0.0}
+2.2 & Other & Last 2 sentences. I would say smth like 'FINGERPAINT is no longer responsible for the application after the final deliverable produced in the SEP course'. It's more to the point than saying 'the client takes over these responsibilities and can make further changes'.\\
+2.3 & Other & I would replace 'playing' with Interacting. Playing is more "speeltje"-like.\\
+2.3 & Other & "This leads to a better understanding of the user" You don't understand the user, you understand the mixing process.\\
+2.3 & Other & last sentence. I would remove "recently thought of" from this sentence.\\
+2.4 & Typo & It should be 'version' instead of 'versions'. You refer to 1 version, and then add 'and above'. This is also consistent with section 3.2.6 \\
+2.4 & Missing & "We will test the application on the following screen resolutions:". Ok, we will test it, but we will also make it work for these resolutions right? Seems trivial but it's not mentioned anywhere.\\
+2.5 & Typo & Remove 'on itself'.\\
+2.6 & Incorrect & "We assume that the server can compute the displacement of fluids reasonably fast, so the visualisation of results can be handled quickly." Visualisation is a separate process, so its not "so" because they're not related. It would be "so the mixing run can be executed quickly". But the server speed does not influence the visualisation speed.\\
+2.7 & Typo & "A graphical representation of these relation between those tiers and channels" $->$ "A graphical representation of the relation between tiers and channels".\\
+2.7.1 & Missing & "GUI" isn't introduced as an abbreviation anywhere.\\
+2.7.2 & Missing & "system administrator" isn't introduced anywhere. Also we don't ever talk about how the application will be distributed or how it will be maintained in the future. It is not in the contract nor in the scope of our project, thus I would not talk about it.\\
+2.7.4 & Typo & "are ran"  -$>$ run.\\
+\end{longtable}
+
+% Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 3}
+
+\subsection{Internal reviews}
+
+\feedbackTableStart{\tessa}{0.0}
+SRQ5 \& SRQ12 & Question & Is this true? Isn't this unnecessary complicated? Just remove and add a new one would also do the trick, so I would say changing mixers is at most a \emph{should have}, \emph{not a must have}.\\
+3.1.6 & Question & `Such a value D can be entered in a text box near the drawing canvas.'  Why not something else like a spinner? I would say text box is inconvenient here, because of the error message when an invalid value is entered.\\
+SRQ23 & Other & `With four columns, to select an initial mixer, geometry and initial distribution.' Sounds kinda weird, since you have four columns for only three options, so it seems. There were two columns for selecting the initial distributions, right? So maybe that should be mentioned.
+Note: After reading the following requirements, this becomes clear. But maybe some extra text under the heading `Select a geometry, mixer and initial concentration distribution', like under some of the other headings, would be helpfull here. \\
+SRQ32 \& SRQ33 & Incorrect & Actually, predefined is \emph{could have} (see CPR14).\\
+Change the drawing Tool & Incorrect & The menu doesn't have two vertical panels. It has one horizontal panel with two cells. The left cell contains a vertical panel, with multiple cells, and each cell containing a button. The right cell of the horizontal panel contains the slider. \\
+SRQ34 & Layout & Faulty reference which screws up the layout of the document.\\
+SRQ38 & Layout & The point that should be on the end of this requirement is placed under the horizontal line, instead of after the requirement itself.\\
+Define the mixing protocol for specific geometries & Question/Incorrect & The protocol consists of movements of the geometry, right? That's what you say in the second alinea of this section. Not of movements of the mixer as stated in the first sentence. \\
+Define the mixing protocol for specific geometries & Incorrect & The circle geometry indeed doesn't support movement, but the mixer that is placed inside it does. Therefore you can specify how far you want to move the mixer inside the geometry, and this serves as the protocol. So the protocl isn't immediately defined after selecting a mixer.\\
+Define the mixing protocol for specific geometries & Question & Why is it stated for the Journal Bearing that movements are defined by swiping, and isn't it for the rectangular/square geometry? \\
+SRQ45 & Inconsistent & In the usecases there isn't an execute step button. Instead theres an 'intermediate steps' checkbox. If this checkbox is checked, selected steps are executed directly.
+Note: after further reading, it seems you have replaced this checkbox with the 'animate mixing' checkbox, which wasn't mentioned in the URD. I do think however that such an 'animate mixing' checkbox is a good idea.\\
+SRQ58 & Other & This isn't mentioned in the User requirements or in the use cases. It is nice, but maybe \emph{should have} is a bit overkill. \\
+Saving and exporting results & Incorrect & `The user can then name the file and browse to a desirable storage location. If during saving the specified name for saving/exporting is already in use, the application returns a name already in use message'.  Since exporting is done through the browser, the application doesn't do anything. You also can't say anything about being able to browse to a specific location, since this totally depends on your browsers download settings.\\
+SRQ84 & Incorrect & Same comment as above: depends on your browsers download settings.\\
+SRQ90 & Layout & Reference doesn't work.\\
+SRQ92 & Typo & tex\textbf{ttt}results has 3 t's here.\\
+Loading Results \& SRQ93 \& SRQ97 & Other & Loading multiple results sounds very awesome, but this wasn't mentioned anywhere in the URD (except for the performance graphs), and it also sounds pretty complicated. Therefore, I would say at least make it a \emph{could have} instead of a \emph{should have}. \\
+SRQ96 \& SRQ99 & Question & Aren't these requirements the same?\\
+Language selection & Other & A preferred language was never mentioned before (in the URD), so be careful with saying this `should be' there.\\
+SRQ109 & Missing & Also the geometry and mixer are given as input.\\
+SRQ110 \& SRQ112 & Question & What do you mean with matrix files? The vector which holds the concentration distribution?\\
+SRQ114 & Other & Sounds like all listed mixers are known for each geometry, which is not the case, and probably not what you meant. \\
+Define a mixing protocol & Other & I read all of this before, in the section `Define mixing protocol for specific geometries'. Also, this section only holds for rectangular and square geometries, which isn't mentioned here.\\
+\end{longtable}
+
+\feedbackTableStart{\hugo}{0.0}
+3.1.4 & Question & SRQ11 \& 12 \& 13 - Not all application services can add new mixers. Right now it looks like very user can define/change/remove mixers. I think we only want to give mr. Anderson the access rights to add/change/remove mixers from the list.\\
+3.1.6 & Incorrect & "the user is prompted to enter a different value." A prompt would be a bad solution. I think the way the spinner is currently implemented the number is rounded towards the closest valid value.\\
+3.1.6 & Structure & SRQ20 \& 22 contain future references (ref. to parts the reader hasn't read yet)\\
+3.1.6 & Typo & "concentration distribution is.."  No capital letter at the start of the sentence.\\
+3.1.6 & Structure & "In case of the second and third option" The text never talks about "options", and suddenly they're referenced to as the 2nd and 3rd option. Same for "3rd column". (Just read the SRQ's below; Only after reading them it is clear what the text above it talks about).\\
+3.1.6 & Inconsistent & Reverse movements are called (for example) "-B". But 'normal' movements are not "+B". I would include the "+" to be  more explicit.\\
+3.1.6 & Inconsistent & A positive T movement is a movement to the right. But a positive B movement is a movement to the left. I suggest both should be to the right, and the minus version both to the left.\\
+3.1.6 & Missing & "JSON" isn't introduced as an abbreviation anywhere\\
+3.1.6 & Other & "un-JSON's" is a strange verb, especially when JSON is a noun.\\
+3.1.7 & Other & Very strange, and lost, sentence in between SRQ46 and 47.\\
+3.1.7 & Other & SRQ50 \& 51 - "spawns". Spawns is kind of a weird word in my opinion.\\
+3.1.7 & Missing & SRQ61 - Opening quote missing.\\
+3.1.7 & Inconsistent & See above. The quotes around "load buttons" is missing for other SRQ's\\
+3.1.7 & Other & "In the results window a save button"  What is the result window? This window is never introduced.\\
+3.1.7 & Other & "The button changes to load selected" It is implicit, but basically every menu has a Back/Cancel button. If the name of the button changes when you select something, you first have to un-select everything before you can go back. I think this isn't what we want (a cancel button should always be available). I think it's a bad idea to give 1 button 2 functionalities. (even though you can also cancel by clicking outside the menu).\\
+3.1.7 & Other & SRQ83 and 84 have random capitals letter T half-way the sentence.\\
+3.1.7 & Incorrect & SRQ85 - Only if 83\&84 have non-empty fields.\\
+3.1.7 & Other & SRQ86 - It's not clear. Should be "Cancel The 'load file menu' ". Atm it looks like cancelling the loading while its loading. Write it similar to 98.\\
+3.1.7 & Other & SRQ89 - Also for 87 i assume.\\
+3.1.7 & Other & SRQ90 - Reference to SRQ 87 is wrong. \\
+3.1.7 & Other & SRQ91 - Analogue to comment about 86.\\
+3.1.7 & Other & SRQ93 - TexTTT, 3 T's is not how you spell text\\
+3.1.7 & Question & Language select - I thought we would use a togglebutton? It's unlikely we implement more languages than english/dutch.\\
+3.1.8 & Other & Again - I advise to not use 1 button for 2 functionalities.\\
+3.1.8 & Inconsistent & SRQ 106 - "visual information" => performance graph.\\
+3.1.9 & Missing & "The server executes the mixing using" --$>$ "Mixing run".\\
+3.1.9 & Inconsistent & +T and +B should both be to the right/left, not opposing directions.\\
+3.2.1 & Incorrect & SRQ 117 118 119 - should be "ON AVERAGE ... ".\\
+\end{longtable}
+
+
+% Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 4}
+
+No feedback has been given on this part of the document.
+
