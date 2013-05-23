@@ -10,14 +10,28 @@ No feedback has been given on this part of the document.
 % Abstract ---------------------------------------------------------------------------------------------------------------------------------
 \section{Abstract}
 
+\subsection{Internal reviews}
 \feedbackTableStart{\hugo}{0.0}
 Abstract & Missing & One of which assignments? Now it feels like it is incomplete. Saying its for the SEP course is enough in my opinion.\\
-Document Status Sheet & Incorrect & It is version 0.0 even though it has a previous issue. I would say remove the template from the history.\\
+\end{longtable}
+
+% Document Status Sheet -------------------------------------------------------------------------------------------------------------------------------
+\section{Document Status Sheet}
+
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+Change Records & Inconsistent & The change record is non-empty, but the version is still 0.0, which is inconsistent.\\
+\end{longtable}
+
+\subsection{Internal reviews}
+\feedbackTableStart{\hugo}{0.0}
+Status Overview & Incorrect & It is version 0.0 even though it has a previous issue. I would say remove the template from the history.\\
 \end{longtable}
 
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
 
+\subsection{Internal reviews}
 \feedbackTableStart{\hugo}{0.0}
 Purpose & Structure & The last sentence seems out of place for the section "Purpose".\\
 Scope & Incorrect & "can be stored and analysed by the user.." Analysing is not part of the functionality provided by the application, therefore I wouldn't mention it in the scope of our project.\\
@@ -27,6 +41,16 @@ Scope & Incorrect & "can be stored and analysed by the user.." Analysing is not 
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 2}
 
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+2.4 & Question & Do you really want to support all those screen sizes?\\
+2.4 & Question & Will you perhaps do something dynamic?\\
+2.5 & Structure/Layout & `That is, the correct (correct as in: how the HTML standard prescribes it) rendering of the web page is (should be) done by the browser.' -- Rewrite this to something less complicated please. Or chop it up in pieces. \\
+2.7 & Question & `There are an arbitrary number of Client tiers.' -- Not sure if "tiers" is the right word here. Is the tier not something like a layer, rather than a possible phone. Are not all these devices in the same tier? \\
+2.7.2 & Question & `(and executing those simulations in the first place)' -- Isn't this actually done by the fortran part, rather than your server part?\\
+\end{longtable}
+
+\subsection{Internal reviews}
 \feedbackTableStart{\hugo}{0.0}
 2.2 & Other & Last 2 sentences. I would say smth like 'FINGERPAINT is no longer responsible for the application after the final deliverable produced in the SEP course'. It's more to the point than saying 'the client takes over these responsibilities and can make further changes'.\\
 2.3 & Other & I would replace 'playing' with Interacting. Playing is more "speeltje"-like.\\
@@ -45,8 +69,23 @@ Scope & Incorrect & "can be stored and analysed by the user.." Analysing is not 
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 3}
 
-\subsection{Internal reviews}
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+3 & Typo & `A priority higher then' -- Should be `higher than'.\\
+3 & Question & `Note that as Fingerpaint application is developed using GWT, some of the software requirements listed in this chapter are described in terms of specific GWT widgets or panels.' -- Didn't you say somewhere in the intro that this document was about How and not What. This sounds like What to me. \\
+SQR5 & Structure/Layout & `The Application Service must allow for removing existing mixers to the Application Persistence.' -- That sentence doesnt make sense in English. \\
+3.1.6 & Other & A bit strange way to start this paragraph with "A duration is bla". Maybe introduce what we are actually talking about first "Such a value D can be entered in a spinner". \\
+3.1.6 & Question & Isn't this again a case of What instead of How? It seems you focus on the spinner a LOT since you already implemented it. This part is not more special than the rest :) \\
+SRQ17 & Other & `This value must be an integer number, and must be at least 1.' -- 2 requirements in 1 requirement? Leave out this detail or make it a seperate one. \\
+3.1.6 & Other & `The user can select a rectangular mixer geometry.' -- Again a strange way to start off. Once again a LOT of detail on the cell browser. This might be too much detail already, but I'm not sure if it's that bad... \\
+SRQ23 - SRQ33 & Question & Should you already say which column etc. things are going to be? Perhaps refer to it more as layers/steps, rather than this specific solution? Once again, I'll leave this in your hands, but these are my thoughts. \\
+3.1.8 & Other & `The user is able to visualise his mixing protocol, as well as able to save and export these results' -- Ambigious, what are the "results" you speak of? \\
+SRQ108 & Typo & `to the Fortran Module, that the Fotran Module can use for simulations.' -- "which" instead of "that" I think. Sounds very Dutch. \\
+3.2.3 - 3.2.5 & Question & TODO or will these just be empty? If they will not get content, perhaps remove them. \\
+3.2.7 - 3.2.12 & Question & TODO or will these just be empty? If they will not get content, perhaps remove them. \\
+\end{longtable}
 
+\subsection{Internal reviews}
 \feedbackTableStart{\tessa}{0.0}
 SRQ5 \& SRQ12 & Question & Is this true? Isn't this unnecessary complicated? Just remove and add a new one would also do the trick, so I would say changing mixers is at most a \emph{should have}, \emph{not a must have}.\\
 3.1.6 & Question & `Such a value D can be entered in a text box near the drawing canvas.'  Why not something else like a spinner? I would say text box is inconvenient here, because of the error message when an invalid value is entered.\\
