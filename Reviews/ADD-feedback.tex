@@ -1,3 +1,4 @@
+% Categories: Question, Typo, Incorrect, Missing, Structure/layout, Inconsistent, Other
 % The structure of this document is conform the latest version of the Software Configuration Management Plan.
 \chapter{ADD Feedback}
 \label{chap:add-feedback}
@@ -22,14 +23,20 @@ No feedback has been given on this part of the document.
 \subsection{Internal reviews}
 \feedbackTableStart{\femke}{0.0}
 1 & Missing & Every chapter with (sub)sections should contain a small introduction before the first (sub)section. \\
-1.1 & Typo & In the sentence ``it describes the dependencies on other components", it should be ``with"  or ``to" instead of ``on". \\
-1.2 & Typo & In ``The application serves as an education tool", it should be ``an educational tool". \\
-1.3 & Typo & ``and in perticular for students" should be ``particular". \\
-1.3 & Typo & The name of the section contains a typo, because it says ``abbrviations" and it should be ``abbreviations". \\
-1.3.1 & Missing & Now, there is one definition in the list and a todo to add more if necessary. Perhaps you can include definitions for the following items as well: Fortran, mixing step, meta-parameter and GWT. \\
-1.3.2 & Missing & The abbreviation ``ADD" is mentioned in this chapter, but it is not included in the list of abbreviations. \\
+1.1 & Typo & In the sentence ``it describes the dependencies on other components'', it should be ``with''  or ``to'' instead of ``on''. \\
+1.2 & Typo & In ``The application serves as an education tool'', it should be ``an educational tool''. \\
+1.3 & Typo & ``and in perticular for students'' should be ``particular''. \\
+1.3 & Typo & The name of the section contains a typo, because it says ``abbrviations'' and it should be ``abbreviations''. \\
+1.3.1 & Missing & Now, there is one definition in the list and a todo to add more if necessary. Perhaps you can include definitions for the following items as well: Fortran, mixing step, meta-parameter, GWT and subordinates. \\
+1.3.2 & Missing & The abbreviation ``ADD'' is mentioned in this chapter, but it is not included in the list of abbreviations. \\
 1.3.2 & Incorrect & 2IP35 is a Software Engineering Project, not a Course. \\
-1.5 & Style & Sometimes you are very brief in this section, such as ``Chapter 2 gives a system overview", whereas sometimes you explicitly say in which sections (``In section 4.2") something is covered. Perhaps you can include some more information on chapters 2, 3 and 4. \\
+1.5 & Style & Sometimes you are very brief in this section, such as ``Chapter 2 gives a system overview'', whereas sometimes you explicitly say in which sections (``In section 4.2'') something is covered. Perhaps you can include some more information on chapters 2, 3 and 4. \\
+\end{longtable}
+
+\feedbackTableStart{\thom{}}{0.0}
+1.3.2 & Structure & The abbreviations should be sorted alphabetically, I think. \\
+1.3.2 & Missing & The abbreviation ``ADD'' is missing.\\
+1.5 & Typo & In the sentence ``...of the system, and an overview...'' there should not be a comma. \\
 \end{longtable}
 
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
@@ -58,9 +65,9 @@ No feedback has been given on this part of the document.
 3.1 & Question & Is it really necessary to make a separate section? You're actually only discussing one item in this chapter. \\
 3 & Missing & Every chapter with (sub)sections should contain a small introduction before the first (sub)section. That is, if you decide to keep the section for this single item. \\
 3.1 & Layout & You provide some sort of list/enumeration here, so perhaps you can use a bullet list. \\
-3.1 & Typo & In ``to be done by Fingerpaint applicationare" a space is missing after ``application". \\
-3.1 & Typo & ``fortran" should be written with a capital letter. The same holds for the ``fortran" in the title of this section (if you decide to keep the section). \\
-3.1 & Typo & ``Communications" sounds a bit odd, I think you mean ``Communication" here. \\
+3.1 & Typo & In ``to be done by Fingerpaint applicationare'' a space is missing after ``application''. \\
+3.1 & Typo & ``fortran'' should be written with a capital letter. The same holds for the ``fortran'' in the title of this section (if you decide to keep the section). \\
+3.1 & Typo & ``Communications'' sounds a bit odd, I think you mean ``Communication'' here. \\
 3.1 & Incorrect & The geometry-parameter is not a number, but a String in our current program. \\
 3.1 & Incorrect & The matrix/mixer is also a String-parameter. \\
 \end{longtable}
@@ -74,13 +81,13 @@ No feedback has been given on this part of the document.
 \subsection{Internal reviews}
 \feedbackTableStart{\femke}{0.0}
 4.2 & Question & Maybe you can refer specifically to figure 2.1 of the SRD here, so it is more clear that you're talking about the same components here. \\
-4.2.1 & Question & What does ``Layout" and ``Application State" mean here? They are not mentioned in figure 2.1 of the SRD, so maybe you can explain what they're about. \\
+4.2.1 & Question & What does ``Layout'' and ``Application State'' mean here? They are not mentioned in figure 2.1 of the SRD, so maybe you can explain what they're about. \\
 4.2.1 & Question & In the Client-component, you say that the Client Browser is responsible for updating the Application Persistence. Do you mean Client Persistence here? And what is exactly updated in this case? \\
-4.2.2 & Typo & A space is missing behind ``Fingerpaint" in the first sentence. This causes the dot (.) to appear above the first letter of the next sentence. \\
-4.2.2 & Question & What does the `depends on'-relation mean? Does it mean that, for instance the Simulator Service communicates with the Fortran Module or vice versa? Perhaps you can explain some more about this relation, so the ``direction" of the relation is also clear. Explaining the bidirectional arrows might also help for understanding the figure better. \\
+4.2.2 & Typo & A space is missing behind ``Fingerpaint'' in the first sentence. This causes the dot (.) to appear above the first letter of the next sentence. \\
+4.2.2 & Question & What does the `depends on'-relation mean? Does it mean that, for instance the Simulator Service communicates with the Fortran Module or vice versa? Perhaps you can explain some more about this relation, so the ``direction'' of the relation is also clear. Explaining the bidirectional arrows might also help for understanding the figure better. \\
 Figure 4.1 & Incorrect & Figure 2.1 in the SRD has bidirectional arrows for all communication lines, for example the communication line between the Simulator Service and the Fortran Module. I think there should be bidirectional arrows in figure 4.1 as well for all these cases. \\
 Figure 4.1 & Incorrect & In figure 4.1 you say that the Application Service depends on the Simulator Service, but that seems quite strange, as the Client Browser is the one who communicates to the Simulator Service (see figure 2.1 SRD).  \\
-Figure 4.1 & Question & Why does the ``Update Application Persistence" depend on the HTTP server? If the Application Persistence is actually the Client Persistence, is there any need to communicate to the HTTP server at all? If this is not the case, could you please explain the purpose of the Application Persistence better? \\
+Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend on the HTTP server? If the Application Persistence is actually the Client Persistence, is there any need to communicate to the HTTP server at all? If this is not the case, could you please explain the purpose of the Application Persistence better? \\
 
 \end{longtable}
 
@@ -93,7 +100,7 @@ No feedback has been given on this part of the document.
 
 %\subsection{Internal reviews}
 %\feedbackTableStart{\femke}{0.0}
-%5 & Question & In the template, it is mentioned that changes in the development library will not be recorded. However, in your table an entry for ``current" is created? \\
+%5 & Question & In the template, it is mentioned that changes in the development library will not be recorded. However, in your table an entry for ``current'' is created? \\
 %\end{longtable}
 
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
