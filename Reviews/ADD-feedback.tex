@@ -41,18 +41,14 @@ No feedback has been given on this part of the document.
 
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 2}
-No feedback has been given on this part of the document.
 %\subsection{External reviews}
 %\feedbackTableStart{Junior Management}{0.0}
 %\end{longtable}
 
-%\subsection{Internal reviews}
-%\feedbackTableStart{\femke}{0.0}
-%2.1 & Missing	 & 	Here, you refer to the SPMP, but there is no reference to this external document. \\
-%2.3	 & 	Missing	 & Again, you mention the SPMP, but there is no reference. \\
-%2.5	 & 	Question & Is it an idea to make a small figure that summarizes what you say in this paragraph, so people can immediately say what the required structure of the documents is? \\
-%2.5	 & Missing & The template describes that all documents must also adhere to the requirements in SQAP and SVVP. \\
-%\end{longtable}
+\subsection{Internal reviews}
+\feedbackTableStart{\thom{}}{0.0}
+2 & Structure & The abbreviations URD and SRD can be used here without writing it all out, especially since these abbreviations are named in the list of abbreviations. When you do want to keep the full titles, please emphasise them. \\
+\end{longtable}
 
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 3}
@@ -88,20 +84,23 @@ No feedback has been given on this part of the document.
 Figure 4.1 & Incorrect & Figure 2.1 in the SRD has bidirectional arrows for all communication lines, for example the communication line between the Simulator Service and the Fortran Module. I think there should be bidirectional arrows in figure 4.1 as well for all these cases. \\
 Figure 4.1 & Incorrect & In figure 4.1 you say that the Application Service depends on the Simulator Service, but that seems quite strange, as the Client Browser is the one who communicates to the Simulator Service (see figure 2.1 SRD).  \\
 Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend on the HTTP server? If the Application Persistence is actually the Client Persistence, is there any need to communicate to the HTTP server at all? If this is not the case, could you please explain the purpose of the Application Persistence better? \\
+\end{longtable}
 
+\feedbackTableStart{\thom{}}{0.0}
+4.1 & Missing & When mentioning the use of GWT, maybe refer to the SCMP (chapter 6)? Maybe not, though, because the SCMP is a project document, whereas the ADD is a product document. \\
+4.2.2 & Typo & In the first sentence, I think there should be a \texttt{\{\}} behind the \LaTeX{} command for the project name, because there is something weird happening now. \\
 \end{longtable}
 
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
-No feedback has been given on this part of the document.
 %\subsection{External reviews}
 %\feedbackTableStart{Junior Management}{0.0}
 %\end{longtable}
 
-%\subsection{Internal reviews}
-%\feedbackTableStart{\femke}{0.0}
-%5 & Question & In the template, it is mentioned that changes in the development library will not be recorded. However, in your table an entry for ``current'' is created? \\
-%\end{longtable}
+\subsection{Internal reviews}
+\feedbackTableStart{\thom{}}{0.0}
+5.2.4 & Layout & Under ``Purpose'', I think the layout of the block with SRQs is not correct. It starts with an indentation now, but that should not be the case. Use \texttt{\textbackslash{}fpstartparagraph}. \\
+\end{longtable}
 
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 6}
