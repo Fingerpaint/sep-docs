@@ -126,6 +126,29 @@ SRQ114 & Other & Sounds like all listed mixers are known for each geometry, whic
 Define a mixing protocol & Other & I read all of this before, in the section `Define mixing protocol for specific geometries'. Also, this section only holds for rectangular and square geometries, which isn't mentioned here.\\
 \end{longtable}
 
+\feedbackTableStart{\femke}{0.1}
+3.1 & Style & A general remark: I noticed that sometimes, you talk about a ``concentration vector'' and sometimes about a ``concentration distribution''. For consistency, I would say to stick to either one of them, because the subsubsections always refer to ``distribution''. \\
+3.1.6 & Incorrect & In ``Defining an initial concentration distribution'', you say ``He can draw ... or drawing the mouse'', but I think you mean ``drawing with the mouse'' here. \\
+3.1.6 & Style & In ``Defining an initial concentration distribution'', I would change the last sentence to ``In addition, the user can reset the current distribution to a completely white distribution.'' \\
+3.1.6 & Missing & In ``Define mixing protocol for specific geometries'', you say ``A step of the mixing protocol has a certain duration (the step size)''. In the next sentence, you mention a \emph{D}, but it has not been introduced yet. Perhaps you can change ``the step size'' to ``the step size, \emph{D}. \\
+3.1.6 & Incorrect & The circular geometry doesn't support any operations to be executed directly on the circle. For the circle, only the initial concentration distribution can be set. \\
+SRQ42 & Typo & In the sentence, ``If a geometry, a mixer, an initial distribution and a protocol is present'' the ``is'' should be ``are''. \\
+3.1.6 & Missing & Under ``Execute mixing runs'', a reference is made to an SRQ, but the reference is unknown. \\
+3.1.7 & Style & I would change the subsubsection ``Mixing runs'' to ``Save and remove mixing runs''. \\
+SRQ67 & Typo & ``If at leas one item'' should of course be ``If at least one item''. \\
+3.1.7 & Typo & In the ``Exporting results'' subsubsection, ``a image'' should be ``an image''. \\
+3.1.7 & Question & In ``exporting results'', references are made to SRQ39, but this requirement is not about executing a mixing simulation. Do you mean SRQ42 here? \\
+SRQ75 & Typo & ``the result ... are actually loaded'' should be ``is loaded''. \\
+SRQ75 & Question & Is this indeed true? I thought you just needed to tap on a distribution and then it is loaded. It is not specified in the use cases of the URD that a confirmation is shown. \\
+SRQ77 & Typo & In ``should be persent'' it should be ``present''. \\
+3.1.7 & Question & In the subsubsection ``Language selection'', you say that the standard language is English. Is it an idea to make a reference to the requirements regarding the English and Dutch version of the application (from sectioon 3.2.2)? \\
+3.1.7 & Typo & In the subsubsection ``Requirements regarding the presentation of results'', in the second sentence ``additon'' should be ``addition''. \\
+3.1.8 & Missing & A few requirements are listed at the beginning of the subsubsection ``Simulator Service Communication'', but they are not explained. \\
+SRQ84 & Typo & In ``to the Application service throught'', ``throught'' should be ''through''. \\
+SRQ86 & Inconsistent & In SRQ85, ``Fortran'' is written with a capital letter and has a special font, but in this requirement is written with a small letter and it has no special font. \\
+SRQ88 & Inconsistent & Again, ``Fortran'' has no special font, but in SRQ85 it does. The same holds for the introduction in ``Information exchange'' and the requirements SRQ89, SRQ90 and SRQ91. \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 3.1.4 & Question & SRQ11 \& 12 \& 13 - Not all application services can add new mixers. Right now it looks like very user can define/change/remove mixers. I think we only want to give mr. Anderson the access rights to add/change/remove mixers from the list.\\
 3.1.6 & Incorrect & "the user is prompted to enter a different value." A prompt would be a bad solution. I think the way the spinner is currently implemented the number is rounded towards the closest valid value.\\
