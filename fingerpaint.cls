@@ -76,7 +76,7 @@
 \RequirePackage{amsmath, amsfonts, amssymb, array, a4wide,%
 		fancyhdr, graphicx, lineno, graphicx, epsfig, soul,%
 		color, wallpaper, pbox, booktabs, tabularx, longtable,%
-		capt-of, ltxtable, ifthen%
+		capt-of, ltxtable, ifthen, xr%
 	}
 \RequirePackage[square, numbers]{natbib}
 \RequirePackage[defaultlines=5,all]{nowidow}
