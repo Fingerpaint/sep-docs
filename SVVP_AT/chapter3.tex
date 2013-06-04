@@ -1,6 +1,10 @@
 \chapter{Test case specifications}
-\todo{Some introduction text for this chapter}
-\renewcommand{\atref}[1]{\ref{at:#1}}
+\label{chap:testCaseSpecs}
+\renewcommand{\atref}[1]{AT\ref{at:#1}}
+
+This chapter gives a detailed description of all acceptance tests. These tests cover all the user requirements from the URD \cite{urd}, with acception of the unimplemented ones, and the untestable ones.
+The requirements that are not implemented in the \applicationname\ are \todo{List user requirements here}.
+The requirements that cannot be tested are \todo{List user requirements here}.
 
 %----------------------------------------------------------------------------------------------------
 \section{Define an initial concentration distribution}
@@ -90,48 +94,6 @@
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
-\section{Load a previously saved concentration distribution}
-\AT[loadDist]{CPR13}{\textbf{Test items}: Verify that a user can load a previously saved concentration distribution in the drawing area.}
-
-\subsection*{Input specifications}
-%Input for this test case
-\begin{enumerate}
-\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{sadSmiley}.
-\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{smiley}.
-\end{enumerate}
-
-\subsection*{Output specifications}
-%Output required from this test case
-\begin{itemize}
-\item After step 1, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
-\item After step 2, the popup panel is closed, and a sad smiley is displayed in the painting area.
-\item After step 3, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
-\item After step 4, the popup panel is closed, and a happy smiley is displayed in the painting area.
-\end{itemize}
-
-%----------------------------------------------------------------------------------------------------
-\section{Load a previously saved mixing protocol}
-\AT[loadProt]{CPR24}{\textbf{Test items}: Verify that a user can load a previously saved mixing protocol.}
-
-\subsection*{Input specifications}
-%Input for this test case
-\begin{enumerate}
-\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
-\item Click/Tap on \emph{Load Mixing Protocol} in the menu bar on the right side of the website.
-\item Click/Tap on one of the displayed names.
-\end{enumerate}
-
-\subsection*{Output specifications}
-%Output required from this test case
-\begin{itemize}
-\item After step 1, some new menu items have appeared in the menu bar on the right side of the website.
-\item After step 2, there is shown a popup panel with a list of distribution names.
-\item After step 3, the popup panel is closed, and the chosen mixing protocol is displayed in the text area on the right side of the website.
-\end{itemize}
-
-%----------------------------------------------------------------------------------------------------
 \section{Define and execute a single mixing step}
 \AT[execSingleStep]{CPR17, CPR18, CPR20, CPR25, CPR26, CPR27}{\textbf{Test items}: Verify that a user can define and execute a single mixing step on an initial concentration distribution.}
 
@@ -183,6 +145,9 @@
 \section{Save a mixing run}
 \AT[saveRun]{CPR30}{\textbf{Test items}: Verify that a user can save the results of a mixing run.}
 
+\subsection*{Preconditions}
+\textbf{\atref{execProt}} passed.
+
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
@@ -196,4 +161,78 @@
 \begin{itemize}
 \item After step 1, there is shown a popup panel
 \item After step 3, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Load a previously saved concentration distribution}
+\AT[loadDist]{CPR13}{\textbf{Test items}: Verify that a user can load a previously saved concentration distribution in the drawing area.}
+
+\subsection*{Preconditions}
+\textbf{\atref{saveDist}} passed.
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{sadSmiley}.
+\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{smiley}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
+\item After step 2, the popup panel is closed, and a sad smiley is displayed in the painting area.
+\item After step 3, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
+\item After step 4, the popup panel is closed, and a happy smiley is displayed in the painting area.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Load a previously saved mixing protocol}
+\AT[loadProt]{CPR24}{\textbf{Test items}: Verify that a user can load a previously saved mixing protocol.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
+\item Click/Tap on \emph{Load Mixing Protocol} in the menu bar on the right side of the website.
+\item \todo{Click/Tap on one of the displayed names}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, some new menu items have appeared in the menu bar on the right side of the website.
+\item After step 2, there is shown a popup panel with a list of distribution names.
+\item After step 3, the popup panel is closed, and the chosen mixing protocol is displayed in the text area on the right side of the website.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{View multiple performance results in one graph}
+\AT[viewMulGraphs]{CPR36}{\textbf{Test items}: Verify that a user can view multiple performance results from previous mixing runs in one graph.}
+
+\subsection*{Preconditions}
+\textbf{\atref{saveRun}}, \textbf{\atref{loadDist}} and \textbf{\atref{loadProt}} passed.
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on \emph{Mix Now} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{Save Results} in the menu bar on the right side of the website.
+\item Enter the text \emph{mixingRun2} within the text area.
+\item Click/Tap on \emph{OK}.
+\item Click/Tap on \emph{Compare Performance} in the menu bar on the right side of the website.
+\item Select both \emph{spiral} and \emph{mixingRun2}.
+\item Click/Tap on \emph{Compare}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the resulting concentration distribution is displayed in the drawing panel.
+\item After step 2, there is shown a popup panel.
+\item After step 4, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\item After step 5, there is shown a popup panel with \emph{spiral} and \emph{mixingRun2}.
+\item After step 7, there is shown a popup panel with a graph of the performance of both the selected mixing runs.
 \end{itemize}
