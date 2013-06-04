@@ -19,6 +19,26 @@
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
+\section{Choose a geometry and mixer type}
+\AT[chooseGeoMixer]{CPR1, CPR2}{Verify that a user can select a geometry and mixer when starting the application.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{rectangle} button after loading the application.
+\item Click/Tap the \emph{default} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a second selection row pops up for the rectangle geometry.
+\item After step 2, both the selection rows close and a drawing canvas in the shape of a rectangle shows up.
+\end{itemize}
+
+\todo{duplicate the test to select different geometries \& add corresponding CPR's.}
+ 
+%----------------------------------------------------------------------------------------------------
 \section{Define an initial concentration distribution}
 \AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{Verify that a user can define a concentration distribution by drawing in the drawing area.}
 
@@ -47,10 +67,10 @@
 %Output required from this test case
 \begin{itemize}
 \item After step 1, a small black square is displayed within the drawing area.
-\item After step 2, there is shown a popup panel with two buttons and a number spinner.
+\item After step 2, a popup panel with two buttons and a number spinner is shown.
 \item After step 3, the \emph{circle} button in the popup panel appears pressed down.
 \item After step 4, a small black circle is displayed within the drawing area.
-\item After step 5, there is shown a popup panel with two buttons and a number spinner.
+\item After step 5, a popup panel with two buttons and a number spinner is shown.
 \item After step 7, a large black circle is displayed within the drawing area.
 \item After step 8, there is shown a popup panel with two buttons and a number spinner.
 \item After step 9, the \emph{square} button in the popup panel appears pressed down.
@@ -155,10 +175,10 @@
 \item Click/Tap on the checkbox with the \emph{Define Protocol} label.
 \item Drag/Slide the top wall to the right.
 \item Drag/Slide the bottom wall to the right.
-\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
 \item Click/Tap on \emph{Reset Protocol} in the menu bar on the right side of the website.
 \item Drag/Slide the top wall to the right and the bottom wall to the left.
-\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
 \item Click/Tap \emph{Mix Now}.
 \end{enumerate}
 
@@ -168,7 +188,7 @@
 \item After step 3, some new menu items have appeared in the menu bar on the right side of the website.
 \item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25].
 \item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25] -B[6.25].
-\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{#step} numberspinner shows 1.
+\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{\#step} numberspinner shows 1.
 \item After step 7, the text area in the menu bar on the right side of the website shows the text T[6.25] B[6.25].
 \item After step 9, the drawing area shows a black spiral distribution.
 \end{itemize}
@@ -188,3 +208,63 @@
 \begin{itemize}
 \item -
 \end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Save a mixing protocol}
+\AT[saveProtocol]{CPR22}{Verify that a user can store the current mixing protocol in local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Save Protocol} button
+\item Type the name `testprotocol' in the textfield of the popup.
+\item Click/Tap the \emph{Save} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a textfield, a \emph{save} button and a \emph{cancel} button.
+\item During step 2, the name appears in the textfield.
+\item After step 3, the popup closes and a \emph{save successful} message appears.
+\end{itemize}
+ 
+%----------------------------------------------------------------------------------------------------
+\section{Remove a mixing run from history}
+\AT[removeRun]{CPR31}{Verify that a user can remove a previously stored mixing run from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Remove Saved Results} button
+\item Click/tap the \texttt{X} button next to the `testprotocol' name.
+\item Click/Tap the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
+\item After step 2, the `testprotocol' file is removed from the table.
+\item After step 3, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{View the performance of a mixing run}
+\AT[viewPerformance]{CPR34}{Verify that a user can view the mixing performance of an executed mixing run.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{View single graph} button
+\item Click/tap the \emph{Close} button
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a graph. In this graph, the mixing performance is shown on the y-axis, and the corresponding protocol step is shown on the x-axis. In addition, there is a \emph{close} button and an \emph{export} button.
+\item After step 2, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
