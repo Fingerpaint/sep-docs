@@ -7,6 +7,24 @@ The requirements that are not implemented in the \applicationname\ are \todo{Lis
 The requirements that cannot be tested are \todo{List user requirements here}.
 
 %----------------------------------------------------------------------------------------------------
+\section{Choose a geometry and mixer type}
+\AT[chooseGeoMixer]{CPR1, CPR2}{Verify that a user can select a geometry and mixer when starting the application.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{rectangle} button after loading the application.
+\item Click/Tap the \emph{default} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a second selection row pops up for the rectangle geometry.
+\item After step 2, both the selection rows close and a drawing canvas in the shape of a rectangle shows up.
+\end{itemize}
+ 
+%----------------------------------------------------------------------------------------------------
 \section{Define an initial concentration distribution}
 \AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{\textbf{Test items}: Verify that a user can define a concentration distribution by drawing in the drawing area.}
 
@@ -35,10 +53,10 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 %Output required from this test case
 \begin{itemize}
 \item After step 1, a small black square is displayed within the drawing area.
-\item After step 2, there is shown a popup panel with two buttons and a number spinner.
+\item After step 2, a popup panel with two buttons and a number spinner is shown.
 \item After step 3, the \emph{circle} button in the popup panel appears pressed down.
 \item After step 4, a small black circle is displayed within the drawing area.
-\item After step 5, there is shown a popup panel with two buttons and a number spinner.
+\item After step 5, a popup panel with two buttons and a number spinner is shown.
 \item After step 7, a large black circle is displayed within the drawing area.
 \item After step 8, there is shown a popup panel with two buttons and a number spinner.
 \item After step 9, the \emph{square} button in the popup panel appears pressed down.
@@ -142,11 +160,46 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
+\section{Save a mixing protocol}
+\AT[saveProtocol]{CPR22}{Verify that a user can store the current mixing protocol in local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Save Protocol} button
+\item Type the name `testprotocol' in the textfield of the popup.
+\item Click/Tap the \emph{Save} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a textfield, a \emph{save} button and a \emph{cancel} button.
+\item During step 2, the name appears in the textfield.
+\item After step 3, the popup closes and a \emph{save successful} message appears.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{View the performance of a mixing run}
+\AT[viewPerformance]{CPR34}{Verify that a user can view the mixing performance of an executed mixing run.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{View single graph} button
+\item Click/tap the \emph{Close} button
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a graph. In this graph, the mixing performance is shown on the y-axis, and the corresponding protocol step is shown on the x-axis. In addition, there is a \emph{close} button and an \emph{export} button.
+\item After step 2, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
 \section{Save a mixing run}
 \AT[saveRun]{CPR30}{\textbf{Test items}: Verify that a user can save the results of a mixing run.}
-
-\subsection*{Preconditions}
-\textbf{\atref{execProt}} passed.
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -166,9 +219,6 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 %----------------------------------------------------------------------------------------------------
 \section{Load a previously saved concentration distribution}
 \AT[loadDist]{CPR13}{\textbf{Test items}: Verify that a user can load a previously saved concentration distribution in the drawing area.}
-
-\subsection*{Preconditions}
-\textbf{\atref{saveDist}} passed.
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -197,23 +247,20 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 \begin{enumerate}
 \item Click/Tap on the checkbox with the \emph{Define Protocol} label.
 \item Click/Tap on \emph{Load Mixing Protocol} in the menu bar on the right side of the website.
-\item \todo{Click/Tap on one of the displayed names}.
+\item Click/Tap on \emph{testprotocol}.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
 \item After step 1, some new menu items have appeared in the menu bar on the right side of the website.
-\item After step 2, there is shown a popup panel with a list of distribution names.
+\item After step 2, there is shown a popup panel with \emph{testprotocol}.
 \item After step 3, the popup panel is closed, and the chosen mixing protocol is displayed in the text area on the right side of the website.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{View multiple performance results in one graph}
 \AT[viewMulGraphs]{CPR36}{\textbf{Test items}: Verify that a user can view multiple performance results from previous mixing runs in one graph.}
-
-\subsection*{Preconditions}
-\textbf{\atref{saveRun}}, \textbf{\atref{loadDist}} and \textbf{\atref{loadProt}} passed.
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -235,4 +282,24 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 \item After step 4, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
 \item After step 5, there is shown a popup panel with \emph{spiral} and \emph{mixingRun2}.
 \item After step 7, there is shown a popup panel with a graph of the performance of both the selected mixing runs.
+\end{itemize}
+ 
+%----------------------------------------------------------------------------------------------------
+\section{Remove a mixing run from history}
+\AT[removeRun]{CPR31}{Verify that a user can remove a previously stored mixing run from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Remove Saved Results} button
+\item Click/tap the \texttt{X} button next to the `mixingRun2' name.
+\item Click/Tap the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
+\item After step 2, the `testprotocol' file is removed from the table.
+\item After step 3, the popup closes.
 \end{itemize}
