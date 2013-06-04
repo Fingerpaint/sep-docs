@@ -1,26 +1,10 @@
 \chapter{Test case specifications}
 \todo{Some introduction text for this chapter}
-
-\section{Load a previously saved concentration distribution}
-\AT[loadDist]{CPR13}{Verify that a user can load a previously saved concentration distribution in the drawing area.}
-
-\subsection*{Input specifications}
-%Input for this test case
-\begin{enumerate}
-\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
-\item Click/Tap on one of the displayed names.
-\end{enumerate}
-
-\subsection*{Output specifications}
-%Output required from this test case
-\begin{itemize}
-\item After step 1, there is shown a popup panel with a list of distribution names.
-\item After step 2, the popup panel is closed, and the chosen distribution is displayed in the painting area.
-\end{itemize}
+\renewcommand{\atref}[1]{\ref{at:#1}}
 
 %----------------------------------------------------------------------------------------------------
 \section{Define an initial concentration distribution}
-\AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{Verify that a user can define a concentration distribution by drawing in the drawing area.}
+\AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{\textbf{Test items}: Verify that a user can define a concentration distribution by drawing in the drawing area.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -64,7 +48,7 @@
 
 %----------------------------------------------------------------------------------------------------
 \section{Save a concentration distribution}
-\AT[saveDist]{CPR11}{Verify that a user can save a concentration distribution.}
+\AT[saveDist]{CPR11}{\textbf{Test items}: Verify that a user can save a concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -106,8 +90,30 @@
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
+\section{Load a previously saved concentration distribution}
+\AT[loadDist]{CPR13}{\textbf{Test items}: Verify that a user can load a previously saved concentration distribution in the drawing area.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{sadSmiley}.
+\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{smiley}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
+\item After step 2, the popup panel is closed, and a sad smiley is displayed in the painting area.
+\item After step 3, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
+\item After step 4, the popup panel is closed, and a happy smiley is displayed in the painting area.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
 \section{Load a previously saved mixing protocol}
-\AT[loadProt]{CPR24}{Verify that a user can load a previously saved mixing protocol.}
+\AT[loadProt]{CPR24}{\textbf{Test items}: Verify that a user can load a previously saved mixing protocol.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -127,7 +133,7 @@
 
 %----------------------------------------------------------------------------------------------------
 \section{Define and execute a single mixing step}
-\AT[execSingleStep]{CPR17, CPR18, CPR20, CPR25, CPR26, CPR27}{Verify that a user can define and execute a single mixing step on an initial concentration distribution.}
+\AT[execSingleStep]{CPR17, CPR18, CPR20, CPR25, CPR26, CPR27}{\textbf{Test items}: Verify that a user can define and execute a single mixing step on an initial concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -145,7 +151,7 @@
 
 %----------------------------------------------------------------------------------------------------
 \section{Define and execute a mixing protocol}
-\AT[execProt]{CPR17, CPR18, CPR19, CPR20, CPR21, CPR25, CPR26, CPR27, CPR29}{Verify that a user can define and execute mixing protocol on an initial concentration distribution.}
+\AT[execProt]{CPR17, CPR18, CPR19, CPR20, CPR21, CPR25, CPR26, CPR27, CPR29}{\textbf{Test items}: Verify that a user can define and execute mixing protocol on an initial concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -155,10 +161,10 @@
 \item Click/Tap on the checkbox with the \emph{Define Protocol} label.
 \item Drag/Slide the top wall to the right.
 \item Drag/Slide the bottom wall to the right.
-\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
 \item Click/Tap on \emph{Reset Protocol} in the menu bar on the right side of the website.
 \item Drag/Slide the top wall to the right and the bottom wall to the left.
-\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
 \item Click/Tap \emph{Mix Now}.
 \end{enumerate}
 
@@ -167,24 +173,27 @@
 \begin{itemize}
 \item After step 3, some new menu items have appeared in the menu bar on the right side of the website.
 \item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25].
-\item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25] -B[6.25].
-\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{#step} numberspinner shows 1.
+\item After step 5, the text area in the menu bar on the right side of the website shows the text T[6.25] -B[6.25].
+\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{\#steps} numberspinner shows 1.
 \item After step 7, the text area in the menu bar on the right side of the website shows the text T[6.25] B[6.25].
 \item After step 9, the drawing area shows a black spiral distribution.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Save a mixing run}
-\AT[saveRun]{CPR30}{Verify that a user can save the results of a mixing run.}
+\AT[saveRun]{CPR30}{\textbf{Test items}: Verify that a user can save the results of a mixing run.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item -
+\item Click/Tap on \emph{Save Results} in the menu bar on the right side of the website.
+\item Enter the text \emph{spiral} within the text area.
+\item Click/Tap on \emph{OK}.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item -
+\item After step 1, there is shown a popup panel
+\item After step 3, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
 \end{itemize}
