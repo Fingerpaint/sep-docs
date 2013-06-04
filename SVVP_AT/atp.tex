@@ -6,14 +6,14 @@
 		
 \newcounter{atcount}
 \newcommand{\AT}[3][]{
-    \begin{center}\begin{tabular}{ >{\bfseries}p{0.5\textwidth} >{\bfseries}p{0.5\textwidth}}
+    \begin{center}\begin{tabular}{ >{\bfseries}p{0.2\textwidth} >{\bfseries}p{0.8\textwidth}}
       AT\refstepcounter{atcount}\arabic{atcount}\ifthenelse{\equal{#1}{}}{}{\label{at:#1}} & #2\\
-      \multicolumn{2}{p{0.9\textwidth}}{#3}\\
       \bottomrule
+      \multicolumn{2}{p{0.9\textwidth}}{#3}\\
     \end{tabular}\end{center}
 }
 
-\newcommand{\srqref}[1]{AT\ref{at:#1}}
+\newcommand{\atref}[1]{AT\ref{at:#1}}
 
 \begin{document}
 

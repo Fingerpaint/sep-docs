@@ -1,19 +1,55 @@
 \chapter{Test plan}
-\todo{Some introduction text for this chapter}
 
 \section{Test items}
-\todo{The items to be tested}
+The software to be tested is the \applicationname{}. As this application is created using the Google Web Toolkit, part of the unit tests are run as GWT JUnit tests, while the other tests are run using Selenium (described elsewhere in this section). The source code for the \applicationname{} is written in Java, but compiled to JavaScript, which means the tests should be run twice. Firstly, the Java bytecode is tested, using the GWT JUnit tests in development mode. Secondly, the tests are run as compiled JavaScript. The same GWT JUnit test can be run both in development mode and in production mode, albeit not at the same time. Therefore, tests need only be written once.
+
+The \applicationname{} is a web application, which means that web browsers are ultimately in control of the application's look and functionality. To make sure all parts of the software work as expected, we use Selenium, which automates browser input. This means we are able to automatically run functional tests on a variety of browsers, where button presses et cetera are generated using Selenium. Tests using Selenium can be run using the regular JUnit testing framework. During testing, screenshots can be used to compare actual output to expected output.
 
 \section{Features to be tested}
-\todo{The features to be tested}
+The \applicationname{} should meet the design as described in the DDD \cite{ddd}. Each component should adhere to the interfaces given in the DDD \cite{ddd}.
 
 \section{Test deliverables}
-\todo{Items that must be delivered before testing starts and when testing ends}
+Before the testing starts, the following items must be delivered:
+
+\begin{itemize}
+  \item SVVP \cite{svvp}.
+  \item DDD \cite{ddd}.
+  \item UTP (this document).
+  \item UT input data.
+\end{itemize}
+
+After completing the testing the following items must be delivered:
+
+\begin{itemize}
+  \item UT report (chapter \ref{chap:testReports} of this document).
+  \item UT output data.
+  \item Problem reports (if applicable).
+\end{itemize}
 
 \section{Testing tasks}
-\todo{To prepare and carry out the tests}
+Before any testing in the UT phase can take place, the following tasks need to be done:
+
+\begin{itemize}
+  \item Designing the unit tests.
+  \item Tracing all test cases to components.
+  \item Covering all components mentioned in the DDD \cite{ddd} by test cases.
+  \item Creating the UT input data.
+  \item Ensuring that all environmental needs for the UT have been satisfied.
+\end{itemize}
+
+\noindent When these tasks have been completed, a UT can be performed according to the procedures described in chapter \ref{chap:testProc}.
 
 \section{Environmental needs}
-\todo{Properties required of the test environment}
+To be able to perform the UT, the following resources are needed:
+
+\begin{itemize}
+  \item One or more web browsers supported by the \applicationname{} (see the URD \cite{urd} for a list).
+  \item A client device with Ant, JUnit, a JDK and GWT installed.
+  \item An active internet connection to connect to the \projectnameplain{} and Selenium servers.
+  \item \todo{Probably some more...}
+\end{itemize}
+
+\noindent See also the constraints described in the DDD \cite{ddd}.
 
 \section{Test case pass/fail criteria}
+Every test should describe the criteria that should be met to pass a specific test. An overall UT pass can only be achieved when all tests described in chapter \ref{chap:testcasespec} have been performed and passed.
