@@ -1,20 +1,70 @@
 \chapter{Test case specifications}\label{chap:testSpecs}
 \todo{Some introduction text for this chapter}
 
+In this chapter we will specify the different test cases that verify the correctness of the communication between the different components described in \ref{ADD-fig:compdependencies}. All testcases can be found in the \textbf{Fingerpaint/test.src/nl.tue.fingerpaint.*} package, where * is the name of one of the sections below.
+%Clarification: We don't have any integration tests, but some jUnit tests make use of several components. Thus they can serve as integration tests.
+
+\todo{We verwijzen momenteel naar compdependencies.pdf in ADD; Is dit het beste, of misschien vervangen met SwoftwareTiers.pdf uit het SRD?}
+
+\section{client}
+\begin{tabular}{llrl}
+\emph{ID} & \emph{Test name} & \emph{Integrated Components} & \\
+\hline
+ITC1 & ApplicationStateTest.java & Layout - & Application State \\
+& & Application State - & Client Persistence \\
+& & Application State - & HTTP Server \\
+& & HTTP Server - & Application Service \\
+& & Application Service - & Application Persistence\\
+& & Application Service - & Simulator Service\\
+& & Simulator Service - & Fortran Module \\
+\end{tabular}
+
+\section{client.simulator}
+\begin{tabular}{llrl}
+\emph{ID} & \emph{Test name} & \emph{Integrated Components} & \\
+\hline
+ITC2 & SimulatorServiceTest.java & Application State - & HTTP Server \\
+& & HTTP Server - & Application Service \\
+& & Application Service - & Simulator Service \\
+& & Simulator Service - & Fortran Module\\
+\end{tabular}
+
+\section{client.storage}
+\begin{tabular}{llrl}
+\emph{ID} & \emph{Test name} & \emph{Integrated Components} & \\
+\hline
+ITC3 & StorageManagerTest.java & Application State - & Client Persistence \\
+\end{tabular}
+
+
+\section{server.simulator}
+\begin{tabular}{llrl}
+\emph{ID} & \emph{Test name} & \emph{Integrated Components} & \\
+\hline
+ITC4 & SimulatorServiceTest.java & Application Service - & Simulator Service \\
+& & Simulator Service - & Fortran Module\\
+\end{tabular}
+
+%\section{util}  %Left out because there are no testcases that use any integration
+%\section{suits} %Left out because there are no testcases that use any integration
+
+
 % For each test case, a section with the following structure:
-\section{Name of the test case}
+%\section{Name of the test case}
+%
+%\subsection{Test case identifier}
+%\todo{A unique identifier}
+%
+%\subsection{Test items}
+%\todo{The items to be tested}
+%
+%\subsection{Input specifications}
+%\todo{Input for this test case}
+%
+%\subsection{Output specifications}
+%\todo{Output required from this test case}
+%
+%\subsection{Environmental needs}
+%\todo{The test environment}
 
-\subsection{Test case identifier}
-\todo{A unique identifier}
 
-\subsection{Test items}
-\todo{The items to be tested}
-
-\subsection{Input specifications}
-\todo{Input for this test case}
-
-\subsection{Output specifications}
-\todo{Output required from this test case}
-
-\subsection{Environmental needs}
-\todo{The test environment}
