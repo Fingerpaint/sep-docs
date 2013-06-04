@@ -1,20 +1,190 @@
 \chapter{Test case specifications}
 \todo{Some introduction text for this chapter}
 
-% For each test case, a section with the following structure:
-\section{Name of the test case}
+\section{Load a previously saved concentration distribution}
+\AT[loadDist]{CPR13}{Verify that a user can load a previously saved concentration distribution in the drawing area.}
 
-\subsection{Test case identifier}
-\todo{A unique identifier}
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
+\item Click/Tap on one of the displayed names.
+\end{enumerate}
 
-\subsection{Test items}
-\todo{The items to be tested}
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, there is shown a popup panel with a list of distribution names.
+\item After step 2, the popup panel is closed, and the chosen distribution is displayed in the painting area.
+\end{itemize}
 
-\subsection{Input specifications}
-\todo{Input for this test case}
+%----------------------------------------------------------------------------------------------------
+\section{Define an initial concentration distribution}
+\AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{Verify that a user can define a concentration distribution by drawing in the drawing area.}
 
-\subsection{Output specifications}
-\todo{Output required from this test case}
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap somewhere in the drawing area.
+\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website.
+\item Click/Tap on \emph{circle} in the displayed popup panel.
+\item Click/Tap somewhere in the drawing area.
+\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website.
+\item Click/Tap on the top button of the numberspinner in the displayed popup panel, until the number shown equals 10.
+\item Click/Tap on somewhere in the drawing area.
+\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website. 
+\item Click/Tap on \emph{square} in the displayed popup panel.
+\item Click/Tap on the bottom button of the numberspinner in the displayed popup panel, until the number shown equals 5.
+\item Click/Tap somewhere outside the popup panel.
+\item Click/Tap on \emph{black} in the menu bar on the right side of the website. 
+\item Click/Tap within the large black circle on the drawing area.
+\item Click/Tap on \emph{white} in the menu bar on the right side of the website. 
+\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website. 
+\item Drag/Slide across the drawing area.
+\end{enumerate}
 
-\subsection{Environmental needs}
-\todo{The test environment}
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a small black square is displayed within the drawing area.
+\item After step 2, there is shown a popup panel with two buttons and a number spinner.
+\item After step 3, the \emph{circle} button in the popup panel appears pressed down.
+\item After step 4, a small black circle is displayed within the drawing area.
+\item After step 5, there is shown a popup panel with two buttons and a number spinner.
+\item After step 7, a large black circle is displayed within the drawing area.
+\item After step 8, there is shown a popup panel with two buttons and a number spinner.
+\item After step 9, the \emph{square} button in the popup panel appears pressed down.
+\item After step 11, the popup panel is closed.
+\item After step 12, the pressed button now shows the text \emph{white}.
+\item After step 13, a smaller white square is displayed within the large black circle on the drawing area.
+\item After step 14, the pressed button now shows the test \emph{black}.
+\item After step 15, the drawing area is completely white.
+\item After step 16, a line following the drag/swipe is displayed within the drawing area.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Save a concentration distribution}
+\AT[saveDist]{CPR11}{Verify that a user can save a concentration distribution.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Drag/Slide across the drawing area to draw a happy smiley face.
+\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
+\item Enter the text \emph{smiley} within the text area.
+\item Click/Tap on \emph{OK}.
+\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website. 
+\item Drag/Slide across the drawing area to draw a sad smiley face.
+\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
+\item Enter the text \emph{smiley} within the text area.
+\item Click/Tap on \emph{OK}.
+\item Click/Tap on \emph{Cancel}.
+\item Enter the text \emph{sadSmiley} within the text area.
+\item Click/Tap on \emph{OK}.
+\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website.
+\item Drag/Slide across the drawing area to draw a new happy smiley face.
+\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
+\item Enter the text \emph{smiley} within the text area.
+\item Click/Tap on \emph{OK}.
+\item Click/Tap on \emph{Overwrite}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 2, there is shown a popup panel
+\item After step 4, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\item After step 5, the drawing area is completely white.
+\item After step 7, there is shown a popup panel
+\item After step 9, there is shown a new popup panel.
+\item After step 10, the first popup panel is shown again.
+\item After step 12, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\item After step 13, the drawing area is completely white.
+\item After step 15, there is shown a popup panel
+\item After step 17, there is shown a new popup panel.
+\item After step 18, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Load a previously saved mixing protocol}
+\AT[loadProt]{CPR24}{Verify that a user can load a previously saved mixing protocol.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
+\item Click/Tap on \emph{Load Mixing Protocol} in the menu bar on the right side of the website.
+\item Click/Tap on one of the displayed names.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, some new menu items have appeared in the menu bar on the right side of the website.
+\item After step 2, there is shown a popup panel with a list of distribution names.
+\item After step 3, the popup panel is closed, and the chosen mixing protocol is displayed in the text area on the right side of the website.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Define and execute a single mixing step}
+\AT[execSingleStep]{CPR17, CPR18, CPR20, CPR25, CPR26, CPR27}{Verify that a user can define and execute a single mixing step on an initial concentration distribution.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on the top button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the website, until the number shown equals 5.
+\item Drag/Slide across the drawing area to draw a large black dot in the middle of the drawing area.
+\item Drag/Slide the top wall to the right.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 3, the black dot has moved, and has now a different shape.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Define and execute a mixing protocol}
+\AT[execProt]{CPR17, CPR18, CPR19, CPR20, CPR21, CPR25, CPR26, CPR27, CPR29}{Verify that a user can define and execute mixing protocol on an initial concentration distribution.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap on the top button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the website, until the number shown equals 6.25.
+\item Drag/Slide across the drawing area to draw a large black dot in the middle of the left half of the drawing area.
+\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
+\item Drag/Slide the top wall to the right.
+\item Drag/Slide the bottom wall to the right.
+\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap on \emph{Reset Protocol} in the menu bar on the right side of the website.
+\item Drag/Slide the top wall to the right and the bottom wall to the left.
+\item Click/Tap on the top button of the numberspinner with the \emph{#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
+\item Click/Tap \emph{Mix Now}.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 3, some new menu items have appeared in the menu bar on the right side of the website.
+\item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25].
+\item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25] -B[6.25].
+\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{#step} numberspinner shows 1.
+\item After step 7, the text area in the menu bar on the right side of the website shows the text T[6.25] B[6.25].
+\item After step 9, the drawing area shows a black spiral distribution.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Save a mixing run}
+\AT[saveRun]{CPR30}{Verify that a user can save the results of a mixing run.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item -
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item -
+\end{itemize}
