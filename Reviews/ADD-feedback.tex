@@ -39,6 +39,15 @@ No feedback has been given on this part of the document.
 1.5 & Typo & In the sentence ``...of the system, and an overview...'' there should not be a comma. \\
 \end{longtable}
 
+\feedbackTableStart{\benjamin{}}{0.0}
+1.1 & Other & \emph{\ldots the \applicationname{} that will be developed \ldots} The application is currently in development, so I would change this to present tense \emph{is being developed}. \\
+1.1 & Other & I would change \emph{Thereafter} to \emph{Then}. \\
+1.3 & Typo & Fortran: A general pupose (fixed). \\
+1.3 & Other & \emph{The combination of a wall the move} should be changed to something like \emph{The combination of which wall moves}. \\
+1.5 & Typo & Chapter 4 covers the sy\textbf{s}tem design (fixed). \\
+1.5 & Typo & Chapter 6 gives an overview of all resources need\textbf{ed} to build, operate and maintain the application. \\
+\end{longtable}
+
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 2}
 %\subsection{External reviews}
@@ -48,6 +57,11 @@ No feedback has been given on this part of the document.
 \subsection{Internal reviews}
 \feedbackTableStart{\thom{}}{0.0}
 2 & Structure & The abbreviations URD and SRD can be used here without writing it all out, especially since these abbreviations are named in the list of abbreviations. When you do want to keep the full titles, please emphasise them. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+2 & Other & \emph{\ldots and the environment it will operate in.} Should be changed to present tense, as it already operates in that environment and this documentation is mainly used for future maintenance, in which case it definitely runs in that environment.\\
+2 & Typo & \emph{any one other information systems} should be either singular or plural. 
 \end{longtable}
 
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
@@ -66,6 +80,15 @@ No feedback has been given on this part of the document.
 3.1 & Typo & ``Communications'' sounds a bit odd, I think you mean ``Communication'' here. \\
 3.1 & Incorrect & The geometry-parameter is not a number, but a String in our current program. \\
 3.1 & Incorrect & The matrix/mixer is also a String-parameter. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+3.1 & Other & \emph{Communication with this module are done} should be either singular or plural. \\
+3.1 & Other & All of the \texttt{len\_*} meta-parameters have similar descriptions. Most of these messages could be combined above the table, so that, in the table, these items only have to talk about what exactly they represent, and not why they are there. \\
+3.1 & Other & Len\_*: \emph{\ldots of above string} misses an article. \\
+3.1 & Other & Geometry: \emph{For example, “Rectangle 400x240”.} This is only a fragment of a sentence and should either be reworded or combined with the previous sentence. \\
+3.1 & Structure & The paragraph at the end of the section should be moved to the beginning of the section and combined with the remark about the meta-parameters above. \\
+3.1 & Typo & prevent segmentation faults from occur\textbf{r}ing (fixed). \\
 \end{longtable}
 
 % Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
@@ -91,6 +114,12 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 4.2.2 & Typo & In the first sentence, I think there should be a \texttt{\{\}} behind the \LaTeX{} command for the project name, because there is something weird happening now. \\
 \end{longtable}
 
+\feedbackTableStart{\benjamin{}}{0.0}
+4.2.1 & Typo & \emph{The following components are ident\textbf{if}ied:} (fixed) \\
+4.2.2 & Typo & fulfil\textbf{l} (fixed). \\
+4.2.2 & Typo & eachother is/are two words (fixed). \\
+\end{longtable}
+
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
 %\subsection{External reviews}
@@ -108,6 +137,39 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 5.1.4 & Incorrect & In the ``purpose'' section, there is one comma extra at the end of the sentence, but no new software requirement is listed. \\
 5.1.5 & Incorrect & There is a whitespace right in the sentence ``The Application Service has an interface with the HTTP Server component.'' \\
 5.2.3 & Typo & In the ``Dependencies'' section, ``dependes'' should be ``depends''. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+5 & Other & \emph{For every component, we will give an identifier \ldots} should be present tense. \\
+5.1.* & Other & In every single Dependencies sub-item, figure 4.1 is referenced. This is not necessary as the user has probably already seen this figure at this point. \\
+5.1.* & Other & \textbf{References}: In \emph{\ldots mentioned in the section purpose \ldots}, \emph{purpose} should be capitalised to indicate that \emph{section purpose} is not a combined noun, but that \emph{Purpose} is the name of the section. Also it really isn't a section anyway. \\
+5.1.1 & Typo & \emph{dependencies with relation to}: \emph{with} should be changed to \emph{in}. \\
+5.1.1 & Question & I'm not sure why the Fortran module does not depend on the Simulator service. Without the latter, I think the Fortran module wouldn't be able to do anything useful. This should either be changed or a better description of \emph{Dependency} should be provided. \\
+5.1.1 & Other & \emph{\ldots and a performance measure, namely the segregation factor.} It is unnecessary to state that the segregation factor is a performance measure,  \emph{\ldots and the segregation factor} would suffice here. \\
+5.1.2 & Other & Function: \emph{The Simulator Service is meant to simulate \ldots} Here, \emph{is meant to} implies that we really want it to simulate things, but it only does this when it feels like it. \\
+5.1.2 & Other & Interfaces: \emph{\ldots is done through C, that calls the Fortran function.} This is a somewhat strange sentence, an alternative would be something like \emph{is set up via C, through which the Fortran function is called}. \\
+5.1.3, 5.1.4, 5.1.6, 5.2.2 & Other & Dependencies: \emph{doesn't} should be \emph{does not} in formal documents. \\
+5.1.3, 5.2.2 & Other & Processing: \emph{it's} should be \emph{it is} in formal documents. \\
+5.1.3 & Other & Processing: \emph{is being done} should be \emph{is done}. \\
+5.1.3 & Other & Data: Here the emphasis is placed on the Application Persistence rather than its data. I would change \emph{is a database containing} to \emph{contains}. \\
+5.1.5 & Other & Function: \emph{centralized data or other communication} implies that data is a form of communication. \\
+5.1.5 & Other & Dependencies: \emph{\ldots when the either the \ldots}: superfluous \emph{the}. \\
+5.1.5 & Typo & Interfaces: \emph{component.This} misses a space. \\
+5.1.5 & Typo & Interfaces: \emph{belonging to a a mixing run}: superfluous \emph{a}. \\
+5.1.5 & Other & Interfaces: \emph{It receives data of the result of \ldots} could be \emph{It receives the result of \ldots}. This is the case in the last paragraph as well. \\
+5.1.5 & Other & Interfaces: \emph{Lastly} without any \emph{firstly}. \\
+5.1.5 & Other & \emph{Basically, the only thing the Application Service does is passing data \ldots} is slightly informal. I propose \emph{The Application Service only passes data \ldots} \\
+5.1.5 & Typo & \emph{Applic\textbf{d}ation State}. \\
+5.2.1 & Typo & Interfaces: \emph{throught}. \\
+5.2.1 & Typo & Processing: \emph{inputted} should be \emph{input} as \emph{to input} is an irregular verb (fixed). \\
+5.2.1 & Typo & Processing: \emph{send} should be \emph{sent} as \emph{to send} is an irregular verb. \\
+5.2.1 & Other & Processing: \emph{The Layout components uses \ldots} should be either singular or plural. \\
+5.2.1 & Other & Data: \emph{doesn't} should be \emph{does not} in formal documents. \\
+5.2.3 & Typo & Dependencies: \emph{inputted} should be \emph{input} as \emph{to input} is an irregular verb (fixed). \\
+5.2.3 & Typo & retreive should be retrieve (fixed). \\
+5.2.4 & Other & Function: As far as I can see there is not difference between keeping track of and storing changes regarding the Application State. \\
+5.2.4 & Typo & \emph{needs to \textbf{be} displayed}. \\
+5.2.4 & Other & Processing: One (preferably the first) of the \emph{it}s should be changed to \emph{Application State}. \\
 \end{longtable}
 
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
