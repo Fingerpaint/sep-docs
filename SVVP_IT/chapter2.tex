@@ -1,19 +1,34 @@
 \chapter{Test plan}
+\label{chap:testPlan}
 \todo{Some introduction text for this chapter}
 
 \section{Test items}
-\todo{The items to be tested}
+Fingerpaint is designed as described in the ADD\ref{add}. Each component specified there is subject to integration tests a described in this document. These components are: the Application State, the Client Persistence, the Layout, the Update Application State,the HTTP Server, the Application Service, the Application Persistence, the Simulator Service and the Fortran Module.
 
 \section{Features to be tested}
-\todo{The features to be tested}
+As all features require communication between the Layout and the Application State components, all features are tested with the integration tests.
 
 \section{Test deliverables}
-\todo{Items that must be delivered before testing starts and when testing ends}
+Prior to testing, the following documents should be completed:
+\begin{itemize}
+\item ADD\ref{add}
+\item ITP\ref{itp}, should be finished up to the test reports (chapter \ref{chap:testReports}).
+\item The Fingerpaint code
+\end{itemize}
+After the tests are concluded, the test reports should be written.
 
 \section{Testing tasks}
-\todo{To prepare and carry out the tests}
+Before the Integration tests can be executed, the following needs to be done:
+\begin{itemize}
+\item The integration tests need to be written.
+\item Each component needs to be functional and tested.
+\item Integration test input data needs to be created.
+\end{itemize}
 
 \section{Environmental needs}
-\todo{Properties required of the test environment}
+The integration requires the following hardware/software:
+\todo{refer to appendix A}
 
 \section{Test case pass/fail criteria}
+The integration tests as a whole succeed if all the integration tests it is composed of pass. Similarly if one test fails, the software is rejected.
+The test criteria are described in chapter \ref{chap:testCaseSpecs}.

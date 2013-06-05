@@ -1,4 +1,4 @@
-\chapter{Test plan}
+\chapter{Test plan}\label{chap:testPlan}
 
 \section{Test items}
 The software to be tested is the \applicationname{}. As this application is created using the Google Web Toolkit, part of the unit tests are run as GWT JUnit tests, while the other tests are run using Selenium (described elsewhere in this section). The source code for the \applicationname{} is written in Java, but compiled to JavaScript, which means the tests should be run twice. Firstly, the Java bytecode is tested, using the GWT JUnit tests in development mode. Secondly, the tests are run as compiled JavaScript. The same GWT JUnit test can be run both in development mode and in production mode, albeit not at the same time. Therefore, tests need only be written once.
