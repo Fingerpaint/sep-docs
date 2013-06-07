@@ -1,6 +1,6 @@
 \chapter{Test plan}
 \label{chap:testPlan}
-\todo{Some introduction text for this chapter}
+In this chapter it is described what is tested and how it is tested with integration tests. Specific information about each test is described in chapters \ref{chap:testCaseSpecs}-\ref{chap:testReports}.
 
 \section{Test items}
 Fingerpaint is designed as described in the ADD\ref{add}. Each component specified there is subject to integration tests a described in this document. These components are: the Application State, the Client Persistence, the Layout, the Update Application State,the HTTP Server, the Application Service, the Application Persistence, the Simulator Service and the Fortran Module.
@@ -9,16 +9,16 @@ Fingerpaint is designed as described in the ADD\ref{add}. Each component specifi
 As all features require communication between the Layout and the Application State components, all features are tested with the integration tests.
 
 \section{Test deliverables}
-Prior to testing, the following documents should be completed:
+Prior to testing, the following documents/code should be completed:
 \begin{itemize}
 \item ADD\ref{add}
 \item ITP\ref{itp}, should be finished up to the test reports (chapter \ref{chap:testReports}).
 \item The Fingerpaint code
 \end{itemize}
-After the tests are concluded, the test reports should be written.
+After the tests are concluded the test reports should be written, and problem reports should be written when necessary.
 
 \section{Testing tasks}
-Before the Integration tests can be executed, the following needs to be done:
+Before the integration tests can be executed, the following needs to be done:
 \begin{itemize}
 \item The integration tests need to be written.
 \item Each component needs to be functional and tested.
@@ -29,5 +29,5 @@ Before the Integration tests can be executed, the following needs to be done:
 The hardware/software required to run \applicationname{} is described in appendix A of the ATP\ref{atp}.
 
 \section{Test case pass/fail criteria}
-The integration tests as a whole succeed if all the integration tests it is composed of pass. Similarly if one test fails, the software is rejected.
+The integration tests as a whole succeed if all the integration tests in it pass. Similarly if one test fails, the software is rejected.
 The test criteria are described in chapter \ref{chap:testCaseSpecs}.
