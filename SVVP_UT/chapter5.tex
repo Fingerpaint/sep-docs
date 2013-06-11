@@ -1,14 +1,59 @@
 \chapter{Test reports}\label{chap:testReports}
-\todo{Some introduction text for this chapter}
 
-% For each execution of a test procedure, a section with the following structure:
-\section{Name of the test procedure}
+\todo{text explaining how to run the tests}
 
-\subsection{Test procedure identifier}
-\todo{A unique identifier}
+\section{Client tests}
+\subsection*{Application State test}
+\begin{tabular}{l|l}
+testSetGeometry & pass \\
+testNrStepsSet    & pass \\
+testSetMixer        & pass \\
+\end{tabular}
 
-\subsection{Description}
-\todo{The items tested}
+\subsection*{MixingProtocolTest}
+\begin{tabular}{l|l}
+testMoveStepBack             & pass \\
+testGetStepExecution        & pass \\
+testAddStep                       & pass \\
+testRemoveStepException & pass \\
+testAddStepException        & pass \\
+testEditStepException        & pass \\
+testRemoveStep                 & pass \\
+testEditStepSize                 & pass \\
+testEditStepWall                 & pass \\
+testMoveStepForward        & pass \\
+testEditStepDirection          & pass \\
+testMoveStepException1   & pass \\
+testMoveStepException2   & pass \\
+testConstructor                  & pass \\
+\end{tabular}
 
-\subsection{Activity and event entries}
-\todo{Identification of the test procedure. When was the test performed, by who and who witnessed it. For each test case in the procedure: did the software pass or fail, what are the problems}
+\subsection*{MixingStepTest}
+\begin{tabular}{l|l}
+testSetStepSize  & pass \\
+testGetStepSize  & pass \\
+testRounding      & pass \\
+\end{tabular}
+
+\subsection*{NumberSpinnerTest}
+\begin{tabular}{l|l}
+testNotRound               & pass \\
+testOverMax                & pass \\
+testRound                    & pass \\
+testDefaultAboveMax  & pass \\
+testDefaultBelowMin    & pass \\
+testUnderMin               & pass \\
+testInitialisation           & pass \\
+testMinBiggerMax        & pass \\
+testListener                 & pass \\
+\end{tabular}
+
+\subsection*{SimulatorServiceTest}
+\begin{tabular}{l|l}
+testSimulation & pass \\
+\end{tabular}
+
+\subsection*{StorageManagerTest}
+testSaveInitialDistribution & pass \\
+testSaveProtocol              & pass \\
+testSaveResult                 & pass \\
