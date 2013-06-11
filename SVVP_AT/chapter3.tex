@@ -160,6 +160,24 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
+\section{Export the resulting distribution image of a mixing run}
+\AT[expImage]{CPR33}{Verify that a user can export the resulting distribution of a mixing run to their device.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Export Image} button
+\item Follow the standard procedure to download a file
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the browser's download menu appears.
+\item After step 2, the image is saved at the chosen location.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
 \section{Save a mixing protocol}
 \AT[saveProtocol]{CPR22}{Verify that a user can store the current mixing protocol in local storage}
 
@@ -187,14 +205,32 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 %Input for this test case
 \begin{enumerate}
 \item Click/Tap the \emph{View single graph} button
-\item Click/tap the \emph{Close} button
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
 \item After step 1, a popup shows up with a graph. In this graph, the mixing performance is shown on the y-axis, and the corresponding protocol step is shown on the x-axis. In addition, there is a \emph{close} button and an \emph{export} button.
-\item After step 2, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Export the performance graph of a mixing run}
+\AT[expGraph]{CPR35}{Verify that a user can export the performance graph of a mixing run to their device.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Export Graph} button
+\item Follow the standard procedure to download a file
+\item Click/tap the \emph{Close} button
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the browser's download menu appears.
+\item After step 2, the image is saved at the chosen location.
+\item After step 3, the popup showing the performance graph closes.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
@@ -283,16 +319,36 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 \item After step 5, there is shown a popup panel with \emph{spiral} and \emph{mixingRun2}.
 \item After step 7, there is shown a popup panel with a graph of the performance of both the selected mixing runs.
 \end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Export the performance graph of a mixing run}
+\AT[expMulGraphs]{CPR37}{Verify that a user can export the performance graph of multiple mixing runs to their device.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Export Graph} button
+\item Follow the standard procedure to download a file
+\item Click/tap the \emph{Close} button
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the browser's download menu appears.
+\item After step 2, the image is saved at the chosen location.
+\item After step 3, the popup showing the performance graph closes.
+\end{itemize}
  
 %----------------------------------------------------------------------------------------------------
-\section{Remove a mixing run from history}
+\section{Remove a mixing run from local storage}
 \AT[removeRun]{CPR31}{Verify that a user can remove a previously stored mixing run from local storage}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
 \item Click/Tap the \emph{Remove Saved Results} button
-\item Click/tap the \texttt{X} button next to the `mixingRun2' name.
+\item Click/tap the \texttt{X} button next to the \emph{mixingRun2} name.
 \item Click/Tap the \emph{Close} button.
 \end{enumerate}
 
@@ -300,6 +356,46 @@ The requirements that cannot be tested are \todo{List user requirements here}.
 %Output required from this test case
 \begin{itemize}
 \item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
-\item After step 2, the `testprotocol' file is removed from the table.
+\item After step 2, the \emph{mixingRun2} file is removed from the table.
+\item After step 3, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Remove a concentration distribution from local storage}
+\AT[removeDist]{CPR12}{Verify that a user can remove a previously stored concentration distribution from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Remove Saved Distributions} button
+\item Click/tap the \texttt{X} button next to the \emph{smiley} name.
+\item Click/Tap the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
+\item After step 2, the \emph{smiley} file is removed from the table.
+\item After step 3, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Remove a mixing protocol from local storage}
+\AT[removeProt]{CPR23}{Verify that a user can remove a previously stored mixing protocol from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Click/Tap the \emph{Remove Saved Protocols} button
+\item Click/tap the \texttt{X} button next to the \emph{testprotocol} name.
+\item Click/Tap the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
+\item After step 2, the \emph{testprotocol} file is removed from the table.
 \item After step 3, the popup closes.
 \end{itemize}
