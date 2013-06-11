@@ -1,20 +1,32 @@
 \chapter{Test plan}
 \label{chap:testPlan}
-\todo{Some introduction text for this chapter}
+In this chapter it is described what is tested and how it is tested with acceptance tests. Specific information about each test is described in chapters \ref{chap:testCaseSpecs}-\ref{chap:testReports}.
 
 \section{Test items}
-\todo{The items to be tested}
+In the acceptance tests, the requirements as described in the URD\ref{urd} are tested. Specifically, \applicationname{} is tested to see if it fulfills these requirements. In addition, the URD\ref{urd} contains use cases that describe the desired behavior.
 
 \section{Features to be tested}
-\todo{The features to be tested}
+The features subject to testing are a part of the CPRs described in the URD\ref{urd}. Not all of these requirements are implemented, and only the implemented requirements can be tested. The implemented requirements are: \todo{insert list of implemented requirements}
 
 \section{Test deliverables}
-\todo{Items that must be delivered before testing starts and when testing ends}
+Prior to testing, the following documents/code should be completed:
+\begin{itemize}
+\item URD\ref{urd}
+\item ATP\ref{stp}, should be finished up to the test reports (chapter \ref{chap:testReports}).
+\item The Fingerpaint code
+\end{itemize}
+After the tests are concluded the test reports should be written, and problem reports should be written when necessary.
 
 \section{Testing tasks}
-\todo{To prepare and carry out the tests}
+Before the acceptance tests can be executed, the following needs to be done:
+\begin{itemize}
+\item The acceptance tests need to be written.
+\item The \applicationname{} should be functional.
+\end{itemize}
 
 \section{Environmental needs}
-\todo{Properties required of the test environment}
+The hardware/software required to run \applicationname{} is described in appendix A of the ATP\ref{atp}.
 
 \section{Test case pass/fail criteria}
+The acceptance tests as a whole succeed if all the acceptance tests in it pass. Similarly if one test fails, the software is rejected.
+The test criteria are described in chapter \ref{chap:testSpecs}.
