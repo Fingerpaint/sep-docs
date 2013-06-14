@@ -2,7 +2,10 @@
 \label{chap:testCaseSpecs}
 \renewcommand{\atref}[1]{AT\ref{at:#1}}
 
-This chapter gives a detailed description of all acceptance tests. These tests are strongly based on the use cases as described in Appendix B of the URD \cite{urd}. They cover all the user requirements from the URD \cite{urd}, except for unimplemented and untestable requirements. Requirements stating portability to a certain browser are also not stated; these requirements can be tested by testing all other requirements on the specified browser. For example: compatibility with Safari can be testing by running all acceptance tests in Safari. In a similar way, support for a certain Operating System can be tested by running the tests on that Operating System.
+This chapter gives a detailed description of all acceptance tests. These tests are strongly based on the use cases as described in Appendix B of the URD \cite{urd}. They cover all the user requirements from the URD \cite{urd}, except for unimplemented and untestable requirements. 
+
+Requirements stating portability to a certain browser are also not stated; these requirements can be tested by testing all other requirements on the specified browser. For example: compatibility with Safari can be testing by running all acceptance tests in Safari. In a similar way, support for a certain Operating System can be tested by running the tests on that Operating System.
+
 Requirements that are not implemented in the \applicationname\ are \textbf{CPR4, CPR5, CPR14, CPR15, CPR16, CPR26, CPR27, CPR28, CPR38, CPR39 and CPR41}.
 
 The requirement that cannot be tested is \textbf{CPR40}.
@@ -408,7 +411,7 @@ Before executing these tests, one should read and follow the guidelines as descr
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
-\section{Export the performance graph of a mixing run}
+\section{Export the performance graph of multiple mixing runs}
 \AT[expMulGraphs]{CPR37}{\textbf{Test items}: Verify that the user can export the performance graph of multiple mixing runs to their device.}
 
 \subsection*{Input specifications}
