@@ -328,7 +328,7 @@ Before executing these tests, one should read and follow the guidelines as descr
 \item After step 2, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
 \item After step 4, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
 \item After step 5, a popup panel with \emph{spiral}, \emph{mixingRun2}, a \emph{Compare} button and a \emph{Cancel} button is displayed.
-\item After step 7, there is shown a popup panel with a graph of the performance of both the selected mixing runs, a \emph{New Comparison} button, and \emph{Export graphs} button and a \emph{Cancel} button.
+\item After step 7, a popup panel with a graph of the performance of both the selected mixing runs, a \emph{New Comparison} button, and \emph{Export graphs} button and a \emph{Cancel} button is displayed.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
@@ -351,6 +351,28 @@ Before executing these tests, one should read and follow the guidelines as descr
 \item After step 3, the popup showing the performance graph closes.
 \end{itemize}
  
+ %----------------------------------------------------------------------------------------------------
+\section{Load the results of a previously saved mixing run}
+\AT[loadRun]{CPR32, CPR34}{\textbf{Test items}: Verify that the user can load the resulting distribution, protocol and performance graph of a previously saved mixing run.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Load Saved Results} in the menu bar on the right side of the application.
+\item Press \emph{spiral}.
+\item Press the \emph{View single graph} button.
+\item Press the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup panel with \emph{spiral}, \emph{mixingRun2} and a \emph{Close} button is displayed.
+\item After step 2, the popup panel is closed, and loading panel is shown for a short amount of time. After the loading panel closes, the black spiral distribution that was obtained at \atref{execProt} is displayed in the drawing area. Also, the text \emph{T[6.25], B[6.25]} is displayed in the text area on the right side of the application and the spinner for the number of steps shows 10.
+\item After step 3, a popup shows up with the graph from \atref{viewPerformance}. In addition, there is a \emph{Close} button and an \emph{Export Graph} button.
+\item After step 4, the popup showing the performance graph closes.
+\end{itemize}
+
 %----------------------------------------------------------------------------------------------------
 \section{Remove a mixing run from local storage}
 \AT[removeRun]{CPR31}{\textbf{Test items}: Verify that the user can remove a previously stored mixing run from local storage}
