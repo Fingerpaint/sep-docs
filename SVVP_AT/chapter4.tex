@@ -1,3 +1,4 @@
 \chapter{Test procedures}
 \label{chap:testProcedures}
-For the tests to succeed, it is important that the tests are done in order. It is also important that the application is not closed between tests, unless the test states otherwise. Otherwise some steps done in earlier tests may have to be repeated for the latter tests to succeed. The set up required is described in appendix A\todo{add reference}.
+For the tests to succeed, it is important that the tests are done in order. It is also important that the application is not closed between tests, unless a test states something else. Otherwise some steps done in earlier tests may have to be repeated for the latter tests to succeed. Furthermore, the tests should be executed on the device that hasn't run the application before. If this is not the case, i.e. the application has been used on the device before, all distributions, protocols and mixing results that might have been saved on the device should be removed before starting the acceptance tests. The set up required to execute the acceptance tests from chapter \ref{chap:testCaseSpecs} is described in appendix A. 
+%todo{add reference to appendix A}.
