@@ -1,0 +1,154 @@
+\chapter{ATP Feedback}
+\label{chap:atp-feedback}
+
+\section{Abstract}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+General & Typo & Please enable spell checking for your \LaTeX{} editor. \\
+Abstract & Question & \emph{\ldots a report on the results needs to be written.} Does this mean that a report should be written after the client has run the tests? Is this report part of this document? I can get the answers from reading the rest of the document, but on its own, the wording is a bit unclear. \\
+Abstract & Structure & The last sentence with the ESA standards is unexpected and directly follows unrelated text. I'd move this sentence to the start of the abstract and start a new paragraph for the remaining text. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+Abstract & Missing & The URD is mentioned here, but there is no reference. \\ 
+\end{longtable}
+
+\section{Chapter 1}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+1.2 & Other & The last sentence implies that the user manual is written because the server setup needs to run the tests on its own. \\
+1.2 & Other & In the last sentence \emph{Appendix A} is not a clickable reference. \\
+1.3.1 & Other & For Safari, you might want to make it clear that this is the version used for desktop systems, to indicate that iOS Safari is not the same as Safari. \\
+1.3.2 & Typo & The list contains \emph{At} which should probably be \emph{AT}. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+1.3.1 & Other & ``Firefox'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``Google Chrome'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``Internet Explorer'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``Firefox'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``iOS'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``iOS Safari'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``iPhone'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``iPad'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``Opera'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``Safari'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.1 & Other & ``System Administrator'' is mentioned in the list of definitions, but it is not used in the document. \\
+1.3.2 & Typo & ``At'' should be in complete capital letters (AT). \\
+1.3.2 & Other & ``ADD'' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Typo & An ``ATP'' is an ``Acceptance Test Plan'', not a ``Plane''. \\
+1.3.2 & Other & `CM' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Other & `GUI' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Other & `SR' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Other & `SRD' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Other & `TU/e' is mentioned in the list of abbreviations, but is not used in the document. \\
+1.3.2 & Missing & `CPR' is used in this document, but it is not included in the list of abbreviations. \\
+\end{longtable}
+
+\section{Chapter 2}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+2 & Other & The wording of this introduction is strange and contains too much passive forms. \\
+2.* & Other & This chapter contains a lot of incorrect citations, e.g. \emph{URD\textbackslash ref\{urd\}} instead of \emph{URD\textbackslash cite\{urd\}}. \\
+2.1 & Other & Why do the first two sentences need to be two sentences? These tests are only to test whether the application fulfils the URD requirements. The first sentence need not be there if the second is reworded slightly. \\
+2.6 & Other & Broken reference in the last sentence. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+2 & Other & I noticed that the references to external documents (URD, ATP) in this chapter are not working. This is because the command `ref' is used, whereas you actually need `cite' for references from the ref.bib file. \\
+2 & Style & The style of the first sentence of this chapter is a bit weird. I would rephrase it somewhat, for instance: ``This chapter describes which items are tested and how they are to be tested, using the acceptance tests.'' \\
+2.1 & Typo & I would change ``Specifically, Fingerpaint application'' to ``Specifically, the Fingerpaint application''. \\
+2.2 & Question & If I understand it correctly, you want to give a list of implemented requirements here. However, I think the list of unimplemented requirements is much shorter. So, is it an idea to list the unimplemented requirements instead? Note: after reading chapter 3, I saw that you wanted to list the unimplemented and not testable requirements there. Is it still necessary to list all (un)implemented requirements here? \\
+2.3 & Style & I would rewrite the last sentence of this section to ``After the tests are concluded, the test reports should be written. Problem reports should be written, when necessary.'' \\
+2.5 & Typo & I would refer to the Fingerpaint application as ``the Fingerpaint application''. \\
+2.6 & Style & ``all the acceptance tests in it pass'' sounds a bit odd to me. Perhaps you can say ``if all the individual acceptance tests pass'. \\
+2.6 & Other & A reference is made to a chapter, but the reference is not working. Perhaps you are missing a label or the label is misspelled. \\
+
+\end{longtable}
+
+\section{Chapter 3}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+3 & Other & \emph{Acception} should be something like \emph{exception}, but the sentence should be reworded to fix this. Also, try to avoid \emph{ones}. \\
+3.* & Other & Personally I would use \emph{the user} instead of \emph{a user}. \\
+3.* & Typo & Various lines do not end with ``.''. \\
+3.* & Other & Throughout the chapter, both computer and mobile input actions are specified, which reads awkwardly. I would discard the computer actions, as we have always said that the application is only really supported on mobile devices. If both types of actions should be kept, I would just put a notice at the start of the chapter. \\
+3.* & Structure & It might be an idea to create a table with on the left the input and on the right the output. Currently it is slightly annoying to scroll up and down every time to validate whether the correct output follows from input. \\
+3.1 & Other & Add a \emph{\textbf{Test items:}} for consistency to the table. \\
+3.1 & Missing & After step 2, not only does the canvas appear, but the menu (which is crucial to the application) does too. \\
+3.1 & Other & Step 7: \emph{Click/Tap on somewhere in the drawing area} has a superfluous \emph{on}. \\
+3.1 & Incorrect & Step 12, 14: There is no \emph{black} or \emph{white} in the menu bar, only a picture with a black and white rounded square. The text makes it appear that there are buttons with these texts. \\
+3.* & Other & Occasionally, the \emph{Rest Dist} button is referenced, this should be \emph{Reset Distribution}. \\
+3.2 & Missing & This test does more than it says in the test items: it also tests whether all drawing tools work etcetera. \\
+3.* & Other & \emph{\ldots there is shown \ldots} sounds \textbf{really} strange. \\
+3.3 & Missing & This test also does more than its test items suggest, such as loading and overwriting. \\
+3.4 & Missing & At this point, a smiley is drawn on the canvas, but the test assumes the canvas is empty. Somewhere the distribution should be reset. \\
+3.* & Incorrect & There is no \#steps label, this was changed to \emph{Number of steps} or similar. I think it would suffice to say \emph{the spinner for the number of steps}. \\
+3.5 & Typo & In \emph{Test items}, it should say \emph{\ldots define and execute \textbf{a} mixing protocol}. \\
+3.* & Incorrect & There is no top button any more for number spinners. \\
+3.* & Incorrect & There is no \emph{Define Protocol} check box. \\
+3.11 & Question & What is the added value of loading a second initial distribution? \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+3 & Question & Some requirements contain the text ``Test items'' (AT2, for instance), while others do not (AT1). Why is this the case? \\
+3 & Question & Perhaps you can mention that the input/output specifications listed for each of the ATs are based on the use cases? \\
+3 & Question & Why do you use the term ``website'' instead of ``application'' in the test case specifications? We always referred to our product as an application. \\
+3 & Missing & It is not entirely clear whether the ATs are stand-alone or have to be executed one after the other. Perhaps you can mention this in the introduction. Note: after reading chapter 4, this becomes clear. Maybe a reference to chapter 4 in the introduction of this chapter is in place here. \\
+3 & Missing & For the saving and loading of items, you implicitly assume that the user has not yet saved any items yet. If this is not the case, then some ATs will fail. Perhaps you can include an assumption that the user begins the ATs with a completely clean local storage. \\
+3 & Incorrect & Throughout this chapter, some buttons are named differently then those in the application. An example is ``Rest Dist'', which should be ``Reset Distribution''. The same holds for the ``rectangle'' button, which is actually the ``Rectangle 400x240'' button. \\
+3 & Incorrect & In some test cases, the construction ``there is shown a ...'' is used, but the order of the sentence is not correct. It should be ``a ... is shown''. \\
+3 & Inconsistent & The description of the test case vary in level of detail. For instance, in AT2 you mention ``a popup panel with two buttons and a number spinner'', whereas in AT3 you mention ``a popup panel'' and '' a new popup panel''. I would stick to the more detailed description, to make the test cases less ambiguous. \\
+3 & Incorrect & Some acceptance tests are described in terms of the old GUI elements. For instance, the numberspinners don't have top and bottom buttons, but + and - buttons instead. This is the case in AT4 and AT5, for instance. The same holds for the checkbox, which is now a toggle button (and hence, the text alters between ``Define Protocol'' and ``Hide Define Protocol'') and the toggle colour button, which is also a toggle button (instead of text white/black). The text of the label ``\#steps'' has been changed to ``Number of steps''. Moreover, after the GUI has been refactored w.r.t. new menus, a lot of acceptance tests probably need some additional steps. \\
+3 & Inconsistent & In some ATs, you specify what is displayed on the canvas when a drawing action is executed (AT2). In others (AT3), this is not mentioned explicitly, which is inconsistent. \\
+3 & Other & The unimplemented requirements are CPR3, CPR4, CPR5, CPR14, CPR15, CPR16, CPR25, CPR26, CPR27, CPR28, CPR38, CPR39 and CPR41. \\
+3 & Other & The not testable requirement(s) is/are: CPR40. \\
+AT1 & Typo & ``both the selection rows'' is not entirely correct. It should be ``both selection rows''. \\
+AT2 & Question & What's the purpose of the ``Click/Tap somewhere in the drawing area''? I think you mean to deselect the current menu that the user is in, so maybe you can say that. Why is the first action necessary? Note: after reading the output, it becomes clear that you actually draw on the canvas with these steps. Perhaps you can clarify this a bit more. \\
+AT2 & Question & In step 11, is it allowed to click on the canvas as well? Or should the user press outside the menu, but not on the canvas? \\
+AT3 & Missing & The following requirements are part of this scenario, but are not mentioned in the list of requirements for this AT: CPR6 (user draws distribution) and CPR8 (user resets distribution). \\
+AT3 & Incorrect & In step 10, the user must press ``Cancel'', but there is no such button in the overwrite panel. This panel has a ``Close'' button. The same holds for the ``OK'' button, which should be the ``Save'' button. \\
+AT4 & Missing & The following requirements are part of this scenario, but are not mentioned in the list of requirements for this AT: CPR6, CPR8 (if reset distribution should be the first step). I believe that CPR8 might be necessary here, because of the last step of the previous AT. \\
+AT4 & Incorrect & CPR17 (define protocol) and CPR20 (define step for each movement in protocol) are not part of this AT, because this AT is not about defining a protocol. \\
+AT4 & Typo & In the output specification after step 3, it should be ``and now has a different shape''. \\
+AT5 & Missing & The following requirements are part of this scenario, but are not mentioned in the list of requirements for this AT: CPR6 and CPR8 (if reset distribution should be the first step). \\
+AT5 & Other & In the output specification, the description ``some new menu items have appeared'' is quite vague. This doesn't ensure that the correct menu items are shown when this step has been executed. \\
+AT5 & Incorrect & CPR18 (execute mixing step directly) is not part of this AT, because a protocol is defined here (CPR17). \\
+AT5 & Incorrect & In the output specification of step 4, the text area also appears (it is not visible initially). \\
+AT5 & Incorrect & In the output specifications, the numbering of the steps is incorrect. The output after step 6 is actually the output after step 7 and so forth. Just add one to the current step numbers (starting from step 6) and then it is correct. Moreover, the text area is not visible when you've pressed ``Reset Protocol''. \\
+AT11 & Missing & From the output specification of steps 2 and 4, it is not clear that the smileys involve the smileys that have been saved previously. \\
+AT12 & Incorrect & The first step from the input involves clicking ``Define Protocol''. However, it has never been pressed in between AT5 and this AT. The step is therefore not needed. \\
+AT13 & Missing & The following requirements are part of this scenario, but are not mentioned in the list of requirements for this AT: CPR29 (execute mixing run) and CPR30 (save results) and CPR32 (view end result of mixing run). \\
+AT14 & Incorrect & The ``Export Graph'' should be the ``Export graphs'' button. \\
+AT14 & Incorrect & The ``Close'' button should be the ``Cancel'' button. \\
+AT15, AT16, AT17 & Question & Is it really enough to click ``Remove Saved ...'' button once? Does that truly show that the chosen item has been removed? Perhaps an additional click on the button can convince the user that the item has indeed been removed. \\
+AT15, AT16, AT17 & Missing & After step 2 (pressing the X-button), a ``Delete Successful'' message appears (just like the ``Save Successful''). \\
+\end{longtable}
+
+\section{Chapter 4}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+4 & Typo & \emph{For the tests to succeed, It is important \ldots}: \emph{It} should not be capitalised. \\
+4 & Other & \emph{\ldots unless the test states otherwise. Otherwise some steps \ldots} The second sentence is only a fragment, and the word \emph{otherwise} occurs twice in succession. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+4 & Other & The last sentence of this chapter is a little vague. Perhaps you can say ``The set up required to execute the ATs from chapter 3 is described in appendix A.''  \\
+\end{longtable}
+
+\section{Chapter 5}
+No feedback has been given on this part of the document.
+
+\section{Chapter 6}
+\subsection{Internal reviews}
+\feedbackTableStart{\benjamin}{0.0}
+- & Other & The right and left sides of the header of the page overlap. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+6.1 & Incorrect & There are duplicate entries in the table, for CPR29 and CPR30. \\
+6.1 & Incorrect & For AT4 and AT5 and AT13, some incorrect requirements are listed in this AT. \\
+6.1+6.2 & Missing & The following requirements are implemented and listed in the ATs, but are not described in this table: CPR12, CPR23, CPR33, CPR35, CPR37. \\
+6.1+6.2 & Missing & Some requirements are covered in more ATs. See the ``Missing'' remarks for the individual ATs for the missing requirements. \\
+6.1+6.2 & Missing & Some ATs are not mentioned in this table. The missing ATs are AT6, AT9, AT13 (the reference doesn't work), AT14, AT15 and AT16. \\
+\end{longtable}

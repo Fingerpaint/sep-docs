@@ -2,304 +2,558 @@
 \label{chap:testCaseSpecs}
 \renewcommand{\atref}[1]{AT\ref{at:#1}}
 
-This chapter gives a detailed description of all acceptance tests. These tests cover all the user requirements from the URD \cite{urd}, with acception of the unimplemented ones, and the untestable ones.
-The requirements that are not implemented in the \applicationname\ are \todo{List user requirements here}.
-The requirements that cannot be tested are \todo{List user requirements here}.
+This chapter gives a detailed description of all acceptance tests. These tests are strongly based on the use cases as described in Appendix B of the URD \cite{urd}. They cover all the user requirements from the URD \cite{urd}, except for unimplemented and untestable requirements. 
+
+Requirements stating portability to a certain browser are also not stated; these requirements can be tested by testing all other requirements on the specified browser. For example: compatibility with Safari can be testing by running all acceptance tests in Safari. In a similar way, support for a certain Operating System can be tested by running the tests on that Operating System.
+
+Requirements that are not implemented in the \applicationname\ are \textbf{CPR4, CPR5, CPR14, CPR15, CPR16, CPR26, CPR27, CPR28, CPR38, CPR39 and CPR41}.
+
+The requirement that cannot be tested is \textbf{CPR40}.
+
+Before executing these tests, one should read and follow the guidelines as described in chapter \ref{chap:testProcedures} of this document.
 
 %----------------------------------------------------------------------------------------------------
-\section{Choose a geometry and mixer type}
-\AT[chooseGeoMixer]{CPR1, CPR2}{Verify that a user can select a geometry and mixer when starting the application.}
+\section{Choose a rectangular geometry and mixer type}
+\AT[chooseRecGeoMixer]{CPR1, CPR2}{\textbf{Test items}: Verify that the user can select a rectangular geometry and mixer when starting the application.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap the \emph{rectangle} button after loading the application.
-\item Click/Tap the \emph{default} button.
+\item Press the \emph{Rectangle 400x240} button after loading the application.
+\item Press the \emph{Default} button.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, a second selection row pops up for the rectangle geometry.
-\item After step 2, both the selection rows close and a drawing canvas in the shape of a rectangle shows up.
+\item After step 1, a second selection row is displayed for the rectangle geometry.
+\item After step 2, both the selection rows close and both a menu and a drawing canvas in the shape of a rectangle show up.
 \end{itemize}
  
 %----------------------------------------------------------------------------------------------------
 \section{Define an initial concentration distribution}
-\AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{\textbf{Test items}: Verify that a user can define a concentration distribution by drawing in the drawing area.}
+\AT[defDist]{CPR6, CPR7, CPR8, CPR9, CPR10}{\textbf{Test items}: Verify that the user can define a concentration distribution by drawing in the drawing area.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap somewhere in the drawing area.
-\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{circle} in the displayed popup panel.
-\item Click/Tap somewhere in the drawing area.
-\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website.
-\item Click/Tap on the top button of the numberspinner in the displayed popup panel, until the number shown equals 10.
-\item Click/Tap on somewhere in the drawing area.
-\item Click/Tap on \emph{Select Tool} in the menu bar on the right side of the website. 
-\item Click/Tap on \emph{square} in the displayed popup panel.
-\item Click/Tap on the bottom button of the numberspinner in the displayed popup panel, until the number shown equals 5.
-\item Click/Tap somewhere outside the popup panel.
-\item Click/Tap on \emph{black} in the menu bar on the right side of the website. 
-\item Click/Tap within the large black circle on the drawing area.
-\item Click/Tap on \emph{white} in the menu bar on the right side of the website. 
-\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website. 
-\item Drag/Slide across the drawing area.
+\item Press somewhere in the drawing area.
+\item Press \emph{Select tool} in the menu bar on the right side of the application.
+\item Press the button with a circle in the menu bar on the right side of the application.
+\item Press somewhere in the drawing area.
+\item Press the \texttt{+} button of the numberspinner in the menu bar on the right side of the application, until the number shown equals 10.
+
+\item Press somewhere in the drawing area.
+\item Press the button with a square in the menu bar on the right side of the application.
+\item Press the \texttt{-} button of the numberspinner in the menu bar on the right side of the application, until the number shown equals 5.
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\item Press the button which shows a black square on top of a white square in the menu bar on the right side of the application. 
+
+\item Press within the large black circle on the drawing area.
+\item Press the button which shows a white square on top of a black square in the menu bar on the right side of the application. 
+\item Drag across the drawing area.
+\item Press \emph{Clear canvas} in the menu bar on the right side of the application. 
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
 \item After step 1, a small black square is displayed within the drawing area.
-\item After step 2, a popup panel with two buttons and a number spinner is shown.
-\item After step 3, the \emph{circle} button in the popup panel appears pressed down.
+\item After step 2,  the menu on the right side of the application slides to the left, and a number spinner, a button with a circle, a button with a square and a \emph{Back} button are shown.
+\item After step 3, the button with a circle appears pressed down.
 \item After step 4, a small black circle is displayed within the drawing area.
-\item After step 5, a popup panel with two buttons and a number spinner is shown.
-\item After step 7, a large black circle is displayed within the drawing area.
-\item After step 8, there is shown a popup panel with two buttons and a number spinner.
-\item After step 9, the \emph{square} button in the popup panel appears pressed down.
-\item After step 11, the popup panel is closed.
-\item After step 12, the pressed button now shows the text \emph{white}.
-\item After step 13, a smaller white square is displayed within the large black circle on the drawing area.
-\item After step 14, the pressed button now shows the test \emph{black}.
-\item After step 15, the drawing area is completely white.
-\item After step 16, a line following the drag/swipe is displayed within the drawing area.
+
+\item After step 6, a large black circle is displayed within the drawing area.
+\item After step 7, the button with a square appears pressed down.
+\item After step 9, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\item After step 10, the pressed button now shows a white square on top of a black square.
+
+\item After step 11, a smaller white square is displayed within the large black circle on the drawing area.
+\item After step 12, the pressed button now shows a black square on top of a white square.
+\item After step 13, a black line following the drag is displayed within the drawing area.
+\item After step 14, the drawing area is completely white.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Save a concentration distribution}
-\AT[saveDist]{CPR11}{\textbf{Test items}: Verify that a user can save a concentration distribution.}
+\AT[saveDist]{CPR11}{\textbf{Test items}: Verify that the user can save a concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Drag/Slide across the drawing area to draw a happy smiley face.
-\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
-\item Enter the text \emph{smiley} within the text area.
-\item Click/Tap on \emph{OK}.
-\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website. 
-\item Drag/Slide across the drawing area to draw a sad smiley face.
-\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
-\item Enter the text \emph{smiley} within the text area.
-\item Click/Tap on \emph{OK}.
-\item Click/Tap on \emph{Cancel}.
-\item Enter the text \emph{sadSmiley} within the text area.
-\item Click/Tap on \emph{OK}.
-\item Click/Tap on \emph{Rest Dist} in the menu bar on the right side of the website.
-\item Drag/Slide across the drawing area to draw a new happy smiley face.
-\item Click/Tap on \emph{Save Distribution} in the menu bar on the right side of the website.
-\item Enter the text \emph{smiley} within the text area.
-\item Click/Tap on \emph{OK}.
-\item Click/Tap on \emph{Overwrite}.
+\item Drag across the drawing area to draw a happy smiley face.
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press \emph{Save} in the menu bar on the right side of the application.
+\item Enter the text \emph{Smiley} within the text area.
+\item Press \emph{Save}.
+
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\item Press \emph{Clear canvas} in the menu bar on the right side of the application. 
+\item Drag across the drawing area to draw a sad smiley face.
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press \emph{Save} in the menu bar on the right side of the application.
+
+\item Enter the text \emph{Smiley} within the text area.
+\item Press \emph{Save}.
+\item Press \emph{Cancel}.
+\item Enter the text \emph{SadSmiley} within the text area.
+\item Press \emph{Save}.
+
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\item Press \emph{Clear canvas} in the menu bar on the right side of the application.
+\item Drag across the drawing area to draw a new happy smiley face.
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press \emph{Save} in the menu bar on the right side of the application.
+
+\item Enter the text \emph{Smiley} within the text area.
+\item Press \emph{Save}.
+\item Press \emph{Overwrite}.
+\item Press \emph{Back} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 2, there is shown a popup panel
-\item After step 4, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
-\item After step 5, the drawing area is completely white.
-\item After step 7, there is shown a popup panel
-\item After step 9, there is shown a new popup panel.
-\item After step 10, the first popup panel is shown again.
-\item After step 12, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
-\item After step 13, the drawing area is completely white.
-\item After step 15, there is shown a popup panel
-\item After step 17, there is shown a new popup panel.
-\item After step 18, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\item After step 1, a happy smiley face is displayed within the drawing area.
+\item After step 2, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 3, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
+\item After step 5, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+
+\item After step 6, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\item After step 7, the drawing area is completely white.
+\item After step 8, a sad smiley face is displayed withing the drawing area.
+\item After step 9, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 10, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
+
+\item After step 12, a new popup panel with a message, a \emph{Overwrite} button and a \emph{Cancel} button is displayed.
+\item After step 13, the first popup panel is displayed again.
+\item After step 15, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+
+\item After step 16, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\item After step 17, the drawing area is completely white.
+\item After step 18, a happy smiley face is displayed within the drawing area.
+\item After step 19, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 20, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
+
+\item After step 22, a new popup panel with a message, a \emph{Overwrite} button and a \emph{Cancel} button is displayed.
+\item After step 23, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+\item After step 24, the menu on the right side of the application slides to the right, and the original menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Define and execute a single mixing step}
-\AT[execSingleStep]{CPR17, CPR18, CPR20, CPR25, CPR26, CPR27}{\textbf{Test items}: Verify that a user can define and execute a single mixing step on an initial concentration distribution.}
+\AT[execSingleStep]{CPR18}{\textbf{Test items}: Verify that the user can define and execute a single mixing step on an initial concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on the top button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the website, until the number shown equals 5.
-\item Drag/Slide across the drawing area to draw a large black dot in the middle of the drawing area.
-\item Drag/Slide the top wall to the right.
+\item Press the \texttt{+} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 5.
+\item Press \emph{Clear canvas} in the menu bar on the right side of the application. 
+\item Drag across the drawing area to draw a large black dot in the middle of the drawing area.
+\item Drag the top wall to the right.
+\item Press \emph{Clear canvas} in the menu bar on the right side of the application. 
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 3, the black dot has moved, and has now a different shape.
+\item After step 2, the drawing area is completely white.
+\item After step 3, a large black dot is displayed withing the drawing area.
+\item After step 4, the black dot has moved, and now has a different shape.
+\item After step 5, the drawing area is completely white.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Define and execute a mixing protocol}
-\AT[execProt]{CPR17, CPR18, CPR19, CPR20, CPR21, CPR25, CPR26, CPR27, CPR29}{\textbf{Test items}: Verify that a user can define and execute mixing protocol on an initial concentration distribution.}
+\AT[execProt]{CPR17, CPR19, CPR20, CPR21, CPR29, CPR32}{\textbf{Test items}: Verify that the user can define and execute a mixing protocol on an initial concentration distribution.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on the top button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the website, until the number shown equals 6.25.
-\item Drag/Slide across the drawing area to draw a large black dot in the middle of the left half of the drawing area.
-\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
-\item Drag/Slide the top wall to the right.
-\item Drag/Slide the bottom wall to the right.
-\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
-\item Click/Tap on \emph{Reset Protocol} in the menu bar on the right side of the website.
-\item Drag/Slide the top wall to the right and the bottom wall to the left.
-\item Click/Tap on the top button of the numberspinner with the \emph{\#steps} label in the menu bar on the right side of the website, until the number shown equals 10.
-\item Click/Tap \emph{Mix Now}.
+\item Press the \texttt{+} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 6.25.
+\item Drag across the drawing area to draw a large black dot in the middle of the left half of the drawing area.
+\item Press \emph{Define protocol} in the menu bar on the right side of the application.
+\item Drag the top wall to the right.
+\item Drag the bottom wall to the right.
+
+\item Press the \texttt{+} button of the spinner for the number of steps in the menu bar on the right side of the application, until the number shown equals 10.
+\item Press \emph{Clear protocol} in the menu bar on the right side of the application.
+\item Drag the top wall to the right and the bottom wall to the left.
+\item Press the \texttt{+} button of the spinner for the number of steps in the menu bar on the right side of the application, until the number shown equals 10.
+\item Press \emph{Mix Now}.
+
+\item Press \emph{Stop defining protocol} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 3, some new menu items have appeared in the menu bar on the right side of the website.
-\item After step 4, the text area in the menu bar on the right side of the website shows the text T[6.25].
-\item After step 5, the text area in the menu bar on the right side of the website shows the text T[6.25] -B[6.25].
-\item After step 6, the text area in the menu bar on the right side of the website is empty, and the \emph{\#steps} numberspinner shows 1.
-\item After step 7, the text area in the menu bar on the right side of the website shows the text T[6.25] B[6.25].
-\item After step 9, the drawing area shows a black spiral distribution.
+\item After step 2, a large black dot is displayed withing the drawing area.
+\item After step 3, the menu on the right side of the application slides to the left, and two number spinners and \emph{Stop defining protocol}, \emph{Mix Now}, \emph{View performance graph}, \emph{Clear Protocol}, and \emph{Protocols} buttons appear.
+\item After step 4, a text area appears in the menu bar on the right side of the application and shows the text T[6.25].
+\item After step 5, the text area in the menu bar on the right side of the application shows the text T[6.25] -B[6.25].
+
+\item After step 7, the text area in the menu bar on the right side of the application has disappeared, and the spinner for the number of steps shows 1.
+\item After step 8, the text area in the menu bar on the right side of the application appeared again and shows the text T[6.25] B[6.25].
+\item After step 10, the drawing area shows a black spiral distribution. Also the \emph{View single graph} button in the menu bar on the right side of the application is now enabled.
+
+\item After step 11, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Export the resulting distribution image of a mixing run}
+\AT[expImage]{CPR33}{\textbf{Test items}: Verify that the user can export the resulting distribution of a mixing run to their device.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press the \emph{Export image} button.
+\item Follow the standard procedure to download a file.
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 2, the browser's download menu appears.
+\item After step 3, the image is saved at the chosen location.
+\item After step 4, the menu on the right side of the application slides to the right, and the original menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Save a mixing protocol}
-\AT[saveProtocol]{CPR22}{Verify that a user can store the current mixing protocol in local storage}
+\AT[saveProtocol]{CPR22}{\textbf{Test items}: Verify that the user can store the current mixing protocol in local storage}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap the \emph{Save Protocol} button
-\item Type the name `testprotocol' in the textfield of the popup.
-\item Click/Tap the \emph{Save} button.
+\item Press \emph{Define protocol} in the menu bar on the right side of the application.
+\item Press \emph{Protocols} in the menu bar on the right side of the application.
+\item Press the \emph{Save} button.
+\item Type the name \emph{Testprotocol} in the textfield of the popup.
+\item Press the \emph{Save} button.
+\item Press \emph{Back} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, a popup shows up with a textfield, a \emph{save} button and a \emph{cancel} button.
-\item During step 2, the name appears in the textfield.
-\item After step 3, the popup closes and a \emph{save successful} message appears.
+\item After step 1, the menu on the right side of the application slides to the left, and two number spinners and \emph{Stop defining protocol}, \emph{Mix Now}, \emph{View performance graph}, \emph{Clear Protocol}, and \emph{Protocols} buttons appear.
+\item After step 2, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove} and \emph{Back} appear.
+\item After step 3, a popup shows up with a textfield, a \emph{Save} button and a \emph{Cancel} button.
+\item After step 5, the popup closes and a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+\item After step 6, the menu on the right side of the application slides to the right, and the protocol menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{View the performance of a mixing run}
-\AT[viewPerformance]{CPR34}{Verify that a user can view the mixing performance of an executed mixing run.}
+\AT[viewPerformance]{CPR34}{\textbf{Test items}: Verify that the user can view the mixing performance of an executed mixing run.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap the \emph{View single graph} button
-\item Click/tap the \emph{Close} button
+\item Press the \emph{View performance graph} button.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, a popup shows up with a graph. In this graph, the mixing performance is shown on the y-axis, and the corresponding protocol step is shown on the x-axis. In addition, there is a \emph{close} button and an \emph{export} button.
-\item After step 2, the popup closes.
+\item After step 1, a popup shows up with a graph. In this graph, the mixing performance is shown on the y-axis, and the corresponding protocol step is shown on the x-axis. In addition, there is a \emph{Close} button and an \emph{Export Graph} button.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Export the performance graph of a mixing run}
+\AT[expGraph]{CPR35}{\textbf{Test items}: Verify that the user can export the performance graph of a mixing run to their device.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press the \emph{Export Graph} button.
+\item Follow the standard procedure to download a file.
+\item Press the \emph{Close} button.
+\item Press \emph{Stop defining protocol} in the menu bar on the right side of the application.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the browser's download menu appears.
+\item After step 2, the image is saved at the chosen location.
+\item After step 3, the popup showing the performance graph closes.
+\item After step 4, the menu on the right side of the application slides to the right, and the original menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Save a mixing run}
-\AT[saveRun]{CPR30}{\textbf{Test items}: Verify that a user can save the results of a mixing run.}
+\AT[saveRun]{CPR30}{\textbf{Test items}: Verify that the user can save the results of a mixing run.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on \emph{Save Results} in the menu bar on the right side of the website.
-\item Enter the text \emph{spiral} within the text area.
-\item Click/Tap on \emph{OK}.
+\item Press \emph{Results} in the menu bar on the right side of the application.
+\item Press \emph{Save} in the menu bar on the right side of the application.
+\item Enter the text \emph{Spiral} within the text area.
+\item Press \emph{Save}.
+\item Press \emph{Back} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, there is shown a popup panel
-\item After step 3, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
+\item After step 1, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Compare performance} and \emph{Back} appear.
+\item After step 2, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
+\item After step 4, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+\item After step 5, the menu on the right side of the application slides to the right, and the original menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Load a previously saved concentration distribution}
-\AT[loadDist]{CPR13}{\textbf{Test items}: Verify that a user can load a previously saved concentration distribution in the drawing area.}
+\AT[loadDist]{CPR13}{\textbf{Test items}: Verify that the user can load a previously saved concentration distribution in the drawing area.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{sadSmiley}.
-\item Click/Tap on \emph{Load Initial Distribution} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{smiley}.
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press \emph{Load} in the menu bar on the right side of the application.
+\item Press \emph{SadSmiley}.
+\item Press \emph{Load} in the menu bar on the right side of the application.
+\item Press \emph{Smiley}.
+\item Press \emph{Back} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
-\item After step 2, the popup panel is closed, and a sad smiley is displayed in the painting area.
-\item After step 3, there is shown a popup panel with \emph{sadSmiley} and \emph{smiley}.
-\item After step 4, the popup panel is closed, and a happy smiley is displayed in the painting area.
+\item After step 1, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 2, a popup panel with \emph{SadSmiley}, \emph{Smiley} and a \emph{Close} button is displayed.
+\item After step 3, the popup panel is closed, and the sad smiley that was drawn at \atref{saveDist} is displayed in the drawing area.
+\item After step 4, a popup panel with \emph{SadSmiley}, \emph{Smiley} and a \emph{Close} button is displayed.
+\item After step 5, the popup panel is closed, and the secondly drawn happy smiley from \atref{saveDist} is displayed in the drawing area.
+\item After step 6, the menu on the right side of the application slides to the right, and the original menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{Load a previously saved mixing protocol}
-\AT[loadProt]{CPR24}{\textbf{Test items}: Verify that a user can load a previously saved mixing protocol.}
+\AT[loadProt]{CPR24}{\textbf{Test items}: Verify that the user can load a previously saved mixing protocol.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on the checkbox with the \emph{Define Protocol} label.
-\item Click/Tap on \emph{Load Mixing Protocol} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{testprotocol}.
+\item Press \emph{Define protocol} in the menu bar on the right side of the application.
+\item Press \emph{Clear protocol} in the menu bar on the right side of the application.
+\item Press the \texttt{+} button of the spinner for the number of steps in the menu bar on the right side of the application, until the number shown equals 10.
+\item Press \emph{Protocols} in the menu bar on the right side of the application.
+\item Press \emph{Load} in the menu bar on the right side of the application.
+\item Press \emph{testprotocol}.
+\item Press \emph{Back} in the menu bar on the right side of the application.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, some new menu items have appeared in the menu bar on the right side of the website.
-\item After step 2, there is shown a popup panel with \emph{testprotocol}.
-\item After step 3, the popup panel is closed, and the chosen mixing protocol is displayed in the text area on the right side of the website.
+\item After step 1, the menu on the right side of the application slides to the left, and two number spinners, a text area and \emph{Stop defining protocol}, \emph{Mix Now}, \emph{View performance graph}, \emph{Clear Protocol}, and \emph{Protocols} buttons appear.
+\item After step 2, the text area in the menu bar on the right side of the application has disappeared, and the spinner for the number of steps shows 1.
+\item After step 4, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, and \emph{Back} appear.
+\item After step 5, a popup panel with \emph{Testprotocol} and a \emph{Close} button is displayed.
+\item After step 6, the popup panel is closed, and \emph{T[6.25], B[6.25]} is displayed in the text area on the right side of the application.
+\item After step 7, the menu on the right side of the application slides to the right, and the protocol menu items appear again.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------------------
 \section{View multiple performance results in one graph}
-\AT[viewMulGraphs]{CPR36}{\textbf{Test items}: Verify that a user can view multiple performance results from previous mixing runs in one graph.}
+\AT[viewMulGraphs]{CPR36}{\textbf{Test items}: Verify that the user can view multiple performance results from previous mixing runs in one graph.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap on \emph{Mix Now} in the menu bar on the right side of the website.
-\item Click/Tap on \emph{Save Results} in the menu bar on the right side of the website.
-\item Enter the text \emph{mixingRun2} within the text area.
-\item Click/Tap on \emph{OK}.
-\item Click/Tap on \emph{Compare Performance} in the menu bar on the right side of the website.
-\item Select both \emph{spiral} and \emph{mixingRun2}.
-\item Click/Tap on \emph{Compare}.
+\item Press \emph{Mix Now} in the menu bar on the right side of the application.
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\item Press \emph{Results} in the menu bar on the right side of the application.
+\item Press \emph{Save} in the menu bar on the right side of the application.
+\item Enter the text \emph{MixingRun2} within the text area.
+
+\item Press \emph{Save}.
+\item Press \emph{Compare performance} in the menu bar on the right side of the application.
+\item Select \emph{Spiral}.
+\item Press \emph{Compare}.
+\item Press \emph{New Comparison}.
+
+\item Select both \emph{Spiral} and \emph{MixingRun2}.
+\item Press \emph{Compare}.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
 \item After step 1, the resulting concentration distribution is displayed in the drawing panel.
-\item After step 2, there is shown a popup panel.
-\item After step 4, there is shown a \emph{Save was successfull} message, which disappears after a few seconds.
-\item After step 5, there is shown a popup panel with \emph{spiral} and \emph{mixingRun2}.
-\item After step 7, there is shown a popup panel with a graph of the performance of both the selected mixing runs.
+\item After step 2, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\item After step 3, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Compare performance} and \emph{Back} appear.
+\item After step 4, a popup panel with a textfield, a \emph{Save} button and a \emph{Cancel} button is displayed.
+
+\item After step 6, a \emph{Save was successful} message is displayed, which disappears after a few seconds.
+\item After step 7, a popup panel with \emph{Spiral}, \emph{MixingRun2}, a \emph{Compare} button and a \emph{Cancel} button is displayed.
+\item After step 9, a popup panel with a graph of the performance of the \emph{Spiral} mixing run, a \emph{New Comparison} button, an \emph{Export graphs} button and a \emph{Cancel} button is displayed.
+\item After step 10, The first popup panel is displayed again.
+
+\item After step 12, a popup panel with a graph of the performance of both the selected mixing runs, a \emph{New Comparison} button, an \emph{Export graphs} button and a \emph{Cancel} button is displayed.
 \end{itemize}
- 
+
 %----------------------------------------------------------------------------------------------------
-\section{Remove a mixing run from history}
-\AT[removeRun]{CPR31}{Verify that a user can remove a previously stored mixing run from local storage}
+\section{Export the performance graph of multiple mixing runs}
+\AT[expMulGraphs]{CPR37}{\textbf{Test items}: Verify that the user can export the performance graph of multiple mixing runs to their device.}
 
 \subsection*{Input specifications}
 %Input for this test case
 \begin{enumerate}
-\item Click/Tap the \emph{Remove Saved Results} button
-\item Click/tap the \texttt{X} button next to the `mixingRun2' name.
-\item Click/Tap the \emph{Close} button.
+\item Press the \emph{Export graphs} button.
+\item Follow the standard procedure to download a file.
+\item Press the \emph{Close} button.
 \end{enumerate}
 
 \subsection*{Output specifications}
 %Output required from this test case
 \begin{itemize}
-\item After step 1, a popup shows up with a table containing file names, an \texttt{X} button next to each of them, and a close button under this table.
-\item After step 2, the `testprotocol' file is removed from the table.
-\item After step 3, the popup closes.
+\item After step 1, the browser's download menu appears.
+\item After step 2, the image is saved at the chosen location.
+\item After step 3, the popup showing the performance graph closes.
+\end{itemize}
+ 
+ %----------------------------------------------------------------------------------------------------
+\section{Load the results of a previously saved mixing run}
+\AT[loadRun]{CPR32, CPR34}{\textbf{Test items}: Verify that the user can load the resulting distribution, protocol and performance graph of a previously saved mixing run.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Load} in the menu bar on the right side of the application.
+\item Press \emph{Spiral}.
+\item Press the \emph{View performance graph} button.
+\item Press the \emph{Close} button.
+\item Press \emph{Stop defining protocol} in the menu bar on the right side of the application.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, a popup panel with \emph{Spiral}, \emph{MixingRun2} and a \emph{Close} button is displayed.
+\item After step 2, the popup panel is closed, and loading panel is shown for a short amount of time. After the loading panel closes, the black spiral distribution that was obtained at \atref{execProt} is displayed in the drawing area. Also, the menu bar on the right side of the application navigates to the protocol menu items. The text \emph{T[6.25], B[6.25]} is displayed in the text area on the right side of the application and the spinner for the number of steps shows 10.
+\item After step 3, a popup shows up with the graph from \atref{viewPerformance}. In addition, there is a \emph{Close} button and an \emph{Export Graph} button.
+\item After step 4, the popup showing the performance graph closes.
+\item After step 5, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Remove a mixing run from local storage}
+\AT[removeRun]{CPR31}{\textbf{Test items}: Verify that the user can remove a previously stored mixing run from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Results} in the menu bar on the right side of the application.
+\item Press the \emph{Remove} button.
+\item Press the \texttt{X} button next to the \emph{MixingRun2} name.
+\item Press the \emph{Close} button.
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Compare performance} and \emph{Back} appear.
+\item After step 2, a popup shows up with a table containing the names \emph{Spiral} and \emph{MixingRun2}, an \texttt{X} button next to each of them, and a \emph{Close} button under this table.
+\item After step 3, a \emph{Delete successful} message is displayed, which disappears after a few seconds. Also, the \emph{MixingRun2} file is removed from the table.
+\item After step 4, the popup closes.
+\item After step 5, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Remove a concentration distribution from local storage}
+\AT[removeDist]{CPR12}{\textbf{Test items}: Verify that the user can remove a previously stored concentration distribution from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Distributions} in the menu bar on the right side of the application.
+\item Press the \emph{Remove} button.
+\item Press the \texttt{X} button next to the \emph{Smiley} name.
+\item Press the \emph{Close} button.
+\item Press \emph{Back} in the menu bar on the right side of the application.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove}, \emph{Export image} and \emph{Back} appear.
+\item After step 2, a popup shows up with a table containing the names \emph{Smiley} and \emph{SadSmiley}, an \texttt{X} button next to each of them, and a \emph{Close} button under this table.
+\item After step 3, a \emph{Delete successful} message is displayed, which disappears after a few seconds. Also, the \emph{Smiley} file is removed from the table.
+\item After step 4, the popup closes.
+\item After step 5, the menu on the right side of the application slides to the right, and the original menu items appear again.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Remove a mixing protocol from local storage}
+\AT[removeProt]{CPR23}{\textbf{Test items}: Verify that the user can remove a previously stored mixing protocol from local storage}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press \emph{Define protocol} in the menu bar on the right side of the application.
+\item Press \emph{Protocols} in the menu bar on the right side of the application.
+\item Press the \emph{Remove} button.
+\item Press the \texttt{X} button next to the \emph{Testprotocol} name.
+\item Press the \emph{Close} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the menu on the right side of the application slides to the left, and two number spinners and \emph{Stop defining protocol}, \emph{Mix Now}, \emph{View performance graph}, \emph{Clear Protocol}, and \emph{Protocols} buttons appear.
+\item After step 2, the menu on the right side of the application slides to the left, and the new buttons \emph{Save}, \emph{Load}, \emph{Remove} and \emph{Back} appear.
+\item After step 3, a popup shows up with a table containing the name \emph{TestProtocol}, an \texttt{X} button next to this name, and a \emph{Close} button under this table.
+\item After step 4, a \emph{Delete successful} message is displayed, which disappears after a few seconds. Also, the \emph{Testprotocol} file is removed from the table.
+\item After step 5, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Choose a square geometry and mixer type}
+\AT[chooseSqrGeoMixer]{CPR3}{\textbf{Test items}: Verify that the user can select a square geometry and mixer when starting the application.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press the \emph{refresh} icon of the browser.
+\item Press the \emph{Square} button.
+\item Press the \emph{Default} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the initial menu of the application is displayed.
+\item After step 2, a second selection row is displayed for the square geometry.
+\item After step 3, both the selection rows close and both a menu and a drawing canvas in the shape of a square show up.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Define a mixing protocol for a square geometry}
+\AT[defSqrProt]{CPR25}{\textbf{Test items}: Verify that the user can define a mixing protocol for a square geometry.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press the \texttt{+} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 6.25.
+\item Press \emph{Define Protocol} in the menu bar on the right side of the application.
+\item Drag the top wall to the right.
+\item Press the \texttt{-} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 3.5.
+\item Drag the bottom wall to the right.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 2, the menu on the right side of the application slides to the left, and two number spinners and \emph{Stop defining protocol}, \emph{Mix Now}, \emph{View performance graph}, \emph{Clear Protocol}, and \emph{Protocols} buttons appear.
+\item After step 3, the text area in the menu bar on the right side of the application shows the text T[6.25].
+\item After step 5, the text area in the menu bar on the right side of the application shows the text T[6.25] -B[3.5].
 \end{itemize}

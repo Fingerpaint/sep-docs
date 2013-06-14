@@ -1,0 +1,96 @@
+\chapter{Requirements traceability matrices}
+\label{chap:ATMatrix}
+
+In this chapter, we link implemented CPRs, described in the URD \cite{urd}, to the tests described in this document. CPRs we did not implement are omitted from this matrix.
+
+\section{URD to ATP}
+The following matrix lists which components are linked to the CPRs in the URD.
+
+\newcounter{tracmatrixcounter}
+\stepcounter{tracmatrixcounter}
+\begin{center}
+  \begin{tabularx}{0.9\textwidth}{rX|rX}
+    \toprule
+    \textbf{CPR} & \textbf{Acceptance tests} & \textbf{CPR} & \textbf{Acceptance tests} \\
+    \midrule
+    CPR1  & \atref{chooseRecGeoMixer}&
+    CPR2  & \atref{chooseRecGeoMixer} \\
+    
+    CPR3 & \atref{chooseSqrGeoMixer} &
+    CPR6  & \atref{defDist} \\ 
+    
+    CPR7  & \atref{defDist} &
+    CPR8  & \atref{defDist} \\ 
+    
+    CPR9  & \atref{defDist} &  
+    CPR10 & \atref{defDist} \\ 
+    
+    CPR11 & \atref{saveDist} &
+    CPR12 & \atref{removeDist} \\ 
+    
+    CPR13 & \atref{loadDist} &
+    CPR17 & \atref{execProt} \\ 
+    
+    CPR18 & \atref{execSingleStep} &
+    CPR19 & \atref{execProt} \\ 
+    
+    CPR20 & \atref{execProt} &
+    CPR21 & \atref{execProt} \\ 
+    
+    CPR22 & \atref{saveProtocol} &
+    CPR23 & \atref{removeProt} \\ 
+    
+    CPR24 & \atref{loadProt} &
+    CPR25 & \atref{defSqrProt} \\ 
+
+    CPR29 & \atref{execProt}  &
+    CPR30 & \atref{saveRun}  \\
+
+    CPR31 & \atref{removeRun}  &
+    CPR32 & \atref{execProt}, \atref{loadRun} \\
+
+    CPR33 & \atref{expImage}  &
+    CPR34 & \atref{viewPerformance}, \atref{loadRun}  \\
+
+    CPR35 & \atref{expGraph}  &
+    CPR36 & \atref{viewMulGraphs} \\
+    
+    CPR37 & \atref{expMulGraphs} &
+     & \\
+    
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+%------------------------------------------------------------------------------------------------------------------------------
+\section{ATP to URD}
+The following matrix lists which CPRs are implemented by each acceptance test.
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{Acceptance test} & \textbf{CPR(s)} \\
+    \midrule
+    \atref{chooseRecGeoMixer} & CPR1,CPR2 \\
+    \atref{defDist}  & CPR6, CPR7 ,CPR8, CPR9, CPR10 \\
+    \atref{saveDist}  & CPR11 \\
+    \atref{execSingleStep}  & CPR18 \\
+    \atref{execProt}  & CPR17, CPR19, CPR20, CPR21, CPR29, CPR32 \\
+    \atref{expImage}  & CPR33 \\
+    \atref{saveProtocol}  & CPR22 \\
+    \atref{viewPerformance}  & CPR34 \\
+    \atref{expGraph}  & CPR35 \\
+    \atref{saveRun}  & CPR30 \\
+    \atref{loadDist}  & CPR13 \\
+    \atref{loadProt}  & CPR24 \\
+    \atref{viewMulGraphs}  & CPR36 \\
+    \atref{expMulGraphs}  & CPR37 \\
+    \atref{loadRun} & CPR32, CPR34 \\
+    \atref{removeRun}  & CPR31 \\
+    \atref{removeDist}  & CPR12 \\
+    \atref{removeProt}  & CPR23 \\
+    \atref{chooseSqrGeoMixer}  & CPR3 \\
+    \atref{defSqrProt}  & CPR25 \\
+    \bottomrule
+  \end{tabularx}
+\end{center}
