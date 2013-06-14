@@ -13,32 +13,35 @@ The following matrix lists which components are linked to the CPRs in the URD.
     \toprule
     \textbf{CPR} & \textbf{Acceptance tests} & \textbf{CPR} & \textbf{Acceptance tests} \\
     \midrule
-    CPR1  & \atref{chooseGeoMixer}&
-    CPR2  & \atref{chooseGeoMixer} \\
+    CPR1  & \atref{chooseRecGeoMixer}&
+    CPR2  & \atref{chooseRecGeoMixer} \\
     
-    CPR6  & \atref{defDist} &
-    CPR7  & \atref{defDist} \\
-
-    CPR8  & \atref{defDist} &
-    CPR9  & \atref{defDist} \\    
-
-    CPR10 & \atref{defDist}   &
-    CPR11 & \atref{saveDist} \\  
-
-    CPR12 & \atref{removeDist} &
-    CPR13 & \atref{loadDist} \\
+    CPR3 & \atref{chooseSqrGeoMixer} &
+    CPR6  & \atref{defDist} \\ 
     
-    CPR17 & \atref{execProt} &
-    CPR18 & \atref{execSingleStep} \\
+    CPR7  & \atref{defDist} &
+    CPR8  & \atref{defDist} \\ 
     
-    CPR19 & \atref{execProt} &
-    CPR20 & \atref{execProt}  \\
+    CPR9  & \atref{defDist} &  
+    CPR10 & \atref{defDist} \\ 
     
-    CPR21 & \atref{execProt} &
-    CPR22 & \atref{saveProtocol} \\
+    CPR11 & \atref{saveDist} &
+    CPR12 & \atref{removeDist} \\ 
     
-    CPR23 & \atref{removeProt} &
-    CPR24 & \atref{loadProt} \\ 
+    CPR13 & \atref{loadDist} &
+    CPR17 & \atref{execProt} \\ 
+    
+    CPR18 & \atref{execSingleStep} &
+    CPR19 & \atref{execProt} \\ 
+    
+    CPR20 & \atref{execProt} &
+    CPR21 & \atref{execProt} \\ 
+    
+    CPR22 & \atref{saveProtocol} &
+    CPR23 & \atref{removeProt} \\ 
+    
+    CPR24 & \atref{loadProt} &
+    CPR25 & \atref{defSqrProt} \\ 
 
     CPR29 & \atref{execProt}  &
     CPR30 & \atref{saveRun}  \\
@@ -68,7 +71,7 @@ The following matrix lists which CPRs are implemented by each acceptance test.
     \toprule
     \textbf{Acceptance test} & \textbf{CPR(s)} \\
     \midrule
-    \atref{chooseGeoMixer} & CPR1,CPR2 \\
+    \atref{chooseRecGeoMixer} & CPR1,CPR2 \\
     \atref{defDist}  & CPR6, CPR7 ,CPR8, CPR9, CPR10 \\
     \atref{saveDist}  & CPR11 \\
     \atref{execSingleStep}  & CPR18 \\
@@ -85,6 +88,8 @@ The following matrix lists which CPRs are implemented by each acceptance test.
     \atref{removeRun}  & CPR31 \\
     \atref{removeDist}  & CPR12 \\
     \atref{removeProt}  & CPR23 \\
+    \atref{chooseSqrGeoMixer}  & CPR3 \\
+    \atref{defSqrProt}  & CPR25 \\
     \bottomrule
   \end{tabularx}
 \end{center}

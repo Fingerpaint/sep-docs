@@ -3,15 +3,15 @@
 \renewcommand{\atref}[1]{AT\ref{at:#1}}
 
 This chapter gives a detailed description of all acceptance tests. These tests are strongly based on the use cases as described in Appendix B of the URD \cite{urd}. They cover all the user requirements from the URD \cite{urd}, except for the unimplemented and the untestable requirements.
-The requirements that are not implemented in the \applicationname\ are \textbf{\todo{CPR3}, CPR4, CPR5, CPR14, CPR15, CPR16, \todo{CPR25}, CPR26, CPR27, CPR28, CPR38, CPR39 and CPR41}.
+The requirements that are not implemented in the \applicationname\ are \textbf{CPR4, CPR5, CPR14, CPR15, CPR16, CPR26, CPR27, CPR28, CPR38, CPR39 and CPR41}.
 
 The requirement that cannot be tested is \textbf{CPR40}.
 
 Before executing these tests, one should read and follow the guidelines as described in chapter \ref{chap:testProcedures} of this document.
 
 %----------------------------------------------------------------------------------------------------
-\section{Choose a geometry and mixer type}
-\AT[chooseGeoMixer]{CPR1, CPR2}{\textbf{Test items}: Verify that the user can select a geometry and mixer when starting the application.}
+\section{Choose a rectangular geometry and mixer type}
+\AT[chooseRecGeoMixer]{CPR1, CPR2}{\textbf{Test items}: Verify that the user can select a rectangular geometry and mixer when starting the application.}
 
 \subsection*{Input specifications}
 %Input for this test case
@@ -409,4 +409,46 @@ Before executing these tests, one should read and follow the guidelines as descr
 \item After step 1, a popup shows up with a table containing the name \emph{testProtocol}, an \texttt{X} button next to this name, and a \emph{Close} button under this table.
 \item After step 2, a \emph{Delete successful} message is displayed, which disappears after a few seconds. Also, the \emph{testprotocol} file is removed from the table.
 \item After step 3, the popup closes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Choose a square geometry and mixer type}
+\AT[chooseSqrGeoMixer]{CPR3}{\textbf{Test items}: Verify that the user can select a square geometry and mixer when starting the application.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press the \emph{refresh} icon of the browser.
+\item Press the \emph{Square} button.
+\item Press the \emph{Default} button.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 1, the initial menu of the application is displayed.
+\item After step 2, a second selection row is displayed for the square geometry.
+\item After step 3, both the selection rows close and both a menu and a drawing canvas in the shape of a square show up.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------------------
+\section{Define a mixing protocol for a square geometry}
+\AT[defSqrProt]{CPR25}{\textbf{Test items}: Verify that the user can define a mixing protocol for a square geometry.}
+
+\subsection*{Input specifications}
+%Input for this test case
+\begin{enumerate}
+\item Press the \texttt{+} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 6.25.
+\item Press \emph{Define Protocol} in the menu bar on the right side of the application.
+\item Drag the top wall to the right.
+\item Press the \texttt{-} button of the numberspinner with the \emph{Step size} label in the menu bar on the right side of the application, until the number shown equals 3.5.
+\item Drag the bottom wall to the right.
+\end{enumerate}
+
+\subsection*{Output specifications}
+%Output required from this test case
+\begin{itemize}
+\item After step 2, a number spinner and \emph{Mix Now}, \emph{Reset Protocol}, \emph{Save Protocol}, \emph{Load Mixing Protocol} and \emph{Removed Saved Protocol} buttons appear in the menu bar on the right side of the application.
+\item After step 3, the text area in the menu bar on the right side of the application shows the text T[6.25].
+\item After step 5, the text area in the menu bar on the right side of the application shows the text T[6.25] -B[3.5].
 \end{itemize}
