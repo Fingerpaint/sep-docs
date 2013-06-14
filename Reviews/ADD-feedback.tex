@@ -16,9 +16,10 @@ No feedback has been given on this part of the document.
 
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+1.3.1 & Question & In the definition of mixing step: this is true specifically for a subset of possible mixers only. Maybe a more general description would be better? \\
+\end{longtable}
 
 \subsection{Internal reviews}
 \feedbackTableStart{\femke}{0.0}
@@ -73,9 +74,11 @@ No feedback has been given on this part of the document.
 
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 3}
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+3 & Structure/layout & The sentence ``parameters are parameters'' is bad structure. One ``parameters'' would be enough: ``Some of these parameters are describing the length of other parameters \[...\]''. \\
+3 & Question & Are there no standard sets for how the geometry and matrix should be named? I think this would make sense as it would avoid inconsistencies. \\
+\end{longtable}
 
 \subsection{Internal reviews}
 \feedbackTableStart{\femke}{0.0}
@@ -107,9 +110,10 @@ No feedback has been given on this part of the document.
 
 % Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 4}
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+4.2.1 & Structure/layout & The ``\textbackslash newpage'' command here (in between the items from the enumeration) looks weird. \\
+\end{longtable}
 
 \subsection{Internal reviews}
 \feedbackTableStart{\femke}{0.0}
@@ -140,9 +144,17 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
+\subsection{External reviews}
+\feedbackTableStart{Junior Management}{0.0}
+5.1.1 & Question & Is the Fortran Module really a single procedure? It seems you just call one procedure of the module, but I guess the module itself is not just a procedure. \\
+5.1.1 & Structure/layout & In ``performs the calculations to calculate'', I would use ``calculates'' only once, i.e. ``The Fortran Module calculates how the mixing distribution changes as a mixing step is applied.'' \\
+5.1.1 & Typo & In the ``Interfaces'' section, ``ands the segregation factor'' should be ``and the segregation factor''. \\
+5.1.3 & Incorrect & You are stating that databases cannot process data, which is not true in general. \\
+5.1.3 & Typo & In the ``Subordinates'' section, ``was not build'' should be ``was not built''. \\
+5.1.5 & Structure/layout & The sentence ``This is not entirely true however: some data is compressed before sending it to the client, for example'' is bad structure. ``This is not entirely true however, as some data is compressed before sending it to the client'' would be nicer. The `colon'-part and the ``for example'' don't really fit here very well. \\
+5.1.5 & Missing & According to Lou, it would be nice to include how you solved the compression thing, as it is a design decision. \\
+5.2.2 & Incorrect & For the ``Processing section'', the same remark applies as in section 5.1.3 for the databases. \\ 
+\end{longtable}
 
 \subsection{Internal reviews}
 \feedbackTableStart{\thom{}}{0.0}
