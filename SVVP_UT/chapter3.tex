@@ -1,23 +1,98 @@
 \chapter{Test case specifications}\label{chap:testcasespec}
-The specifications for the test cases can be found in the source code repository, more specifically in the \texttt{fingerpaint/application/test/src/nl/tue/fingerpaint/} folder. % This folder contains two subfolders, namely \texttt{client} and \texttt{server}. The \texttt{server} folder contains tests concerning the communication between the client and server, while the \texttt{client} folder contains tests that are only applicable to the client.
-To read the explanation of a test case -- i.e. what it does and what it checks -- refer to the Javadoc for that test.
+
+The specifications for the test cases can be found in the source code repository, more specifically in the \texttt{fingerpaint/test/src/nl/tue/fingerpaint/*} folder, where * represents the structure of the section names below. In the section below, a full list of test cases can be found. For an explanation of a test case -- i.e. what it does and what it checks -- refer to the Javadoc for that test in either the source code or the DDD \cite{DDD}.
+
+\section{List of test cases}
+
+The following tests are included.
+
+\subsection{Client}
+\subsubsection{GUI}
+\begin{itemize}
+\item NumberSpinnerTest.java
+\end{itemize}
+\subsubsection{model}
+\begin{itemize}
+\item ApplicationStateTest.java
+\item DrawingToolTest.java
+\item RectangleGeometryTest.java
+\end{itemize}
+\subsubsection{storage}
+\begin{itemize}
+\item FingerpaintJsonizerTest.java
+\item FingerpaintZipperTest.java
+\item ResultStorageTest.java
+\end{itemize}
+\subsection{shared}
+\begin{itemize}
+\item GeometryNamesTest.java
+\item ServerDataResultTest.java
+\end{itemize}
+\subsubsection{model}
+\begin{itemize}
+\item MixingProtocolTest.java
+\item RectangleMixingStepTest.java
+\end{itemize}
+\subsubsection{simulator}
+\begin{itemize}
+\item SimulationResultTest.java
+\item SimulationTest.java
+\item SimulationServiceTest.java
+\end{itemize}
+\subsubsection{utils}
+\begin{itemize}
+\item ColourTest.java
+\end{itemize}
+
+\subsection{testenvironment}
+\begin{itemize}
+\item StandardCapabilitiesProvider.java
+\item TestUtil.java
+\end{itemize} 
+
+\section{Suites}
+The suites allow for multiple test cases to be run at once. Every suit described below runs all the tests listed in their respective sections.
+
+\subsection{ClientUnit.java}
+\begin{itemize}
+\item ApplicationStateTest
+\item 	DrawingToolTest
+\item 	NumberSpinnerTest
+\item 	RectangleGeometryTest
+\item 	FingerpaintJsonizerTest
+\item 	FingerpaintZipperTest
+\item 	ResultStorageTest
+\end{itemize}
+\subsection{SharedUnit.java}
+\begin{itemize}
+\item	MixingProtocolTest.class,
+\item	RectangleMixingStepTest.class,
+\item	SimulationResultTest.class,
+\item	SimulationTest.class,
+\end{itemize}
+
+
+
+
+%The specifications for the test cases can be found in the source code repository, more specifically in the \texttt{fingerpaint/application/test/src/nl/tue/fingerpaint/} folder. % This folder contains two subfolders, namely \texttt{client} and \texttt{server}. The \texttt{server} folder contains tests concerning the communication between the client and server, while the \texttt{client} folder contains tests that are only applicable to the client.
+%To read the explanation of a test case -- i.e. what it does and what it checks -- refer to the Javadoc for that test.
 
 % \todo{Some introduction text for this chapter}
 
 % For each test case, a section with the following structure:
 % \section{Name of the test case}
-% 
+%
 % \subsection{Test case identifier}
 % \todo{A unique identifier}
-% 
+%
 % \subsection{Test items}
 % \todo{The items to be tested}
-% 
+%
 % \subsection{Input specifications}
 % \todo{Input for this test case}
-% 
+%
 % \subsection{Output specifications}
 % \todo{Output required from this test case}
-% 
+%
 % \subsection{Environmental needs}
 % \todo{The test environment}
