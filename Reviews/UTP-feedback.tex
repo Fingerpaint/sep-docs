@@ -62,6 +62,11 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 2.6 & 		other & 	There is no "fail criteria". When you don't meet the pass criterea you automatically fail.\\
 \end{longtable}
 
+\feedbackTableStart{\roel}{0.0}
+2.3 & 		Incorrect & 	it is stated the utp must be completed before the tests, but part of the utp can't be 
+completed till after the tests (chapter 5).\\
+\end{longtable}
+
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 3}
 
@@ -74,6 +79,14 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 3.2 & Typo & `Every suit described..'. This should be `suite' instead of `suit'.\\
 3.2.2. & Missing & This suite also contains ColourTest.class\\
 3.2 & Inconsistent & At 3.2.2 comma's are added at the end of each test class, where this isn't the case in 3.2.1. I think the comma's should be left out at 3.2.2.\\
+\end{longtable}
+
+\feedbackTableStart{\roel}{0.0}
+3.1.1 & 	Question & 	DrawingToolTest is listed in chapter 3, but not in chapter 5.\\
+3.1.2 & 	Question &	GeometryNamesTest \& ServerDataResultTest \& SimulatorServiceTest is listed in chapter 
+3, but not in chapter 5. \\
+3.2.2 & 	Question &	SimulationResultTest \& ColourTest are listed in chapter 5, but aren't part of the test 
+suite in chapter 3. \\
 \end{longtable}
 
 % Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
@@ -100,6 +113,12 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 4.4 & 		Other & 	We wanted test cases to be independant of Eclipse (discussion 11-06-13). Therefore this section should probably be re-written.\\
 \end{longtable}
 
+\feedbackTableStart{\roel}{0.0}
+4.0 & 		Typo & 		The last line of the intro contains a broken reference.\\
+4.2 & 		Question & 	Described is that tests can be executed on a browser of your choice, but is it actually 
+described how this is done (instead of on standard firefox3)?\\
+\end{longtable}
+
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
 
@@ -116,4 +135,7 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 5.2 & Incorrect & At MixingProtocolTest, testEditStepException, testEditStepSize, testEditStepWall and testEditStepDirection should be removed, since they don't exist.\\
 \end{longtable}
 
-
+\feedbackTableStart{\roel}{0.0}
+5.2 & 		Incorrect & 	SimulationResultTest is listed twice (presumably the second is GeometryNamesTest and 
+should be omitted).\\
+\end{longtable}
