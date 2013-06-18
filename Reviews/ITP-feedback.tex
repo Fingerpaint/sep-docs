@@ -1,4 +1,11 @@
 \chapter{ITP feedback}
+
+\section{Chapter 1}
+\subsection{Internal reviews}
+\feedbackTableStart{\femke{}}{0.0}
+1.2 & Other & You mention here that chapter 3 gives a detailed description of the test cases, but in my opinion, the given description is very brief. Either remove ``detailed'' here or make chapter 3 more detailed. \\
+\end{longtable}
+
 \section{Chapter 2}
 \subsection{Internal reviews}
 \feedbackTableStart{\benjamin{}}{0.0}
@@ -7,6 +14,22 @@
 2.3 & Other & Change \emph{documents/code} to \emph{items}, characters like the slash look messy. \\
 2.3 & Other & Inconsistent `.'ing in the list. \\
 2.5 & Other & Change \emph{hardware/software} to \emph{hardware and software}. \\
+\end{longtable}
+
+\feedbackTableStart{\femke{}}{0.0}
+2 & Incorrect & This introductory text is not suited for the ITP, as it is about ``acceptance tests''. I would also slightly rephrase this sentence, for instance: ``This chapter describes what items are tested with integration tests and how these items must be tested.'' \\
+2.1 & Other & Perhaps you can also mention here that the components are from chapter 5 of the ADD. I think that would clarify about which components you're talking here. \\
+2.1 & Other & See previous remark: if you include the reference to chapter 5, perhaps you can also list the components in the same order here as in chapter 5 of the ADD. \\
+2.3 & Style & I would rephrase the last sentence of this section to ``After the tests are concluded, test reports should be written. Problem reports should be written when necessary.'' This makes it also consistent with the text in the ATP. \\
+2.4 & Question & What do you mean with ``Integration test input data needs to be created''? What is this ``input data''? \\
+2.5 & Incorrect & This section is about running the application, but it should discuss ``properties required of the test environment''. \\
+2.6 & Incorrect & The test criteria are not described in chapter 3. In chapter 3, you describe the test cases. \\
+\end{longtable}
+
+\feedbackTableStart{\hugo{}}{0.0}
+2.2 & 		Remark & 	I don't think this sentence gives the information you expect in the section "features to be tested"\\
+2.3 & 		Other & 	"..the test reports (chapter 5)." I would replace it with "chapters 1-4" to prevent confusion about incl or excl chapter 5. \\
+2.6 & 		Other & 	"Similarly" implies 'all things have to pass as well'. It's not the right word in this context.\\
 \end{longtable}
 
 \section{Chapter 3}
@@ -19,4 +42,11 @@
 \subsection{Internal reviews}
 \feedbackTableStart{\benjamin{}}{0.0}
 3 & Missing & The link to a chapter in the ADD is broken (it says chapter \textbf{??}). \\
+\end{longtable}
+
+\section{Chapter 5}
+\subsection{Internal reviews}
+\feedbackTableStart{\femke{}}{0.0}
+5 & Missing & Perhaps you can say what the listed items are the individual tests from the mentioned test classes. Providing information in a tabular format might also clarify things even more. \\
+5 & Missing & According to the general info document, you should also include ``when was the test performed, by who and who witnessed it. \\
 \end{longtable}
