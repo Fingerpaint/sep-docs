@@ -9,7 +9,11 @@
 %\subsection{External reviews}
 %\feedbackTableStart{Junior Management}{0.0}
 %\end{longtable}
+
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+abstract & 	typo & 		Dot missing after last sentence. \\
+\end{longtable}
 
 \feedbackTableStart{\hugo}{0.0}
 abstract & 	typo & 		"needs to be written" -$>$ "will be written"\\
@@ -18,7 +22,20 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
+
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+1.1 & Structure/Layout & `The UTP document' sounds weird. I would say `The UTP' or `This document'.\\
+1.2 & Typo & `Chapter 3 species' should be `Chapter 3 specifies'.\\
+1.2 & Incorrect & Chapter 3 doesn't specify how tests are defined. It lists all the Unit Tests.\\
+1.2 & Typo & `Chapter 5 species' should be `Chapter 5 specifies'.\\
+1.2 & Incorrect & Chapter 5 doesn't specify how test results are reported. It reports the test results.\\
+1.3.1 & Other & Client is mentioned a lot of times in this document, but it always refers to the client-side of the application. Never to dr. Anderson.\\
+1.3.1 & Missing & I think Javadoc should be added here.\\
+1.3.1 & Missing & I think local storage should be added here.\\
+1.3.2 & Missing & DD is missing from this list.\\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 1.1 & 		Typo & 		"dened" -$>$ "defined".\\
 1.1 & 		Typo & 		"..tests make sure that kroket complies.." This is not Kroket ;)\\
@@ -32,8 +49,13 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 2}
 
-
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+2.1 & Typo & `using the Google Web Toolkit,the unit test..'. A space is missing after the comma in this sentence.\\
+2.5 & Question & Is Ant still needed on the client device? I thought this was only necessary for running the tests from the command lines, which we aren't doing.\\
+2.6 & Question & `Every test should describe the criteria that should be met to pass a specific test'. We aren't doing this in chapter 3. Is it really necessary?\\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 2.1 & 		Other & 	"described elsewhere in this section" should probably replaced with a more concrete reference.\\
 2.3 & 		Other & 	The style of this section is a bit weird. While reading it, it looks like you're reading an unfinished document. I suggest to rewrite references to the future (i.e. "must be delivered" in reference to a chapter in the same document).\\
@@ -44,23 +66,54 @@ Document Status Sheet & Question & Why don't the dates match? It is the same ver
 \section{Chapter 3}
 
 \subsection{Internal reviews}
-No feedback.
+\feedbackTableStart{\tessa}{0.0}
+3.1.1 & Other & I think GUI shouldn't be spelled with capital letters, since it doesn't conform to the folder structure like that.\\
+3.1.2 & Incorrect & GeometryNamesTest doesn't exist.\\
+3.1.2 & Incorrect & SimulationServiceTest doesn't exist. SimulatorServiceTest does, but shouldn't be included here since it's a integration test.\\
+3.1.3 & Incorrect & Both classes mentioned here are classes to use with Selenium, and not unit tests. Therefore this whole section should be removed.\\
+3.2 & Typo & `Every suit described..'. This should be `suite' instead of `suit'.\\
+3.2.2. & Missing & This suite also contains ColourTest.class\\
+3.2 & Inconsistent & At 3.2.2 comma's are added at the end of each test class, where this isn't the case in 3.2.1. I think the comma's should be left out at 3.2.2.\\
+\end{longtable}
 
 % Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 4}
 
-
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+4 & Other & `to both client and the server side testing.' This sounds weird. It should be `to both client and server side testing'.\\
+4 & Typo & `server side testing is discussed'. Should be `are discussed'.\\
+4 & Missing & It states here that only tests with the local storage should be executed in manual mode, but this is not entirely true anymore. All tests that make use of zipping in some way, all tests that use the canvas and some server side tests need to be executed in manual mode as well.\\
+4 & Typo & `these tests in given in section sec:localStorageProc'. This reference is broken. It looks like the \emph{ref} tag is missing.\\
+4.2 & Incorrect & `All GWT JUnit test can ben executed from a single test suite'. Actually, we have two: ClientUnit.java and SharedUnit.java.\\
+4.2 & Missing & It should be mentioned these test suites will only pass when running them in manual mode (section 4.4).\\
+4.3 & Incorrect & We don't have any server side tests, since Fortran didn't cooperate here. The test suite mentioned in this section therefore doesn't exist anymore.\\
+4.4 & Incorrect & This doesn't apply only to the local storage tests anymore. I would just make this a general procedure to run the tests, since over half of the tests only work in manual mode now.\\
+4.4 & Other & I would make this a general guide for both test cases and test suites, and not specifically for the suite `ClientUnit.java'.\\
+4.4 & Other & The last step of this guide states that a dialogue is shown, but in my experience this isn't always the case. So I would change this to `a dialogue might be shown', or something like that.\\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 4.0 & 		Typo & 		"to both client and the server side testing is discussed" Plural, -$>$ "are discussed"\\
 4.0 & 		Typo & 		"to be adhered for client" -$>$ "adhered to". \\
-4.0 & 		Missing & 	"sec:localStorageProc" Misses the \ref{} command in latex. \\
+4.0 & 		Missing & 	"sec:localStorageProc" Misses the \emph{ref} command in latex. \\
 4.4 & 		Other & 	We wanted test cases to be independant of Eclipse (discussion 11-06-13). Therefore this section should probably be re-written.\\
 \end{longtable}
 
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
+
 \subsection{Internal reviews}
-No feedback.
+\feedbackTableStart{\tessa}{0.0}
+5 & Incorrect & `after executing the integration tests'. This should be `unit tests'.\\
+5 & Structure/Layout & In general, I would list the test methods for each test class in alfabetical order.\\
+5.1 & Structure/Layout & I would list the testcases here in the same order as in chapter 3, and preferably also with the same structure. So make subsubsections for `client.gui', `client.model' etc.\\
+5.1 & Typo & FingerpaintJsoniserTest should be spelled with a `z' (Jsonizer), not an `s'.\\
+5.2 & Incorrect & The second SimulationResultTest, with testGetShort and testGetLong doesn't exist and should be removed.\\
+5.2 & Typo & `ColoursTest' should be `ColourTest'.\\
+5.2 & Missing & The ServerDataResultTest is missing from this list.\\
+5.2 & Missing & At MixingProtocolTest, testToSring is missing.\\
+5.2 & Incorrect & At MixingProtocolTest, testEditStepException, testEditStepSize, testEditStepWall and testEditStepDirection should be removed, since they don't exist.\\
+\end{longtable}
 
 
