@@ -10,18 +10,37 @@ We assume the server runs a Linux operating system. A Windows operating system c
 
 \subsection{Tools installation}
 \label{sec:building}
-First the JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. This can be done through the package manager of the operating system. On a Debian based system this is:
+First the JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. To get the application from the git repository, git is also required. Installation can be done through the package manager of the operating system. On a Debian based system this is:
 
 \begin{verbatim}
-apt-get install openjdk-7-jdk gcc gfortran make ant
+apt-get install openjdk-7-jdk gcc gfortran make ant git
 \end{verbatim}
+
+\subsection{Retrieving the application}
+\label{sec:retrieving}
+To retrieve the application from the git repository, navigate to the folder where you want to place the source.
+We denote this folder as \textsc{<app-root>}. Now execute the following command:
+
+\begin{verbatim}
+git clone git@github.com:Fingerpaint/project-code.git
+\end{verbatim}
+
+The repository is now initialized in \textsc{<app-root>}.
 
 \subsection{Compilation of the application}
 \label{sec:compiling}
-We assume source code of the application is installed to the \textsc{<app-root>} folder. Navigate in the console to the \textsc{<app-root>/fingerpaint} folder. Then execute the following:
+We assume source code of the application is installed to the \textsc{<app-root>} folder.
+Navigate in the console to the \textsc{<app-root>/fingerpaint} folder. 
+We need to make sure the \textsc{JAVA\_HOME} environment variable is correctly set. On some machines, this will be the case by default. The variable should be set to the home directory of the JDK that was just installed (we denote this directory as \textsc{<jdk-home>}. If the variable was already set correctly (or you choose to set it manually, not covered by this manual), you can now execute the following command to compile the project:
 
 \begin{verbatim}
-ant jar
+ant clean jar
+\end{verbatim}
+
+If the environment variable is not set, you can use the following compilation command to temporarily set the variable during compilation:
+
+\begin{verbatim}
+ant clean jar -Djava.jdk.home=<jdk-home>
 \end{verbatim}
 
 After compilation has completed, a file named \textsc{Fingerpaint.jar} has been created in the \textsc{<app-root>/fingerpaint} folder.
