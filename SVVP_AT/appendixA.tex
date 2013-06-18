@@ -8,11 +8,21 @@ A manual on how to get the \applicationname{} application running can be found b
 We assume the server runs a linux operating system. A Windows operating system also works, but is not supported by this manual. The text below is tested under a Debian based system.
 
 \subsection{Tools installation}
-First the Java JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. This can be done through the package manager of the operating system. On a Debian based system this is:
+First the Java JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. To get the application from the git repository git is also required. Installation can be done through the package manager of the operating system. On a Debian based system this is:
 
 \begin{verbatim}
-apt-get install openjdk-7-jdk gcc gfortran make ant
+apt-get install openjdk-7-jdk gcc gfortran make ant git
 \end{verbatim}
+
+\subsection{Retrieving of the application}
+To retrieve the application from the git repository, navigate to the folder where you want to place the source.
+We denote this folder as \textsc{<app-root>}. Now execute the following command:
+
+\begin{verbatim}
+git clone git@github.com:Fingerpaint/project-code.git
+\end{verbatim}
+
+The repository is now initialized in \textsc{<app-root>}.
 
 \subsection{Compilation of the application}
 We assume source code of the application is installed to the \textsc{<app-root>} folder.
