@@ -1,20 +1,23 @@
 \chapter{Environment setup}
 \label{environment_setup}
-The environment of the \applicationname{} application consists of a client with a browser and a server on which the application needs to be installed.
 
-A manual on how to get the \applicationname{} application running can be found below.
+The environment of the \applicationname{} consists of a client with a browser and a server on which the application needs to be installed.
+
+What follows is a manual on how to build the \applicationname{}.
 
 \section{Server}
-We assume the server runs a linux operating system. A Windows operating system also works, but is not supported by this manual. The text below is tested under a Debian based system.
+We assume the server runs a Linux operating system. A Windows operating system can also be used, but that is not supported by this manual. The text below is tested on a Debian based system.
 
 \subsection{Tools installation}
-First the Java JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. This can be done through the package manager of the operating system. On a Debian based system this is:
+\label{sec:building}
+First the JDK, the Ant and Make build systems and the gfortran and gcc compilers need to be installed. This can be done through the package manager of the operating system. On a Debian based system this is:
 
 \begin{verbatim}
 apt-get install openjdk-7-jdk gcc gfortran make ant
 \end{verbatim}
 
 \subsection{Compilation of the application}
+\label{sec:compiling}
 We assume source code of the application is installed to the \textsc{<app-root>} folder. Navigate in the console to the \textsc{<app-root>/fingerpaint} folder. Then execute the following:
 
 \begin{verbatim}
@@ -24,6 +27,7 @@ ant jar
 After compilation has completed, a file named \textsc{Fingerpaint.jar} has been created in the \textsc{<app-root>/fingerpaint} folder.
 
 \subsection{Deployment of the application}
+\label{sec:deployment}
 After compilation, move the \textsc{Fingerpaint.jar} to the folder where you want to deploy the application. We assume this folder is \textsc{<deploy-root>}. Navigate in the console to this folder and execute the following:
 
 \begin{verbatim}
