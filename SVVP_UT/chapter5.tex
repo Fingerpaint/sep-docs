@@ -1,14 +1,73 @@
 \chapter{Test reports}\label{chap:testReports}
 
-\todo{text explaining how to run the tests}
+This chapter shows the test reports after executing the integration tests.
 
 \section{Client tests}
 \subsection*{Application State test}
 \begin{tabular}{l|l}
+testSegregation   & pass \\
 testSetGeometry & pass \\
-testNrStepsSet    & pass \\
+testDistribution    & pass \\
+testProtocol         & pass \\
+testNrSteps         & pass \\
+testConstructor   & pass \\
 testSetMixer        & pass \\
+testStepsize         & pass \\
 \end{tabular}
+
+\subsection*{DrawingToolTest}
+\begin{tabular}{l|l}
+testGetTool   & pass \\
+testRadius    & pass \\
+\end{tabular}
+
+\subsection*{NumberSpinnerTest}
+\begin{tabular}{l|l}
+testNotRound               & pass \\
+testOverMax                & pass \\
+testRound                    & pass \\
+testDefaultAboveMax  & pass \\
+testDefaultBelowMin    & pass \\
+testUnderMin               & pass \\
+testInitialisation           & pass \\
+testMinBiggerMax        & pass \\
+testListener                 & pass \\
+\end{tabular}
+
+\subsection*{RectangleGeometryTest}
+\begin{tabular}{l|l}
+testIsInsideBottomWall       & pass \\
+testIsInsideDrawingArea    & pass \\
+testIsInsideTopWall             & pass \\
+testInitCanvas                    & pass \\
+testMixingSteps                  & pass \\
+testIsOutsideDrawingArea & pass \\
+\end{tabular}
+
+\subsection*{FingerpaintJsoniserTest}
+\begin{tabular}{l|l}
+testJsonizeResultStorage & pass \\
+testJsonizeHashMap         & pass \\
+testJsonizeProtocol           & pass \\
+testJsonizeIntArray          & pass \\
+\end{tabular}
+
+\subsection*{FingerpaintZipperTest}
+\begin{tabular}{l|l}
+testZip & pass \\
+\end{tabular}
+
+\subsection*{ResultStorageTest}
+\begin{tabular}{l|l}
+testGetNrSteps       & pass \\
+testGetMixer           & pass \\
+testGetGeometry    & pass \\
+testGetDistribution  & pass \\
+testGetProtocol       & pass \\
+testGetSegregation & pass \\
+\end{tabular}
+
+\section{Shared tests}
 
 \subsection*{MixingProtocolTest}
 \begin{tabular}{l|l}
@@ -28,34 +87,42 @@ testMoveStepException2   & pass \\
 testConstructor                  & pass \\
 \end{tabular}
 
-\subsection*{MixingStepTest}
+\subsection*{RectangleMixingStepTest}
 \begin{tabular}{l|l}
 testSetStepSize  & pass \\
 testGetStepSize  & pass \\
+testToString        & pass \\
 testRounding      & pass \\
 \end{tabular}
 
-\subsection*{NumberSpinnerTest}
+\subsection*{SimulationResultTest}
 \begin{tabular}{l|l}
-testNotRound               & pass \\
-testOverMax                & pass \\
-testRound                    & pass \\
-testDefaultAboveMax  & pass \\
-testDefaultBelowMin    & pass \\
-testUnderMin               & pass \\
-testInitialisation           & pass \\
-testMinBiggerMax        & pass \\
-testListener                 & pass \\
+testGetVectors         & pass \\
+testGetSegregation & pass \\
+testConstructor       & pass \\
 \end{tabular}
 
-\subsection*{SimulatorServiceTest}
+\subsection*{SimulationTest}
 \begin{tabular}{l|l}
-testSimulation & pass \\
+testIntermediateVectors       & pass \\
+testGetMixer                         & pass \\
+testGetRuns                          & pass \\
+testGetProtocol                     & pass \\
+testGetConcentrationVector & pass \\
+testConstructor                    & pass \\
 \end{tabular}
 
-\subsection*{StorageManagerTest}
+\subsection*{SimulationResultTest}
 \begin{tabular}{l|l}
-testSaveInitialDistribution & pass \\
-testSaveProtocol              & pass \\
-testSaveResult                 & pass \\
+testGetShort & pass \\
+testGetLong  & pass \\
+\end{tabular}
+
+\subsection*{ColoursTest}
+\begin{tabular}{l|l}
+testHex             & pass \\
+testPad             & pass \\
+testEquals         & pass \\
+testSetters        & pass \\
+testConstructor & pass \\
 \end{tabular}
