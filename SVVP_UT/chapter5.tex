@@ -1,128 +1,130 @@
 \chapter{Test reports}\label{chap:testReports}
 
-This chapter shows the test reports after executing the integration tests.
+This chapter shows the test reports after executing the unit tests.
 
-\section{Client tests}
-\subsection*{Application State test}
+\section{client}
+\subsection{gui}
+\subsubsection*{NumberSpinnerTest}
 \begin{tabular}{l|l}
+testDefaultAboveMax  & pass \\
+testDefaultBelowMin    & pass \\
+testInitialisation           & pass \\
+testListener                 & pass \\
+testMinBiggerMax        & pass \\
+testNotRound               & pass \\
+testOverMax                & pass \\
+testRound                    & pass \\
+testUnderMin               & pass \\
+\end{tabular}
+
+\subsection{model}
+\subsubsection*{ApplicationStateTest}
+\begin{tabular}{l|l}
+testConstructor   & pass \\
+testDistribution    & pass \\
+testNrSteps         & pass \\
+testProtocol         & pass \\
 testSegregation   & pass \\
 testSetGeometry & pass \\
-testDistribution    & pass \\
-testProtocol         & pass \\
-testNrSteps         & pass \\
-testConstructor   & pass \\
 testSetMixer        & pass \\
 testStepsize         & pass \\
 \end{tabular}
 
-\subsection*{DrawingToolTest}
+\subsubsection*{DrawingToolTest}
 \begin{tabular}{l|l}
 testGetTool   & pass \\
 testRadius    & pass \\
 \end{tabular}
 
-\subsection*{NumberSpinnerTest}
+\subsubsection*{RectangleGeometryTest}
 \begin{tabular}{l|l}
-testNotRound               & pass \\
-testOverMax                & pass \\
-testRound                    & pass \\
-testDefaultAboveMax  & pass \\
-testDefaultBelowMin    & pass \\
-testUnderMin               & pass \\
-testInitialisation           & pass \\
-testMinBiggerMax        & pass \\
-testListener                 & pass \\
-\end{tabular}
-
-\subsection*{RectangleGeometryTest}
-\begin{tabular}{l|l}
+testInitCanvas                    & pass \\
 testIsInsideBottomWall       & pass \\
 testIsInsideDrawingArea    & pass \\
 testIsInsideTopWall             & pass \\
-testInitCanvas                    & pass \\
-testMixingSteps                  & pass \\
 testIsOutsideDrawingArea & pass \\
+testMixingSteps                  & pass \\
 \end{tabular}
 
-\subsection*{FingerpaintJsoniserTest}
+\subsection{storage}
+\subsubsection*{FingerpaintJsoniserTest}
 \begin{tabular}{l|l}
-testJsonizeResultStorage & pass \\
 testJsonizeHashMap         & pass \\
-testJsonizeProtocol           & pass \\
 testJsonizeIntArray          & pass \\
+testJsonizeProtocol           & pass \\
+testJsonizeResultStorage & pass \\
 \end{tabular}
 
-\subsection*{FingerpaintZipperTest}
+\subsubsection*{FingerpaintZipperTest}
 \begin{tabular}{l|l}
 testZip & pass \\
 \end{tabular}
 
-\subsection*{ResultStorageTest}
+\subsubsection*{ResultStorageTest}
 \begin{tabular}{l|l}
-testGetNrSteps       & pass \\
-testGetMixer           & pass \\
-testGetGeometry    & pass \\
 testGetDistribution  & pass \\
+testGetGeometry    & pass \\
+testGetMixer           & pass \\
+testGetNrSteps       & pass \\
 testGetProtocol       & pass \\
 testGetSegregation & pass \\
 \end{tabular}
 
-\section{Shared tests}
-
-\subsection*{MixingProtocolTest}
+\section{shared}
+\subsubsection*{ServerDataResultTest}
 \begin{tabular}{l|l}
-testMoveStepBack             & pass \\
-testGetStepExecution        & pass \\
+testConstructor  & pass \\
+testSetters        & pass \\
+\end{tabular}
+
+\subsection{model}
+\subsubsection*{MixingProtocolTest}
+\begin{tabular}{l|l}
 testAddStep                       & pass \\
-testRemoveStepException & pass \\
 testAddStepException        & pass \\
-testEditStepException        & pass \\
-testRemoveStep                 & pass \\
-testEditStepSize                 & pass \\
-testEditStepWall                 & pass \\
-testMoveStepForward        & pass \\
-testEditStepDirection          & pass \\
+testConstructor                  & pass \\
+testGetStepExecution        & pass \\
+testMoveStepBack             & pass \\
 testMoveStepException1   & pass \\
 testMoveStepException2   & pass \\
-testConstructor                  & pass \\
+testMoveStepForward        & pass \\
+testRemoveStep                 & pass \\
+testRemoveStepException & pass \\
+testToString 			& pass \\
 \end{tabular}
 
-\subsection*{RectangleMixingStepTest}
+\subsubsection*{RectangleMixingStepTest}
 \begin{tabular}{l|l}
-testSetStepSize  & pass \\
 testGetStepSize  & pass \\
-testToString        & pass \\
 testRounding      & pass \\
+testSetStepSize  & pass \\
+testToString        & pass \\
 \end{tabular}
 
-\subsection*{SimulationResultTest}
+\subsection{simulator}
+\subsubsection*{SimulationResultTest}
 \begin{tabular}{l|l}
-testGetVectors         & pass \\
-testGetSegregation & pass \\
 testConstructor       & pass \\
+testGetSegregation & pass \\
+testGetVectors         & pass \\
 \end{tabular}
 
-\subsection*{SimulationTest}
+\subsubsection*{SimulationTest}
 \begin{tabular}{l|l}
-testIntermediateVectors       & pass \\
-testGetMixer                         & pass \\
-testGetRuns                          & pass \\
-testGetProtocol                     & pass \\
-testGetConcentrationVector & pass \\
 testConstructor                    & pass \\
+testGetConcentrationVector & pass \\
+testGetMixer                         & pass \\
+testGetProtocol                     & pass \\
+testGetRuns                          & pass \\
+testIntermediateVectors       & pass \\
 \end{tabular}
 
-\subsection*{SimulationResultTest}
+\subsection{utils}
+\subsubsection*{ColourTest}
 \begin{tabular}{l|l}
-testGetShort & pass \\
-testGetLong  & pass \\
-\end{tabular}
-
-\subsection*{ColourTest}
-\begin{tabular}{l|l}
+testConstructor & pass \\
+testEquals         & pass \\
 testHex             & pass \\
 testPad             & pass \\
-testEquals         & pass \\
 testSetters        & pass \\
-testConstructor & pass \\
 \end{tabular}
