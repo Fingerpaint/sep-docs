@@ -1,9 +1,9 @@
 \chapter{Test plan}\label{chap:testPlan}
 
 \section{Test items}
-The software to be tested is the \applicationname{}. As this application is created using the Google Web Toolkit,the unit tests are run with GWT JUnit tests. The source code for the \applicationname{} is written in Java, but compiled to JavaScript, which means the tests should be run twice. Firstly, the Java bytecode is tested, using the GWT JUnit tests in development mode. Secondly, the tests are run as compiled JavaScript. The same GWT JUnit test can be run both in development mode and in production mode, albeit not at the same time. Therefore, tests need only be written once.
+The software to be tested is the \applicationname{}. As this application is created using the Google Web Toolkit, the unit tests are run with GWT JUnit tests. The source code for the \applicationname{} is written in Java, but compiled to JavaScript, which means the tests should be run twice. Firstly, the Java bytecode is tested, using the GWT JUnit tests in development mode. Secondly, the tests are run as compiled JavaScript. The same GWT JUnit test can be run both in development mode and in production mode, albeit not at the same time. Therefore, tests need only be written once.
 
-%Absolete since the great selenium crash
+%Obsolete since the great selenium crash
 %The \applicationname{} is a web application, which means that web browsers are ultimately in control of the application's look and functionality. To make sure all parts of the software work as expected, we use Selenium, which automates browser input. This means we are able to automatically run functional tests on a variety of browsers, where button presses et cetera are generated using Selenium. Tests using Selenium can be run using the regular JUnit testing framework. During testing, screenshots can be used to compare actual output to expected output.
 
 
@@ -16,7 +16,7 @@ Before the testing can commence, the following items must be completed:
 \begin{itemize}
   \item SVVP \cite{svvp}.
   \item DDD \cite{DDD}.
-  \item UTP (this document).
+  \item UTP (this document, excluding chapter 5).
   \item UT input data.
 \end{itemize}
 
@@ -52,4 +52,4 @@ To be able to perform the UT, the following resources are needed:
 \noindent See also the constraints described in the DDD \cite{DDD}.
 
 \section{Test case pass/fail criteria}
-Every test should describe the criteria that should be met to pass a specific test. An overall UT pass can only be achieved when all tests described in chapter \ref{chap:testcasespec} have been performed and passed.
+An overall UT pass can only be achieved when all tests described in chapter \ref{chap:testcasespec} have been performed and passed.
