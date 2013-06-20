@@ -18,7 +18,7 @@ Abstract & Other & It is unclear what is meant by \emph{This program}. \\
 \section{Chapter 1}
 \subsection{Internal reviews}
 \feedbackTableStart{\roel}{0.0}
-1.7 & Question & It is stated that problems cannot be reported at group fingerpaint. However, the chapter 
+1.7 & Question & It is stated that problems cannot be reported at group fingerpaint. However, the chapter
 does not state where problems can be reported. \\
 \end{longtable}
 
@@ -41,14 +41,14 @@ does not state where problems can be reported. \\
 \subsection{Internal reviews}
 \feedbackTableStart{\roel}{0.0}
 3.3.3 & Typo & In results, wall movement should be plural. \\
-3.4.1 & Structure & The description is about a mixing protocol, while the section is only about a single 
+3.4.1 & Structure & The description is about a mixing protocol, while the section is only about a single
 step. \\
-3.5 \& 3.6 & Structure & Why are the exporting functions described before the corresponding viewing 
+3.5 \& 3.6 & Structure & Why are the exporting functions described before the corresponding viewing
 functions. \\
 3.8 & Missing & Missing pictures of the loading menu. \\
 3.11 & Missing & Missing pictures of the removing menu. \\
 3.17.4 & Typo & Broken reference. \\
-3.* & Question & Possible errors is oftentimes empty because the error message is described in 
+3.* & Question & Possible errors is oftentimes empty because the error message is described in
 cautions. (occurs in chapter 4 as well) I would mention the error a second time. A good example is 4.1. \\
 \end{longtable}
 
@@ -68,7 +68,7 @@ cautions. (occurs in chapter 4 as well) I would mention the error a second time.
 3.5.2 & Other & \emph{Hence exporting is not possible} is a fragment (fixed). \\
 3.5.3, 3.6.3, 3.7.3 & Other & Try to avoid characters like `/', use \emph{or} instead. \\
 3.6.3 & Other & Spell out small numbers like \emph{2}. \\
-3.6.3 & Other & Change \emph{\ldots of the selected mixing runs appears 3.5} to \emph{\ldots of the selected mixing runs appears (figure 3.5)} (fixed). \\ 
+3.6.3 & Other & Change \emph{\ldots of the selected mixing runs appears 3.5} to \emph{\ldots of the selected mixing runs appears (figure 3.5)} (fixed). \\
 3.14.2 & Incorrect & One can simply save the white distribution without explicitly defining it as such. \\
 3.17.3, 3.18.3 & Other & Typeset the x and y of \emph{x-axis} in mathmode ($x$-axis). \\
 3.17.3 & Other & \emph{\ldots the mixing performance from the mixing results are displayed} contains a singular noun as subject and a plural verb. \\
@@ -78,16 +78,29 @@ cautions. (occurs in chapter 4 as well) I would mention the error a second time.
 \section{Chapter 4}
 \subsection{Internal reviews}
 \feedbackTableStart{\roel}{0.0}
-4.* & Other & Spinner is mentioned multiple times in the chapter (e.g. 4.3). I don't think spinner is a 
+4.* & Other & Spinner is mentioned multiple times in the chapter (e.g. 4.3). I don't think spinner is a
 term known by non-developers. \\
-4.5 & Other & Saying the load and remove button have reduced funtionality sound weird. It should be 
-stated more specifically that files cannot be deleted/loaded if there are no files to 
+4.5 & Other & Saying the load and remove button have reduced funtionality sound weird. It should be
+stated more specifically that files cannot be deleted/loaded if there are no files to
 delete/load. \\
-4.7 & Structure & You should state more specifically that using the Step Size spinner affects the step size 
+4.7 & Structure & You should state more specifically that using the Step Size spinner affects the step size
 of NEW mixing steps in the Functional description. \\
-4.9 & Incorrect & Formal description: Remove part of a file name does not always work this way, because the 
+4.9 & Incorrect & Formal description: Remove part of a file name does not always work this way, because the
 cursor can be placed in the middle of the name, instead of at the end. \\
 \end{longtable}
+
+\feedbackTableStart{\hugo}{0.0}
+4.x & 		Inconsistent & 	textdt{} is used for buttons and emph{} for menu's. In the rest of the document emph{} is used for both.\\
+4.x & 		Other & 	Maybe some picture would be illustrative.\\
+4.1 & 		Other & 	\emph{Cell browser} is a technical term for 'a menu'. In the user manual the reader shouldn't be confronted with such terminology.\\
+4.1 & 		Other & 	idem for \emph{level}. I suggest to change it to \emph{column} or \emph{drop-down menu} (drop-right menu).\\
+4.2 &		Typo & 		\emph{The drawing area is used for drawing the initial concentration result.} 'initial concentration result' $\rightarrow$ \emph{concentration distribution}. You don't draw a result. \\
+4.3 & 		Other & 	\emph{spinner} is a technical term for 'a menu where you specify a value'. In the user manual the reader shouldn't be confronted with such terminology. I don't know if this issue is resolved by the glossary...\\
+4.5 & 		Other & 	\emph{the user can choose to overwrite that name} You overwrite the file, not the name.\\
+4.5 & 		Typo & 		\emph{If there are more results than fit on the screen} Insert 'can'. Also the cellList is limited to x-pixels (hardcoded value), not the fullscreen. So technically it's not true. (idem for other cellLists in the document)\\
+4.9 & 		Typo & 		\emph{only possible with a new of}. new $\rightarrow$ name.\\
+\end{longtable}
+
 
 % Appendix A ------------------------------------------------------------------------------------------------------------------------------
 \section{Appendix A}
@@ -106,11 +119,17 @@ A.3.1 & Other & \emph{doesn't} should be \emph{does not}. \\
 A.3.1 & Other & \emph{Hereafter} sounds strange. It is probably correct though. \\
 \end{longtable}
 
+\feedbackTableStart{\hugo}{0.0}
+Appendix A & 	Question &	Can we make a table of contents for the appendix? It seems useful looking at the amount of different sections/messages.\\
+Appendix A.2 &	Other & 	Specifiy an \emph{item} to be either a distribution, porotocol or mxixing run at the beginning of the section rather than putting it between brackets in every subsection.\\
+Appendix A.2-ish & Other & 	\emph{FINGAEPRPPEANINDTIX A. ERROR MESSAGES AND RECOVERY PROCEDURES} The header of the page has overlapping words because it is too long.\\
+\end{longtable}
+
 % Appendix B ------------------------------------------------------------------------------------------------------------------------------
 \section{Appendix B}
 \subsection{Internal reviews}
 \feedbackTableStart{\roel}{0.0}
-Appendix B & Inconsistent & The definition of mixer is inappropriate and does not fit in with the explanation 
+Appendix B & Inconsistent & The definition of mixer is inappropriate and does not fit in with the explanation
 of geometry. \\
 \end{longtable}
 
