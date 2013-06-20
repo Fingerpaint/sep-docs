@@ -2,7 +2,7 @@
 		pathtobase=..,%
 		titlefull={Review Document},%
 		titleabbr=Review,%
-		version=0.0]{fingerpaint}
+		version=0.14]{fingerpaint}
 
 \def\reviewversion{0.0}
 \newcommand{\setVersion}[1]{\midrule[1pt] \multicolumn{3}{r}{\def\reviewversion{#1}Version \reviewversion}\\ \midrule[1pt]}
@@ -52,9 +52,11 @@ Each chapter corresponds to one document and contains all the feedback on this d
 \item Software Configuration Management Plan \cite{scmp} (chapter \ref{chap:scmp-feedback})
 \item Software Validation and Verification Plan \cite{svvp} (chapter \ref{chap:svvp-feedback})
 \item Architectural Design Document \cite{add} (chapter \ref{chap:add-feedback})
-\item Acceptance Test Plan \cite{atp} (chapter \ref{chap:atp-feedback})
 \item Unit Test Plan \cite{utp} (chapter \ref{chap:utp-feedback})
 \item Integration Test Plan \cite{itp} (chapter \ref{chap:itp-feedback})
+\item Acceptance Test Plan \cite{atp} (chapter \ref{chap:atp-feedback})
+\item Software Transfer Document \cite{std} (chapter \ref{chap:std-feedback})
+\item Software User Manual \cite{sum} (chapter \ref{chap:sum-feedback})
 \end{itemize}
 
 \input{URD-feedback}
@@ -62,9 +64,10 @@ Each chapter corresponds to one document and contains all the feedback on this d
 \input{SCMP-feedback}
 \input{SVVP-feedback}
 \input{ADD-feedback}
-\input{ATP-feedback}
 \input{UTP-feedback}
 \input{ITP-feedback}
+\input{ATP-feedback}
 \input{STD-feedback}
+\input{SUM-feedback}
 
 \end{document}
