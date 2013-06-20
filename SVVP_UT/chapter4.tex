@@ -1,5 +1,5 @@
 \chapter{Test procedures}\label{chap:testProc}
-This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in sections \ref{sec:clientProc}. \\
+This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable to server and client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in sections \ref{sec:clientProc}, and the procedures that have to be adhered for client side testing can be found in sections \ref{sec:serverProc}.\\
 As the \applicationname{} is developed using Eclipse, all the unit tests will be executed in Eclipse as well. This poses some problems for most of the tests, however, namely all tests that make use of zipping, the local storage, the canvas and also some server side tests. The functionality of these tests is not supported in the browsers that are used by Eclipse to execute the (GWT) JUnit tests. A procedure on how to execute these tests is given in section \ref{sec:exectest}.
 
 \section{General procedures}\label{sec:genProc}
@@ -11,8 +11,8 @@ On the client side, functionality can be tested with either GWT JUnit tests or w
 All the GWT JUnit tests can be executed from two test suites, which can be found at \texttt{test/src/suites/ClientUnit.java} and \texttt{test/src/suites/SharedUnit.java}. In a similar fashion, all Selenium tests can be executed via \texttt{test/src/suites/Selenium.java}. \\
 As mentioned before, some special settings are required to run the unit tests. This also applies to the test suites, as these contain all the individual unit tests regarding specific functionality. All the unit tests in the test suites will only pass, when they are executed in manual mode. See section \ref{sec:exectest} for more information.
 
-%\section{Server side testing}\label{sec:serverProc}
-%Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{test/src/suites/ServerUnit.java}.
+\section{Server side testing}\label{sec:serverProc}
+Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{test/src/suites/ServerUnit.java}.
 
 \section{Executing the tests}\label{sec:exectest}
 As mentioned before, most of the individual tests and the tests in the test suites will not pass automatically when the standard Eclipse settings are used for running these tests and test suites. To resolve this issue, proceed as follows:
