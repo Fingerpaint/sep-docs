@@ -8,12 +8,25 @@
 abstract & Typo & Broken references to the ESA. \\
 \end{longtable}
 
+\feedbackTableStart{\benjamin{}}{0.0}
+General & Typo & There are a lot of cases where the Fingerpaint application is referenced, but these are not followed by spaces (e.g. The Fingerpaint applicationis awesome). \\
+General & Typo & Closing quotes '' are used to open a quote. These should be `` instead. \\
+Abstract & Other & It is unclear what is meant by \emph{This program}. \\
+\end{longtable}
+
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
 \subsection{Internal reviews}
 \feedbackTableStart{\roel}{0.0}
 1.7 & Question & It is stated that problems cannot be reported at group fingerpaint. However, the chapter 
 does not state where problems can be reported. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+1.1 & Other & Insert a comma in \emph{\ldots mobile device basic knowledge \ldots} (fixed). \\
+1.6 & Other & Change \emph{italic text} to \emph{italics} for consistency (fixed). \\
+1.6 & Other & This line runs off the page (fixed). \\
+1.7 & Other & Change \emph{\ldots the Group Fingerpaintwill \ldots} to \emph{\ldots Group Fingerpaint will \ldots} (fixed). \\
 \end{longtable}
 
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
@@ -39,6 +52,28 @@ functions. \\
 cautions. (occurs in chapter 4 as well) I would mention the error a second time. A good example is 4.1. \\
 \end{longtable}
 
+\feedbackTableStart{\benjamin{}}{0.0}
+3.* & Other & It might be better to change the `X' used for indicating the \texttt{Toggle Menu} button to $\times$. \\
+3.* & Other & There are forward references in some tutorials. The \emph{Remove some item} tutorials in particular contain forward references to \emph{Save some item} tutorials. \\
+3.* & Other & Some references are broken. \\
+3.1.2, 3.1.3 & Other & Inconsistent `.' at the end of enumerations (fixed). \\
+3.1.4 & Other & Remove the colon after the error message, as it does not end the sentence (fixed). \\
+3.2.4 & Other & Do not use \emph{can't}', but use \emph{cannot} (fixed). \\
+3.3.3 & Other & Superfluous \emph{to} in \emph{\ldots can to be used \ldots} (twice) (fixed). \\
+3.3.3 & Other & \emph{When the protocol is satisfactory \ldots} sounds strange. \\
+3.4.1 & Other & This refers to \emph{\ldots the mixing protocol \ldots} which implies there is only one protocol possible. \\
+3.4.3 & Other & \emph{\ldots right away} sounds very informal. \\
+3.5.2 & Other & \emph{\ldots after \textbf{a} successful mixing run \ldots} (fixed). \\
+3.5.2 & Other & \emph{\ldots after \textbf{a} single step simulations} (fixed). \\
+3.5.2 & Other & \emph{Hence exporting is not possible} is a fragment (fixed). \\
+3.5.3, 3.6.3, 3.7.3 & Other & Try to avoid characters like `/', use \emph{or} instead. \\
+3.6.3 & Other & Spell out small numbers like \emph{2}. \\
+3.6.3 & Other & Change \emph{\ldots of the selected mixing runs appears 3.5} to \emph{\ldots of the selected mixing runs appears (figure 3.5)} (fixed). \\ 
+3.14.2 & Incorrect & One can simply save the white distribution without explicitly defining it as such. \\
+3.17.3, 3.18.3 & Other & Typeset the x and y of \emph{x-axis} in mathmode ($x$-axis). \\
+3.17.3 & Other & \emph{\ldots the mixing performance from the mixing results are displayed} contains a singular noun as subject and a plural verb. \\
+\end{longtable}
+
 % Chapter 4 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 4}
 \subsection{Internal reviews}
@@ -55,6 +90,21 @@ cursor can be placed in the middle of the name, instead of at the end. \\
 \end{longtable}
 
 % Appendix A ------------------------------------------------------------------------------------------------------------------------------
+\section{Appendix A}
+\subsection{Internal Reviews}
+\feedbackTableStart{\benjamin{}}{0.0}
+A.* & Other & The header of this appendix is too long and does not fit next to \emph{Fingerpaint}. \\
+A.1.1 & Other & \emph{There are two specific cases in which this error might occur. Firstly, when trying to load the application. Secondly, when trying to execute a mixing run.}
+These lines are fragmentary and should be combined into one sentence. \\
+A.1.2 & Other & \emph{throws an error} might sound strange to non-computer scientists. \\
+A.2.1 & Other & \emph{\ldots a new name can be specified to save the specified item} sounds strange, it might be better to change the second \emph{specified} to \emph{selected} or something similar. \\
+A.2.2 & Other & The suggested fix for a full storage message is to remove an item of the same type, but as local storage is site specific, removing a different item also works, as long as enough space is freed. \\
+A.2.2 & Other & Incorrect tense in \emph{\ldots when this message is shown when a distribution is saved \ldots}. When something \emph{is saved}, it implies that the save was successful, but the point of this error is to notify the user that it was not. \\
+A.2.3 & Other & \emph{More specifically, this error could occur \ldots} First you say \emph{more specifically}, and then \emph{could}, which is not exactly specific. \\
+A.2.4 & Other & Most errors are shown when an exception occurs, and this is not interesting to the end-user. Also, the definition of error (technically failure but anyway) basically says they should not occur. The important thing is that something went wrong, and it is not any of the other errors described before. Worded as it is now, it sounds confusing. \\
+A.3.1 & Other & \emph{doesn't} should be \emph{does not}. \\
+A.3.1 & Other & \emph{Hereafter} sounds strange. It is probably correct though. \\
+\end{longtable}
 
 % Appendix B ------------------------------------------------------------------------------------------------------------------------------
 \section{Appendix B}
@@ -63,3 +113,4 @@ cursor can be placed in the middle of the name, instead of at the end. \\
 Appendix B & Inconsistent & The definition of mixer is inappropriate and does not fit in with the explanation 
 of geometry. \\
 \end{longtable}
+

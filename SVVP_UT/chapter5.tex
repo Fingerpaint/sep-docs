@@ -2,10 +2,16 @@
 
 This chapter shows the test reports after executing the unit tests.
 
+\newcounter{count}
+\stepcounter{count}
+
 \section{client}
 \subsection{gui}
 \subsubsection*{NumberSpinnerTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testDefaultAboveMax  & pass \\
 testDefaultBelowMin    & pass \\
 testInitialisation           & pass \\
@@ -16,10 +22,15 @@ testOverMax                & pass \\
 testRound                    & pass \\
 testUnderMin               & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsection{model}
 \subsubsection*{ApplicationStateTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testConstructor   & pass \\
 testDistribution    & pass \\
 testNrSteps         & pass \\
@@ -29,15 +40,25 @@ testSetGeometry & pass \\
 testSetMixer        & pass \\
 testStepsize         & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{DrawingToolTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testGetTool   & pass \\
 testRadius    & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{RectangleGeometryTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testInitCanvas                    & pass \\
 testIsInsideBottomWall       & pass \\
 testIsInsideDrawingArea    & pass \\
@@ -45,23 +66,38 @@ testIsInsideTopWall             & pass \\
 testIsOutsideDrawingArea & pass \\
 testMixingSteps                  & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsection{storage}
 \subsubsection*{FingerpaintJsoniserTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testJsonizeHashMap         & pass \\
 testJsonizeIntArray          & pass \\
 testJsonizeProtocol           & pass \\
 testJsonizeResultStorage & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{FingerpaintZipperTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testZip & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{ResultStorageTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testGetDistribution  & pass \\
 testGetGeometry    & pass \\
 testGetMixer           & pass \\
@@ -69,17 +105,27 @@ testGetNrSteps       & pass \\
 testGetProtocol       & pass \\
 testGetSegregation & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \section{shared}
 \subsubsection*{ServerDataResultTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testConstructor  & pass \\
 testSetters        & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsection{model}
 \subsubsection*{MixingProtocolTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testAddStep                       & pass \\
 testAddStepException        & pass \\
 testConstructor                  & pass \\
@@ -92,25 +138,40 @@ testRemoveStep                 & pass \\
 testRemoveStepException & pass \\
 testToString 			& pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{RectangleMixingStepTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testGetStepSize  & pass \\
 testRounding      & pass \\
 testSetStepSize  & pass \\
 testToString        & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsection{simulator}
 \subsubsection*{SimulationResultTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testConstructor       & pass \\
 testGetSegregation & pass \\
 testGetVectors         & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsubsection*{SimulationTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testConstructor                    & pass \\
 testGetConcentrationVector & pass \\
 testGetMixer                         & pass \\
@@ -118,13 +179,32 @@ testGetProtocol                     & pass \\
 testGetRuns                          & pass \\
 testIntermediateVectors       & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
 
 \subsection{utils}
 \subsubsection*{ColourTest}
-\begin{tabular}{l|l}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
 testConstructor & pass \\
 testEquals         & pass \\
 testHex             & pass \\
 testPad             & pass \\
 testSetters        & pass \\
 \end{tabular}
+\end{center}
+\stepcounter{count}
+
+\section{server}
+\subsection{simulator}
+\subsubsection*{NativeCommunicatorTest}
+\begin{center}
+\begin{tabular}{ p{0.84\textwidth} p{0.25\textwidth}}
+\textbf{UT\arabic{count}} & \emph{Date: 19-june-2013} \\
+\hline
+testSegregation & pass \\
+\end{tabular}
+\end{center}
+\stepcounter{count}
