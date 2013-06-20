@@ -1,10 +1,16 @@
 \chapter{STD Feedback}
 \label{chap:std-feedback}
 
+% Abstract ---------------------------------------------------------------------------------------------------------------------------------
+\section{Abstract}
+\subsection{Internal reviews}
+\feedbackTableStart{\hugo}{0.0}
+Abstract &	Inconsistent 	& customer $\rightarrow$ client\\
+\end{longtable}
+
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
 \subsection{Internal reviews}
-
 \feedbackTableStart{\femke}{0.0}
 1.1	& Other	& There is a command for ``Group Fingerpaint'' ($\backslash$projectauthor), so you can use that here. \\
 1.3.1 & Other & The following definitions are mentioned in the list of definitions, but are not used in the STD: Java Development Kit, Ant and Make. \\
@@ -16,9 +22,8 @@
 \end{longtable}
 
 \feedbackTableStart{\hugo}{0.0}
-abstract &	Inconsistent 	& customer -$>$ client\\
-1.1 &		Inconsistent	& customer -$>$ client\\
-1.3 & 		Inconsistent	& customer -$>$ client. Basically this comment holds throughout the document. In all other documents we call him "the client"\\
+1.1 &		Inconsistent	& customer $\rightarrow$ client\\
+1.3 & 		Inconsistent	& customer $\rightarrow$ client. Basically this comment holds throughout the document. In all other documents we call him "the client"\\
 1.3 & 		Other		& "Java Development Kit: The software used to build Java applications" Either 'the software WE used' or 'software used to...'\\
 \end{longtable}
 
@@ -54,8 +59,18 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 % Chapter 5 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 5}
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+5 & Typo & Spaces are missing between ATP, URD and their references. \\
+\end{longtable}
+
 \feedbackTableStart{\roel}{0.0}
 5 & Typo & Broken references to the URD and ATP. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+5 & Other & The commas in the long list of CPRs are bold, when they should not be. Also \emph{and} is in boldface. \\
+5 & Other & Have we actually tested non-iOS operating systems? \\
+5 & Other & \emph{Another conclusion that came from \ldots}: \emph{came from} is unnecessary. \\
 \end{longtable}
 
 \feedbackTableStart{\femke}{0.0}
@@ -72,6 +87,20 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 6}
 \subsection{Internal reviews}
+\feedbackTableStart{\tessa}{0.0}
+6 & Other & Maybe add something here like: `If a solution is known for these bugs, but not yet implemented, this will also be mentioned.' And then remove the `Solution' section everywhere where the solution is `The issues should disappear'. \\
+6.5 & Typo & The solution should start with a capital letter. \\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+6 & Other & Transfer phase is mentioned twice. \\
+6.1 & Other & \emph{When a popup pops up}......... Yea. \\
+6.1 & Other & \emph{When the popup pops up}......... Same as above, but at least be consistent with \emph{a} and \emph{the}. \\
+6.2, 6.5, 6.6 & Other & This is the desired effect, not the solution. \\
+6.4 & Question & Is this still true? I thought we had already fixed this some time ago. \\
+6.7 & Other & Change \emph{the to be downloaded file} to \emph{the file to be downloaded}. \\
+\end{longtable}
+
 \feedbackTableStart{\femke}{0.0}
 6 & Inconsistent & In chapter 6, the sections are numbered, whereas in chapters 7 and 8, there is no such numbering. To make it consistent, I would remove the numbering of the sections in chapter 6. \\
 6.5 & Other & ``performance graphs'' should be ``Performance graphs'', as it is the start of a new sentence. \\
@@ -80,16 +109,24 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 \end{longtable}
 
 \feedbackTableStart{\hugo}{0.0}
+6 &         Missing &   We're missing the issue of the fortran code containing a memory leak. It's beyond the scope of our project, and we're not going to fix it, but it's definitely an issue of the Fingerpaint application. \\
 6 & 		Style &		"During transfer phase"... "at the transfer phase". I would remove one of the two. Also the ":" at the end of the sentence is a bit out of place when there is a section rather than a list on the next line.\\
 6.3 & 		Other & 	Say something like "to prevent accidental deletion". Otherwise it's like 'its missing' and 'it should be added' without any reason being given for the change.\\
 6.5 &		Other & 	We can be a bit more precise here. Say something like "Get the gwt-visualization.jar library to work for IE"\\
 6.6 & 		Other & 	I feel like we can be more precise than 'it should not crash' here. Think in terms of solutions instead of 'it should stop exhibiting the unwanted behavior'. (i.e. "It should resize properly", "It shouldn't be resizable to smaller sizes", "scroll bars should appear", etc).\\
-x &         Missing &   We're missing the issue of the fortran code containing a memory leak. It's beyond the scope of our project, and we're not going to fix it, but it's definitely an issue of the Fingerpaint application.
 \end{longtable}
 
 % Chapter 7 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 7}
 \subsection{Internal reviews}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+7 & Other & Show loading: busy is superfluous here, the present continuous tense already implies that the activity is being executed at that time. \\
+7 & Other & Logarithmic scale: change y-axis to $y$-axis. \\
+7 & Other & Gray entries: from reading this document, it is unclear what is meant by \emph{gray} and \emph{selected} entries. \\
+7 & Typo & Gray entries: Gray is spelt \emph{grey}. Gray is an SI unit. \\
+\end{longtable}
+
 \feedbackTableStart{\femke}{0.0}
 7 & Missing & There is no introductory text for this chapter. You could write something like ``During the transfer phase, the following modifications were requested by the customer:''. \\
 7 & Style & ``Sometimes button presses do not register'' should be ``Sometimes button presses are not registered''.  \\
@@ -105,6 +142,11 @@ with selected entries. They should be more distinguishable." Selected items shou
 % Chapter 8 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 8}
 \subsection{Internal reviews}
+\feedbackTableStart{\benjamin{}}{0.0}
+8 & Other & Gray entries: from reading this document, it is unclear what is meant by \emph{gray} and \emph{selected} entries. \\
+8 & Typo & Gray entries: Gray is spelt \emph{grey}. Gray is an SI unit. \\
+\end{longtable}
+
 \feedbackTableStart{\femke}{0.0}
 8 & Inconsistent & Again, all widgets are spelled with a small letter, but they should have a capital letter (only the first letter of the widget name). \\
 8 & Other & The introductory text for this chapter is simply the text from the general info document. Perhaps you can rewrite it to something like ``During the transfer phase, the following modifications requests from the customer were implemented:''. \\
