@@ -2,7 +2,7 @@
 		pathtobase=..,%
 		titlefull={Review Document},%
 		titleabbr=Review,%
-		version=0.10]{fingerpaint}
+		version=0.14]{fingerpaint}
 
 \def\reviewversion{0.0}
 \newcommand{\setVersion}[1]{\midrule[1pt] \multicolumn{3}{r}{\def\reviewversion{#1}Version \reviewversion}\\ \midrule[1pt]}
@@ -43,15 +43,20 @@ This document contains the collection of all review documents, both internal rev
 \bibliography{../ref}
 
 \section{Overview}
-Each chapter corresponds to one document and contains all the feedback on this document. The chapters are organized according to the newest version of each of the documents; we distinguish between internal and external reviews and will also list the name of the person or group of persons that provided the feedback. \\
-The following deliverables are reviewed in this document:
+Each chapter corresponds to one document and contains all the feedback on this document. The chapters are organized according to the newest version of each of the documents; we distinguish between internal and external reviews and will also list the name of the person or group of persons that provided the feedback. If no feedback is provided on a certain chapter or part of a document, then this chapter or part is omitted in that particular review document.
+
+\fpstartparagraph{} The following deliverables are reviewed in this document:
 \begin{itemize}
 \item User Requirements Document \cite{urd} (chapter \ref{chap:urd-feedback})
 \item Software Requirements Document \cite{srd} (chapter \ref{chap:srd-feedback})
 \item Software Configuration Management Plan \cite{scmp} (chapter \ref{chap:scmp-feedback})
 \item Software Validation and Verification Plan \cite{svvp} (chapter \ref{chap:svvp-feedback})
 \item Architectural Design Document \cite{add} (chapter \ref{chap:add-feedback})
+\item Unit Test Plan \cite{utp} (chapter \ref{chap:utp-feedback})
+\item Integration Test Plan \cite{itp} (chapter \ref{chap:itp-feedback})
 \item Acceptance Test Plan \cite{atp} (chapter \ref{chap:atp-feedback})
+\item Software Transfer Document \cite{std} (chapter \ref{chap:std-feedback})
+\item Software User Manual \cite{sum} (chapter \ref{chap:sum-feedback})
 \end{itemize}
 
 \input{URD-feedback}
@@ -59,8 +64,10 @@ The following deliverables are reviewed in this document:
 \input{SCMP-feedback}
 \input{SVVP-feedback}
 \input{ADD-feedback}
-\input{ATP-feedback}
 \input{UTP-feedback}
 \input{ITP-feedback}
+\input{ATP-feedback}
+\input{STD-feedback}
 \input{SUM-feedback}
+
 \end{document}

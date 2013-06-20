@@ -1,21 +1,22 @@
 \chapter{Test plan}
 \label{chap:testPlan}
-In this chapter it is described what items are tested with the acceptance tests, and how these items must be tested. Specific information about each test is described in chapters \ref{chap:testSpecs}-\ref{chap:testReports}.
+In this chapter it is described what items are tested with the integration tests, and how these items must be tested. Specific information about each test is described in chapters \ref{chap:testSpecs} to \ref{chap:testReports}.
 
 \section{Test items}
-Fingerpaint is designed as described in the ADD \cite{add}. Each component specified there is subject to integration tests as described in this document. These components are: the Client Persistence, the Layout, the Application State, the HTTP Server, the Application Service, the Application Persistence, the Simulator Service and the Fortran Module.
+Fingerpaint is designed as described in the ADD \cite{add}. Each component specified in chapter \ref*{ADD-chap:compdescr} of the ADD \cite{add} is subject to integration tests as described in this document. These components are: the Fortran Module, the Simulator Service, the Application Persistence, the HTTP Server, the Application Service, the Layout, the Client Persistence and the Application State. %the Client Persistence, the Layout, the Application State, the HTTP Server, the Application Service, the Application Persistence, the Simulator Service and the Fortran Module.
 
 \section{Features to be tested}
-As all features require communication between the Layout and the Application State components, all features are tested with the integration tests.
+%As all features require communication between the Layout and the Application State components, all features are tested with the integration tests.
+The features that are explicitely tested with the integration test are all features regarding the saving, loading and removing of distributions, protocols and mixing results. Furthermore all features regarding the execution of mixing runs are tested.
 
 \section{Test deliverables}
-Prior to testing, the following documents/code should be completed:
+Prior to testing, the following items should be completed:
 \begin{itemize}
 \item ADD \cite{add}.
-\item ITP \cite{itp}, should be finished up to the test reports (chapter \ref{chap:testReports}).
+\item ITP \cite{itp}, should be finished, except for the test reports (chapter \ref{chap:testReports}).
 \item The Fingerpaint code.
 \end{itemize}
-After the tests are concluded the test reports should be written, and problem reports should be written when necessary.
+After the tests are concluded, test reports should be written. Problem reports should be written when necessary.
 
 \section{Testing tasks}
 Before the integration tests can be executed, the following needs to be done:
@@ -26,8 +27,14 @@ Before the integration tests can be executed, the following needs to be done:
 \end{itemize}
 
 \section{Environmental needs}
-The hardware/software required to run \applicationname{} is described in appendix A of the ATP \cite{atp}.
+To be able to perform the IT, the following resources are needed:
+
+\begin{itemize}
+  \item One or more web browsers supported by the \applicationname{} (see the URD \cite{urd} for a list).
+  \item A client device with Ant, JUnit, a JDK and GWT installed.
+\end{itemize}
+
+\noindent See also the constraints described in the DDD \cite{DDD}.
 
 \section{Test case pass/fail criteria}
-The integration tests as a whole succeed if all the integration tests in it pass. Similarly if one test fails, the software is rejected.
-The test criteria are described in chapter \ref{chap:testSpecs}.
+The integration tests as a whole succeed if all the integration tests in it pass. If one test fails, the software is rejected.

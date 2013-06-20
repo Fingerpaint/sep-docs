@@ -1,18 +1,5 @@
-% Categories: Question, Typo, Incorrect, Missing, Structure/layout, Inconsistent, Other
-% The structure of this document is conform the latest version of the Software Configuration Management Plan.
 \chapter{ADD Feedback}
 \label{chap:add-feedback}
-
-% Abstract ---------------------------------------------------------------------------------------------------------------------------------
-\section{Abstract}
-No feedback has been given on this part of the document.
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
-
-%\subsection{Internal reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
 
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
@@ -22,18 +9,6 @@ No feedback has been given on this part of the document.
 \end{longtable}
 
 \subsection{Internal reviews}
-\feedbackTableStart{\femke}{0.0}
-1 & Missing & Every chapter with (sub)sections should contain a small introduction before the first (sub)section. \\
-1.1 & Typo & In the sentence ``it describes the dependencies on other components'', it should be ``with''  or ``to'' instead of ``on''. \\
-1.2 & Typo & In ``The application serves as an education tool'', it should be ``an educational tool''. \\
-1.3 & Typo & ``and in perticular for students'' should be ``particular''. \\
-1.3 & Typo & The name of the section contains a typo, because it says ``abbrviations'' and it should be ``abbreviations''. \\
-1.3.1 & Missing & Now, there is one definition in the list and a todo to add more if necessary. Perhaps you can include definitions for the following items as well: Fortran, mixing step, meta-parameter, GWT and subordinates. \\
-1.3.2 & Missing & The following abbreviations are mentioned in the document, but are not included in the list of abbreviations: ``ADD'', GWT, JNI and GUI. \\
-1.3.2 & Incorrect & 2IP35 is a Software Engineering Project, not a Course. \\
-1.5 & Style & Sometimes you are very brief in this section, such as ``Chapter 2 gives a system overview'', whereas sometimes you explicitly say in which sections (``In section 4.2'') something is covered. Perhaps you can include some more information on chapters 2, 3 and 4. \\
-\end{longtable}
-
 \feedbackTableStart{\thom{}}{0.0}
 1.3.2 & Structure & The abbreviations should be sorted alphabetically, I think. \\
 1.3.2 & Missing & The abbreviation ``ADD'' is missing.\\
@@ -47,6 +22,18 @@ No feedback has been given on this part of the document.
 1.3 & Other & \emph{The combination of a wall the move} should be changed to something like \emph{The combination of which wall moves}. \\
 1.5 & Typo & Chapter 4 covers the sy\textbf{s}tem design (fixed). \\
 1.5 & Typo & Chapter 6 gives an overview of all resources need\textbf{ed} to build, operate and maintain the application. \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+1 & Missing & Every chapter with (sub)sections should contain a small introduction before the first (sub)section. \\
+1.1 & Typo & In the sentence ``it describes the dependencies on other components'', it should be ``with''  or ``to'' instead of ``on''. \\
+1.2 & Typo & In ``The application serves as an education tool'', it should be ``an educational tool''. \\
+1.3 & Typo & ``and in perticular for students'' should be ``particular''. \\
+1.3 & Typo & The name of the section contains a typo, because it says ``abbrviations'' and it should be ``abbreviations''. \\
+1.3.1 & Missing & Now, there is one definition in the list and a todo to add more if necessary. Perhaps you can include definitions for the following items as well: Fortran, mixing step, meta-parameter, GWT and subordinates. \\
+1.3.2 & Missing & The following abbreviations are mentioned in the document, but are not included in the list of abbreviations: ``ADD'', GWT, JNI and GUI. \\
+1.3.2 & Incorrect & 2IP35 is a Software Engineering Project, not a Course. \\
+1.5 & Style & Sometimes you are very brief in this section, such as ``Chapter 2 gives a system overview'', whereas sometimes you explicitly say in which sections (``In section 4.2'') something is covered. Perhaps you can include some more information on chapters 2, 3 and 4. \\
 \end{longtable}
 
 \feedbackTableStart{\hugo{}}{0.0}
@@ -67,13 +54,13 @@ No feedback has been given on this part of the document.
 2 & Structure & The abbreviations URD and SRD can be used here without writing it all out, especially since these abbreviations are named in the list of abbreviations. When you do want to keep the full titles, please emphasise them. \\
 \end{longtable}
 
-\feedbackTableStart{\benjamin{}}{0.0}
-2 & Other & \emph{\ldots and the environment it will operate in.} Should be changed to present tense, as it already operates in that environment and this documentation is mainly used for future maintenance, in which case it definitely runs in that environment.\\
-2 & Typo & \emph{any one other information systems} should be either singular or plural. 
-\end{longtable}
-
 \feedbackTableStart{\roel{}}{0.1}
 2 & Missing & A description of the design descision to compress with zip is needed. In addition, the alternative (lwz compression) should be described.\\
+\end{longtable}
+
+\feedbackTableStart{\benjamin{}}{0.0}
+2 & Other & \emph{\ldots and the environment it will operate in.} Should be changed to present tense, as it already operates in that environment and this documentation is mainly used for future maintenance, in which case it definitely runs in that environment.\\
+2 & Typo & \emph{any one other information systems} should be either singular or plural.
 \end{longtable}
 
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
@@ -85,6 +72,15 @@ No feedback has been given on this part of the document.
 \end{longtable}
 
 \subsection{Internal reviews}
+\feedbackTableStart{\benjamin{}}{0.0}
+3.1 & Other & \emph{Communication with this module are done} should be either singular or plural. \\
+3.1 & Other & All of the \texttt{len\_*} meta-parameters have similar descriptions. Most of these messages could be combined above the table, so that, in the table, these items only have to talk about what exactly they represent, and not why they are there. \\
+3.1 & Other & Len\_*: \emph{\ldots of above string} misses an article. \\
+3.1 & Other & Geometry: \emph{For example, “Rectangle 400x240”.} This is only a fragment of a sentence and should either be reworded or combined with the previous sentence. \\
+3.1 & Structure & The paragraph at the end of the section should be moved to the beginning of the section and combined with the remark about the meta-parameters above. \\
+3.1 & Typo & prevent segmentation faults from occur\textbf{r}ing (fixed). \\
+\end{longtable}
+
 \feedbackTableStart{\femke}{0.0}
 3.1 & Question & Is it really necessary to make a separate section? You're actually only discussing one item in this chapter. \\
 3 & Missing & Every chapter with (sub)sections should contain a small introduction before the first (sub)section. That is, if you decide to keep the section for this single item. \\
@@ -96,19 +92,10 @@ No feedback has been given on this part of the document.
 3.1 & Incorrect & The matrix/mixer is also a String-parameter. \\
 \end{longtable}
 
-\feedbackTableStart{\benjamin{}}{0.0}
-3.1 & Other & \emph{Communication with this module are done} should be either singular or plural. \\
-3.1 & Other & All of the \texttt{len\_*} meta-parameters have similar descriptions. Most of these messages could be combined above the table, so that, in the table, these items only have to talk about what exactly they represent, and not why they are there. \\
-3.1 & Other & Len\_*: \emph{\ldots of above string} misses an article. \\
-3.1 & Other & Geometry: \emph{For example, “Rectangle 400x240”.} This is only a fragment of a sentence and should either be reworded or combined with the previous sentence. \\
-3.1 & Structure & The paragraph at the end of the section should be moved to the beginning of the section and combined with the remark about the meta-parameters above. \\
-3.1 & Typo & prevent segmentation faults from occur\textbf{r}ing (fixed). \\
-\end{longtable}
-
 \feedbackTableStart{\hugo{}}{0.0}
-3.0 & 		Style & 	"with this, we mean" -$>$ "This means..."\\
-3.1 & 		Typo & 		"with this module are done" -$>$ "is done"\\
-3.1 & 		Typo  & 	"In the above, all meta-parameters are not needed to make" -$>$ "Not all meta-parameters of the above table are needed..."\\
+3.0 & 		Style & 	``with this, we mean'' $\rightarrow$ ``This means...''\\
+3.1 & 		Typo & 		``with this module are done'' $\rightarrow$ ``is done''\\
+3.1 & 		Typo  & 	``In the above, all meta-parameters are not needed to make'' $\rightarrow$ ``Not all meta-parameters of the above table are needed...''\\
 3.1 & 		Missing & 	Include 'segmentation faults' in the definitions table.\\
 \end{longtable}
 
@@ -120,17 +107,6 @@ No feedback has been given on this part of the document.
 \end{longtable}
 
 \subsection{Internal reviews}
-\feedbackTableStart{\femke}{0.0}
-4.2 & Question & Maybe you can refer specifically to figure 2.1 of the SRD here, so it is more clear that you're talking about the same components here. \\
-4.2.1 & Question & What does ``Layout'' and ``Application State'' mean here? They are not mentioned in figure 2.1 of the SRD, so maybe you can explain what they're about. \\
-4.2.1 & Question & In the Client-component, you say that the Client Browser is responsible for updating the Application Persistence. Do you mean Client Persistence here? And what is exactly updated in this case? \\
-4.2.2 & Typo & A space is missing behind ``Fingerpaint'' in the first sentence. This causes the dot (.) to appear above the first letter of the next sentence. \\
-4.2.2 & Question & What does the `depends on'-relation mean? Does it mean that, for instance the Simulator Service communicates with the Fortran Module or vice versa? Perhaps you can explain some more about this relation, so the ``direction'' of the relation is also clear. Explaining the bidirectional arrows might also help for understanding the figure better. \\
-Figure 4.1 & Incorrect & Figure 2.1 in the SRD has bidirectional arrows for all communication lines, for example the communication line between the Simulator Service and the Fortran Module. I think there should be bidirectional arrows in figure 4.1 as well for all these cases. \\
-Figure 4.1 & Incorrect & In figure 4.1 you say that the Application Service depends on the Simulator Service, but that seems quite strange, as the Client Browser is the one who communicates to the Simulator Service (see figure 2.1 SRD).  \\
-Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend on the HTTP server? If the Application Persistence is actually the Client Persistence, is there any need to communicate to the HTTP server at all? If this is not the case, could you please explain the purpose of the Application Persistence better? \\
-\end{longtable}
-
 \feedbackTableStart{\thom{}}{0.0}
 4.1 & Missing & When mentioning the use of GWT, maybe refer to the SCMP (chapter 6)? Maybe not, though, because the SCMP is a project document, whereas the ADD is a product document. \\
 4.2.2 & Typo & In the first sentence, I think there should be a \texttt{\{\}} behind the \LaTeX{} command for the project name, because there is something weird happening now. \\
@@ -140,6 +116,17 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 4.2.1 & Typo & \emph{The following components are ident\textbf{if}ied:} (fixed) \\
 4.2.2 & Typo & fulfil\textbf{l} (fixed). \\
 4.2.2 & Typo & eachother is/are two words (fixed). \\
+\end{longtable}
+
+\feedbackTableStart{\femke}{0.0}
+4.2 & Question & Maybe you can refer specifically to figure 2.1 of the SRD here, so it is more clear that you're talking about the same components here. \\
+4.2.1 & Question & What does ``Layout'' and ``Application State'' mean here? They are not mentioned in figure 2.1 of the SRD, so maybe you can explain what they're about. \\
+4.2.1 & Question & In the Client-component, you say that the Client Browser is responsible for updating the Application Persistence. Do you mean Client Persistence here? And what is exactly updated in this case? \\
+4.2.2 & Typo & A space is missing behind ``Fingerpaint'' in the first sentence. This causes the dot (.) to appear above the first letter of the next sentence. \\
+4.2.2 & Question & What does the `depends on'-relation mean? Does it mean that, for instance the Simulator Service communicates with the Fortran Module or vice versa? Perhaps you can explain some more about this relation, so the ``direction'' of the relation is also clear. Explaining the bidirectional arrows might also help for understanding the figure better. \\
+Figure 4.1 & Incorrect & Figure 2.1 in the SRD has bidirectional arrows for all communication lines, for example the communication line between the Simulator Service and the Fortran Module. I think there should be bidirectional arrows in figure 4.1 as well for all these cases. \\
+Figure 4.1 & Incorrect & In figure 4.1 you say that the Application Service depends on the Simulator Service, but that seems quite strange, as the Client Browser is the one who communicates to the Simulator Service (see figure 2.1 SRD).  \\
+Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend on the HTTP server? If the Application Persistence is actually the Client Persistence, is there any need to communicate to the HTTP server at all? If this is not the case, could you please explain the purpose of the Application Persistence better? \\
 \end{longtable}
 
 \feedbackTableStart{\hugo{}}{0.0}
@@ -157,7 +144,7 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 5.1.3 & Typo & In the ``Subordinates'' section, ``was not build'' should be ``was not built''. \\
 5.1.5 & Structure/layout & The sentence ``This is not entirely true however: some data is compressed before sending it to the client, for example'' is bad structure. ``This is not entirely true however, as some data is compressed before sending it to the client'' would be nicer. The `colon'-part and the ``for example'' don't really fit here very well. \\
 5.1.5 & Missing & According to Lou, it would be nice to include how you solved the compression thing, as it is a design decision. \\
-5.2.2 & Incorrect & For the ``Processing section'', the same remark applies as in section 5.1.3 for the databases. \\ 
+5.2.2 & Incorrect & For the ``Processing section'', the same remark applies as in section 5.1.3 for the databases. \\
 \end{longtable}
 
 \subsection{Internal reviews}
@@ -165,12 +152,8 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 5.2.4 & Layout & Under ``Purpose'', I think the layout of the block with SRQs is not correct. It starts with an indentation now, but that should not be the case. Use \texttt{\textbackslash{}fpstartparagraph}. \\
 \end{longtable}
 
-\feedbackTableStart{\femke{}}{0.0}
-5 & Question & I noticed that you refer to figure 4.1 quite often in the ``Dependencies'' section. Is it an idea to make a remark at the beginning and remove each of the remarks in the ``Dependencies'' section? \\
-5.1.1 & Question & In the section ``Interfaces'', you list the arguments that the procedure call recieve from the Simulation Service. It seems that you only explain the case where the arguments are immediately send to the server (the checkbox for define protocol is unchecked). Shouldn't we also explain the case for defining a protocol? In that case, there is a list of mixing steps and also a number of steps parameter. \\
-5.1.4 & Incorrect & In the ``purpose'' section, there is one comma extra at the end of the sentence, but no new software requirement is listed. \\
-5.1.5 & Incorrect & There is a whitespace right in the sentence ``The Application Service has an interface with the HTTP Server component.'' \\
-5.2.3 & Typo & In the ``Dependencies'' section, ``dependes'' should be ``depends''. \\
+\feedbackTableStart{\roel{}}{0.1}
+5.1.2 & Question & In \texttt{Data}, it is stated that internal data results may have to be duplicated for intermediate results, but intermediate results are not implemented.\\
 \end{longtable}
 
 \feedbackTableStart{\benjamin{}}{0.0}
@@ -206,34 +189,26 @@ Figure 4.1 & Question & Why does the ``Update Application Persistence'' depend o
 5.2.4 & Other & Processing: One (preferably the first) of the \emph{it}s should be changed to \emph{Application State}. \\
 \end{longtable}
 
+\feedbackTableStart{\femke{}}{0.0}
+5 & Question & I noticed that you refer to figure 4.1 quite often in the ``Dependencies'' section. Is it an idea to make a remark at the beginning and remove each of the remarks in the ``Dependencies'' section? \\
+5.1.1 & Question & In the section ``Interfaces'', you list the arguments that the procedure call recieve from the Simulation Service. It seems that you only explain the case where the arguments are immediately send to the server (the checkbox for define protocol is unchecked). Shouldn't we also explain the case for defining a protocol? In that case, there is a list of mixing steps and also a number of steps parameter. \\
+5.1.4 & Incorrect & In the ``purpose'' section, there is one comma extra at the end of the sentence, but no new software requirement is listed. \\
+5.1.5 & Incorrect & There is a whitespace right in the sentence ``The Application Service has an interface with the HTTP Server component.'' \\
+5.2.3 & Typo & In the ``Dependencies'' section, ``dependes'' should be ``depends''. \\
+\end{longtable}
+
 \feedbackTableStart{\hugo{}}{0.0}
 5.x & 	Incorrect & 	Needs to be updated to match the latest version of the SRD.\\
 \end{longtable}
 
-\feedbackTableStart{\roel{}}{0.1}
-5.1.2 & Question & In \texttt{Data}, it is stated that internal data results may have to be duplicated for intermediate results, but intermediate results are not implemented.\\
-\end{longtable}
-
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 6}
-%No feedback has been given on this part of the document.
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
-
-\feedbackTableStart{\hugo{}}{0.0}
-6 (client device) & Question & 	So if you want to run FINGERPAINT on your smartphone, your smartphone needs $>$ 1 GB RAM? This seems a lot.\\
-\end{longtable}
-
+\subsection{Internal reviews}
 \feedbackTableStart{\roel{}}{0.1}
 6 & Question & \emph{The operating system requirement for the application is \dots or some up-to-date Linux distribution} I find some up-to-date distribution a rather vague description for a linux version.\\
+\end{longtable} 
+
+\feedbackTableStart{\hugo{}}{0.0}
+6 (client device) & Question & 	So if you want to run FINGERPAINT on your smartphone, your smartphone needs $\rightarrow$ 1 GB RAM? This seems a lot.\\
 \end{longtable}
 
-% Chapter 7 --------------------------------------------------------------------------------------------------------------------------------
-\section{Chapter 7}
-No feedback has been given on this part of the document.
-%\subsection{External reviews}
-%\feedbackTableStart{Junior Management}{0.0}
-%\end{longtable}
-
-%\subsection{Internal reviews}
