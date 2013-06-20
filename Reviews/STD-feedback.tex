@@ -1,11 +1,20 @@
 \chapter{STD Feedback}
 \label{chap:std-feedback}
 
-% Please only include chapters for which feedback is given!
-
 % Chapter 1 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 1}
 \subsection{Internal reviews}
+
+\feedbackTableStart{\femke}{0.0}
+1.1	& Other	& There is a command for ``Group Fingerpaint'' ($\backslash$projectauthor), so you can use that here. \\
+1.3.1 & Other & The following definitions are mentioned in the list of definitions, but are not used in the STD: Java Development Kit, Ant and Make. \\
+1.3.1 & Missing & The following definitions are mentioned in the STD, but are not included in the list of definitions: Internet Explorer and Safari/iOS Safari (see ``Question''-remark for chapter 5). \\
+1.3.2 & Other & The following abbreviations are mentioned in the list of abbreviations, but are not used in the STD: JDK (if you remove Java Development Kit from 1.3.1). \\
+1.3.2 & Missing & The following abbreviations are mentioned in the STD, but are not included in the list of abbreviations: ESA, URD, SRD, DDD, UTP, ITP, SUM, STD, SCMP, SPMP, SQAP and SVVP. \\
+1.3.2 & Other & Please make sure that the list of definitions and abbreviations are sorted alphabetically; this makes it also consistent with the other documents. \\
+1.5 & Style & Perhaps you can rewrite the sentence for chapter 6 to ``If any software problems were raised during the transfer phase, they are listed in chapter 6.'' This makes it also consistent with the description in the general info document. \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 abstract &	Inconsistent 	& customer -$>$ client\\
 1.1 &		Inconsistent	& customer -$>$ client\\
@@ -16,6 +25,10 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 % Chapter 2 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 2}
 \subsection{Internal reviews}
+\feedbackTableStart{\femke}{0.0}
+2 & Other & The links to appendix A of the ATP are click able, but that has no purpose, as they refer to an external document. You can fix this by using $\backslash$ref\*. \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 2 & 		Other &		Broken references.\\
 \end{longtable}
@@ -23,6 +36,10 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 % Chapter 3 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 3}
 \subsection{Internal reviews}
+\feedbackTableStart{\femke}{0.0}
+3 & Other & Again, there are click able references.
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 3 & 		Other &		Broken references.\\
 \end{longtable}
@@ -41,6 +58,13 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 5 & Typo & Broken references to the URD and ATP. \\
 \end{longtable}
 
+\feedbackTableStart{\femke}{0.0}
+5 & Missing & According to the SEP marking form, the ATP test reports should also be included in the STD. Perhaps you can make a reference in this chapter in the ATP (the label is chap:testReports, I believe). \\
+5 & Other & The list given here is already mentioned in section 2.2 of the ATP, so perhaps you can simply refer to that section here, instead of providing the whole list again. \\
+5 & Missing & You seem to give an enumeration here, as you mention ``Another conclusion'' and ``Finally'', but there is no such keyword for the first item (all tests written succeeded). \\
+5 & Question & Does the exporting functionality not work on Safari or iOS Safari, or on both? \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 5 &		Missing &	I would add "(all versions)" to the description of IE and Safari not working.\\
 \end{longtable}
@@ -48,6 +72,13 @@ abstract &	Inconsistent 	& customer -$>$ client\\
 % Chapter 6 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 6}
 \subsection{Internal reviews}
+\feedbackTableStart{\femke}{0.0}
+6 & Inconsistent & In chapter 6, the sections are numbered, whereas in chapters 7 and 8, there is no such numbering. To make it consistent, I would remove the numbering of the sections in chapter 6. \\
+6.5 & Other & ``performance graphs'' should be ``Performance graphs'', as it is the start of a new sentence. \\
+6.6 & Typo & ``chrashes'' should be ``crashes''. The same holds for ``chrash'', which should be ``crash''. \\
+6.7 & Question & See question for chapter 5: is it Safari or iOS Safari? \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 6 & 		Style &		"During transfer phase"... "at the transfer phase". I would remove one of the two. Also the ":" at the end of the sentence is a bit out of place when there is a section rather than a list on the next line.\\
 6.3 & 		Other & 	Say something like "to prevent accidental deletion". Otherwise it's like 'its missing' and 'it should be added' without any reason being given for the change.\\
@@ -59,7 +90,23 @@ x &         Missing &   We're missing the issue of the fortran code containing a
 % Chapter 7 --------------------------------------------------------------------------------------------------------------------------------
 \section{Chapter 7}
 \subsection{Internal reviews}
+\feedbackTableStart{\femke}{0.0}
+7 & Missing & There is no introductory text for this chapter. You could write something like ``During the transfer phase, the following modifications were requested by the customer:''. \\
+7 & Style & ``Sometimes button presses do not register'' should be ``Sometimes button presses are not registered''.  \\
+7 & Incorrect & The \emph{save/remove successful} message should be \emph{Save/Delete successful}. \\
+7 & Inconsistent & In the SUM, we refer to widgets (buttons etcetera) with a capital letter (only the first letter of the widget name). In chapter 7, they are all listed with a small letter. \\
+\end{longtable}
+
 \feedbackTableStart{\hugo}{0.0}
 7 & 		Other & 	"In the view multiple performance option, the gray entries in the loading menu are confused
 with selected entries. They should be more distinguishable." Selected items should be distinguishable. At the moment grey entries are so distinguishable that they being are confused with selectable items. Hence, they should be made LESS distinguishable (from other non-selected cellList items).\\
+\end{longtable}
+
+% Chapter 8 --------------------------------------------------------------------------------------------------------------------------------
+\section{Chapter 8}
+\subsection{Internal reviews}
+\feedbackTableStart{\femke}{0.0}
+8 & Inconsistent & Again, all widgets are spelled with a small letter, but they should have a capital letter (only the first letter of the widget name). \\
+8 & Other & The introductory text for this chapter is simply the text from the general info document. Perhaps you can rewrite it to something like ``During the transfer phase, the following modifications requests from the customer were implemented:''. \\
+8 & Question & The CelLBrowser is only disabled in version 1.1. Shouldn't we mention that here? \\
 \end{longtable}
