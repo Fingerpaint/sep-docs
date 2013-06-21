@@ -37,13 +37,13 @@ There are three possible options to compile the application. These options are t
   \item[war] This option compiles the application to a war file named \textsc{Fingerpaint.war}. This file can then be deployed in a jetty server. This deployment procedure is, however, not covered by this manual as it depends on the configuration of the server used.
 \end{description}
 
-For the first compiling option a port number may be chosen on which the server listens, denoted by \textsc{<port-number}.
+For the first compiling option a port number may be chosen on which the server listens, denoted by \textsc{<port-number>}.
 
 Extra compiler options may be given to the GWT-compiler in order to modify its behavior. These options are denoted by \textsc{<gwt-options>}. This is, however, an advanced option and is not covered futher by this manual.
 
-We assume source code of the application can be foun in the \textsc{<app-root>} folder.
+We assume source code of the application can be found in the \textsc{<app-root>} folder.
 Navigate in the console to the \textsc{<app-root>/fingerpaint} folder. 
-We need to make sure the \textsc{JAVA\_HOME} environment variable is correctly set. On some machines, this will be the case by default. The variable should be set to the home directory of the JDK that was just installed (we denote this directory as \textsc{<jdk-home>}. If the variable was already set correctly (or you choose to set it manually, not covered by this manual), you can ignore the option setting the \textsc{<jdk-home>} in the following command. Otherwise, you have to include it. You can now execute the following command to compile the project:
+We need to make sure the \textsc{JAVA\_HOME} environment variable is correctly set. On some machines, this will be the case by default. The variable should be set to the home directory of the JDK that was just installed (we denote this directory as \textsc{<jdk-home>}). If the variable was already set correctly (or you choose to set it manually, not covered by this manual), you can ignore the option setting the \textsc{<jdk-home>} in the following command. Otherwise, you have to include it. You can now execute the following command to compile the project:
 
 \begin{verbatim}
 ant <compiler-option> [-Djava.jdk.home=<jdk-home>] [-Dgwt.args=<gwt-options>] 
