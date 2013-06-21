@@ -1,1 +1,79 @@
 \chapter{Sprints phase} \label{Sprints phase}
+
+\section{SR phase}
+\subsection{The Software Requirements Review}
+The outputs of the Software Requirements Definition Phase are formally reviewed in the Software Requirements Review (SR-R). Internal reviews are held before the formal external SR-R takes place. It ensures that:
+\begin{itemize}
+	\item The SRD states the software requirements clearly, completely and in sufficient detail to start the design phase.
+	\item The STP is an adequate plan for system testing the software in the DD phase.
+\end{itemize}
+
+\subsection{Requirements for Software Requirements}
+In the SRD each requirement must:
+\begin{itemize}
+	\item have a unique identifier. Traceability in other phases depends on this identifier.
+	\item be marked essential or not. Essential requirements have to be met for the software to be acceptable.
+	\item have a priority if the transfer will proceed in phases.
+	\item be marked if unstable. Unstable requirements may depend on feedback from other phases.
+	\item have references that trace it back to the URD. A software requirement is caused by one or more user requirements.
+	\item be verifiable.
+\end{itemize}
+
+Besides the requirements the SRD must contain a traceability matrix containing trace from the software requirements to the user requirements and vice-versa. This matrix should be complete, meaning all requirements should be traceable.
+
+\section{AD phase}
+\subsection{The Architectural Design Review}
+The outputs of the Architectural Design phase are formally reviewed in the Architectural Design Review (AD-R). Any report by the QAM may also be input for the AD-R. Internal reviews are held before the formal external AD-R takes place. It ensures that:
+\begin{itemize}
+	\item The ADD describes the optimal solution to the problem stated in the SRD.
+	\item The ADD describes the architectural design clearly, completely and in sufficient detail to start the detailed design phase.
+	\item  The ADD is a good design for the \applicationname{}.
+	\item  The ITP is an adequate plan for integration testing the software in the DD phase.
+\end{itemize}
+
+\subsection{Design Quality}
+A good design is:
+\begin{itemize}
+	\item Adaptable: it is easy to modify and maintain.
+	\item  Efficient: it makes a minimal use of available resources.
+	\item  Understandable: it is not only clear for the developers, but also for outsiders.
+	\item  Modular: the components are simple and independent from each other:
+	\begin{itemize}
+		\item  A change in one component has minimal impact on other components.
+		\item A small change in requirements does not lead to system wide changes.
+		\item  The effects of an error condition are isolated to its source component.
+		\item A component is understandable as a stand-alone unit, without reference to others.
+	\end{itemize}
+\end{itemize}
+
+Good components obey the information hiding principle: software design decisions are encapsulated so that the interface reveals as little as possible about its inner workings. For example, a component should hide how its data is stored: it can be in memory (in an array, list, tree, ...) or in a temporary file.
+Some rules to choose components:
+\begin{itemize}
+	\item Minimize coupling between components.
+	\begin{itemize}
+		\item Minimize the number of items that are passed between components;
+		\item Pass only the data that are needed (data coupling);
+		\item Do not pass a structure of which only a small part is being used (stamp coupling);
+		\item Avoid the use of control flags (control coupling);
+		\item Do not use global data (common coupling).
+	\end{itemize}
+	\item Maximize cohesion inside a component: put elements into a component that are related to each other; they contribute for example to the same task.
+	\item Restrict fan-out: restrict the number of child components.
+	\item Maximize fan-in: reuse components as often as possible.
+	\item Use factoring: avoid duplication of functionality. Cut the common functionality from the components and put it into a reusable component.
+	\item Separate logical and physical functionality: top-level components must be separated from physical aspects (the data they deal with); the level of abstraction of a component must be according to its place in the hierarchy.
+\end{itemize}
+
+\section{DD phase}
+\subsection{The Detailed Design and Production Review}
+The outputs of the Detailed Design and Production Phase are formally reviewed in the Detailed Design and Production Review (DD-R). Any report of the QAM may also be input for the DD-R. Internal reviews are held before the formal external DD-R takes place. It ensures that:
+\begin{itemize}
+	\item The DDD describes the detailed design clearly, completely and in sufficient detail to allow development and maintenance by software engineers not involved in the project.
+	\item  Modules have been coded according to the DDD.
+	\item Modules have been verified according to the unit test specifications in the UTP.
+	\item Major components have been integrated according to the ADD.
+	\item Major components have been verified according to the integration test specifications in the ITP.
+	\item The software has been verified against the SRD according to the system test specifications in the STP.
+	\item The ATP specifies the test design, test procedures and test cases so that all user requirements in the URD can be validated.
+	\item The SUM explains what the software does and instructs the users how to operate the software correctly.
+\end{itemize}
