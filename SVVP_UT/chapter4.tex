@@ -1,5 +1,5 @@
 \chapter{Test procedures}\label{chap:testProc}
-This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable to server and client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in sections \ref{sec:clientProc}, and the procedures that have to be adhered for client side testing can be found in sections \ref{sec:serverProc}.\\
+This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable to server and client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in section \ref{sec:clientProc}, and the procedures that have to be adhered for client side testing can be found in section \ref{sec:serverProc}.\\
  A procedure on how to execute these tests is given in section \ref{sec:exectest}.
 
 \section{General procedures}\label{sec:genProc}
@@ -9,14 +9,14 @@ If a new testcase has been written, it should be added to one of the testsuites 
 
 \section{Client side testing}\label{sec:clientProc}
 On the client side, functionality can be tested with either GWT JUnit tests or with Selenium tests. The GWT JUnit tests can be used whenever a specific component has to be tested without the use of a graphical user interface. For example, tests regarding saving to and loading from the local storage can be tested internally: this can be tested by calling the appropriate store and retrieve functionality from the storage-related classes. Testing via the graphical user interface can be achieved through Selenium tests. These tests are written in Java and can be executed on several browsers of choice. After running the tests, the results for the selected browsers can be compared automatically, using a screen-shot comparator.
-All the GWT JUnit tests can be executed from two test suites, which can be found at \texttt{test/src/nl/tue/fingerpaint/suites/ClientSuite.java} and \texttt{test/src/nl/tue/fingerpaint/suites/SharedSuite.java}. In a similar fashion, all Selenium tests can be executed via \texttt{test/src/nl/tue/fingerpaint/suites/SeleniumSuite.java}. \\
+All the GWT JUnit tests can be executed from two test suites, which can be found at \texttt{ClientSuite.java} and \texttt{SharedSuite.java}. In a similar fashion, all Selenium tests can be executed via \texttt{SeleniumSuite.java}. \\
 As mentioned before, some special settings are required to run the unit tests. This also applies to the test suites, as these contain all the individual unit tests regarding specific functionality. All the unit tests in the test suites will only pass, when they are executed in manual mode.
 
 \section{Server side testing}\label{sec:serverProc}
-Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{test/src/nl/tue/fingerpaint/suites/ServerSuite.java}.
+Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{ServerSuite.java}.
 
 \section{Executing the tests}\label{sec:exectest}
-To execute the tests, it is assumed the environment of the system is setup correctly as described in ATP section \ref*{ATP-environment_setup}. 
+To execute the tests, it is assumed the environment of the system is setup correctly as described in ATP appendix \ref*{ATP-environment_setup}. 
 Assuming the application is present in \textsc{<app-root>}, navigate the command-line to \textsc{<app-root>/fingerpaint}. To run the tests, one
 can now execute the following command:
 
