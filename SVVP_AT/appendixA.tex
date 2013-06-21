@@ -29,30 +29,39 @@ The repository is now initialized in \textsc{<app-root>}.
 
 \subsection{Compilation of the application}
 \label{sec:compiling}
-We assume source code of the application is installed to the \textsc{<app-root>} folder.
+There are three possible options to compile the application. These options are the following and the name of the option you chose is denoted by \textsc{<compiler-option>}.
+
+\begin{description}
+  \item[run] This option compiles the application and immediately starts a server running the application
+  \item[jar] This option compiles the application to a runnable jar file named \textsc{Fingerpaint.jar}. This file can then be run at any time to start the server running the application
+  \item[war] This option compiles the application to a war file named \textsc{Fingerpaint.war}. This file can then be deployed in a jetty server. This deployment procedure is, however, not covered by this manual as it depends on the configuration of the server used.
+\end{description}
+
+For the first compiling option a port number may be chosen on which the server listens, denoted by \textsc{<port-number}.
+
+Extra compiler options may be given to the GWT-compiler in order to modify its behavior. These options are denoted by \textsc{<gwt-options>}. This is, however, an advanced option and is not covered futher by this manual.
+
+We assume source code of the application can be foun in the \textsc{<app-root>} folder.
 Navigate in the console to the \textsc{<app-root>/fingerpaint} folder. 
-We need to make sure the \textsc{JAVA\_HOME} environment variable is correctly set. On some machines, this will be the case by default. The variable should be set to the home directory of the JDK that was just installed (we denote this directory as \textsc{<jdk-home>}. If the variable was already set correctly (or you choose to set it manually, not covered by this manual), you can now execute the following command to compile the project:
+We need to make sure the \textsc{JAVA\_HOME} environment variable is correctly set. On some machines, this will be the case by default. The variable should be set to the home directory of the JDK that was just installed (we denote this directory as \textsc{<jdk-home>}. If the variable was already set correctly (or you choose to set it manually, not covered by this manual), you can ignore the option setting the \textsc{<jdk-home>} in the following command. Otherwise, you have to include it. You can now execute the following command to compile the project:
 
 \begin{verbatim}
-ant clean jar
+ant <compiler-option> [-Djava.jdk.home=<jdk-home>] [-Dgwt.args=<gwt-options>] 
+                      [-Drun.port.number=<port-number>]
 \end{verbatim}
 
-If the environment variable is not set, you can use the following compilation command to temporarily set the variable during compilation:
+After compilation has completed, either a war or jar file has been created, or the application has been deployed. If a jar file was created, the following section describes how to run the application.
+
+\subsection{Running the application}
+\label{sec:running}
+After compilation, move the \textsc{Fingerpaint.jar} to the folder where you want to run the application. We assume this folder is \textsc{<deploy-root>}. You can again chose a port number to run the application on, denoted by \textsc{<port-number>}. Navigate in the console to this folder and execute the following:
 
 \begin{verbatim}
-ant clean jar -Djava.jdk.home=<jdk-home>
+java -jar Fingerpaint.jar <port-number>
 \end{verbatim}
 
-After compilation has completed, a file named \textsc{Fingerpaint.jar} has been created in the \textsc{<app-root>/fingerpaint} folder.
+This starts the standalone fingerpaint server listening to the specified port on the system. After typing \textsc{quit} and pressing \textsc{<enter>} the server is stopped again.
 
 \subsection{Deployment of the application}
 \label{sec:deployment}
-After compilation, move the \textsc{Fingerpaint.jar} to the folder where you want to deploy the application. We assume this folder is \textsc{<deploy-root>}. Navigate in the console to this folder and execute the following:
-
-\begin{verbatim}
-java -jar Fingerpaint.jar
-\end{verbatim}
-
-This starts the standalone fingerpaint server listening to port 80 on the system. After pressing \textsc{<enter>} the server is stopped again.
-
-The application can also be deployed in a jetty server. A \textsc{war} file can be created by executing \textsc{ant war} instead of \textsc{ant jar} in the compilation fase. This war can then be deployed in the jetty server. However, this procedure is not explained in this manual.
+The application can also be deployed in a jetty server. See section \ref{sec:compiling} to compile the application into a war file. This file can now be deployed to a jetty server in a standard manner. However, this procedure is not explained in this manual, because it is highly dependent on the configuration of the server.
