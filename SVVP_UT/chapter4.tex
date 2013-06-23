@@ -1,42 +1,30 @@
 \chapter{Test procedures}\label{chap:testProc}
-This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable to server and client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in sections \ref{sec:clientProc}, and the procedures that have to be adhered for client side testing can be found in sections \ref{sec:serverProc}.\\
-As the \applicationname{} is developed using Eclipse, all the unit tests will be executed in Eclipse as well. This poses some problems for most of the tests, however, namely all tests that make use of zipping, the local storage, the canvas and also some server side tests. The functionality of these tests is not supported in the browsers that are used by Eclipse to execute the (GWT) JUnit tests. A procedure on how to execute these tests is given in section \ref{sec:exectest}.
+This chapter describes the procedures that have to be followed when writing and executing unit tests. Some general procedures that are applicable to server and client side testing are discussed in section \ref{sec:genProc}. The specific procedures that have to be adhered for client side testing can be found in section \ref{sec:clientProc}, and the procedures that have to be adhered for client side testing can be found in section \ref{sec:serverProc}.\\
+ A procedure on how to execute these tests is given in section \ref{sec:exectest}.
 
 \section{General procedures}\label{sec:genProc}
 For both client and server side functionality, the author of the code of a certain component should also write test cases accordingly for this component. It should never be the case that code is committed before it has been tested. Moreover, whenever existing functionality is re-factored, the person who changes the code must make sure that all the test cases still pass after the re-factoring. \\
 As a rule of thumb, each class from the \texttt{src} folder should have its own test class in the \texttt{test} folder. The name of the test class should clearly indicate the test class under consideration and should be suffixed with \texttt{Test}. The test classes should only test functionality of the class under consideration. However, it might be necessary to include functionality of other classes (such as instantiating other classes) when testing a particular class.
+If a new testcase has been written, it should be added to one of the testsuites present in the code, in order to enable automatic testing from the command line.
 
 \section{Client side testing}\label{sec:clientProc}
 On the client side, functionality can be tested with either GWT JUnit tests or with Selenium tests. The GWT JUnit tests can be used whenever a specific component has to be tested without the use of a graphical user interface. For example, tests regarding saving to and loading from the local storage can be tested internally: this can be tested by calling the appropriate store and retrieve functionality from the storage-related classes. Testing via the graphical user interface can be achieved through Selenium tests. These tests are written in Java and can be executed on several browsers of choice. After running the tests, the results for the selected browsers can be compared automatically, using a screen-shot comparator.
-All the GWT JUnit tests can be executed from two test suites, which can be found at \texttt{test/src/suites/ClientUnit.java} and \texttt{test/src/suites/SharedUnit.java}. In a similar fashion, all Selenium tests can be executed via \texttt{test/src/suites/Selenium.java}. \\
-As mentioned before, some special settings are required to run the unit tests. This also applies to the test suites, as these contain all the individual unit tests regarding specific functionality. All the unit tests in the test suites will only pass, when they are executed in manual mode. See section \ref{sec:exectest} for more information.
+All the GWT JUnit tests can be executed from two test suites, which can be found at \texttt{ClientSuite.java} and \texttt{SharedSuite.java}. In a similar fashion, all Selenium tests can be executed via \texttt{SeleniumSuite.java}. \\
+As mentioned before, some special settings are required to run the unit tests. This also applies to the test suites, as these contain all the individual unit tests regarding specific functionality. All the unit tests in the test suites will only pass, when they are executed in manual mode.
 
 \section{Server side testing}\label{sec:serverProc}
-Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{test/src/suites/ServerUnit.java}.
+Server side testing can be done through JUnit tests, in a similar way as the GWT JUnit tests in section \ref{sec:clientProc}. Again, a test suite is available to execute all the server tests at once: \texttt{ServerSuite.java}.
 
 \section{Executing the tests}\label{sec:exectest}
-As mentioned before, most of the individual tests and the tests in the test suites will not pass automatically when the standard Eclipse settings are used for running these tests and test suites. To resolve this issue, proceed as follows:
-\begin{itemize}
-	\item Right-click on the test or test suite that you want to run.
-	\item Select ``Properties''; the ``Properties'' menu appears for the selected test or test suite.
-	\item Select ``Run/Debug Settings''. 
-	\item If there are any launch configurations shown in the list, remove them all. This makes sure that the launch configuration that you are about to set is correct.
-	\item Create a new launch configuration, by clicking the ``New'' button; the ``Select Configuration Type'' dialogue appears.
-	\item Select ``GWT JUnit Test'' and press ``OK''; the ``Edit Configuration'' menu appears.
-	\item Go to the ``Arguments'' tab.
-	\item In the ``VM-arguments'' section, put the following text: $-Dgwt.args="-runStyle Manual:1"$.
-	\item Press ``Apply'' and ``OK'', to go back to the ``Run/Debug Settings'' menu.
-	\item Press ``Apply'' and ``OK''; now, the properties-menu will close.
-	\item Now, you can run this test suite as a GWT JUnit test, by right-clicking on the file and choosing Run As $>$ GWT JUnit Test.
-	\item After a short amount of time, the ``Console'' tab in Eclipse will receive focus and displays the following text:
+To execute the tests, it is assumed the environment of the system is setup correctly as described in ATP appendix \ref*{ATP-environment_setup}. 
+Assuming the application is present in \textsc{<app-root>}, navigate the command-line to \textsc{<app-root>/fingerpaint}. To run the tests, one
+can now execute the following command:
 
-	\noindent Please navigate your browser to this URL:
+\begin{verbatim}
+ant test
+\end{verbatim}
 
-	\noindent $<Some URL>$
-	\item Copy this URL to the browser of your choice. A dialogue might be shown whether you want to accept the connection from the GWT developer plugin. Press ``OK''.
-\end{itemize}
-
-\fpstartparagraph{} All the specified tests are now executed in the browser of your choice. It may take a while to finish all the tests, but once the tests have been completed, the ``JUnit'' tab in Eclipse will display the results of all the executed tests.
+This command compiles the application. After it is finished, a URL is presented on the command-line. Navigate the browser you would like to use to run the tests to this URL. The GWTTestCases wil now be run in this browser. Selenium tests and standard Junin tests will also be automatically run. After all tests are finished, a test report will be printed on the command line.
 
 % For each test procedure, a section with the following structure:
 %\section{Name of the test procedure}
